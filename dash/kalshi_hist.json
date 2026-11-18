@@ -1,0 +1,9 @@
+{
+ "rows": [],
+ "meta": [
+  {
+   "label": "Contenu",
+   "value": "Historique quotidien des forwards Kalshi bornés (médiane implicite), reconstruit à partir des chandeliers journaliers de chaque contrat puis complété chaque jour."
+  }
+ ]
+}

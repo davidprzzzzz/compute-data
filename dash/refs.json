@@ -1,0 +1,19 @@
+{
+ "rows": [
+  {
+   "id": "eurusd",
+   "label": "EUR/USD (BCE)",
+   "valeur": 1.16,
+   "unite": "USD par EUR",
+   "date": "2026-11-18"
+  },
+  {
+   "id": "oi_perps",
+   "label": "Open interest perpétuels H100 (5 venues)",
+   "valeur": 158000,
+   "unite": "USD",
+   "date": "2026-11-18"
+  }
+ ],
+ "meta": []
+}
