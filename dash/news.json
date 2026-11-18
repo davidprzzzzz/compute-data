@@ -1,0 +1,52 @@
+{
+ "rows": [
+  {
+   "id": "1",
+   "date": "2026-11-18",
+   "titre": "CME pose des conditions à la revue de ses futures GPU ; open interest des perpétuels H100 à 158 000 $ sur 5 venues",
+   "source": "AlienWP",
+   "url": "https://alienwp.com/cme-puts-conditions-on-gpu-futures-review-as-kalshi-builds-ai-compute-markets/"
+  },
+  {
+   "id": "2",
+   "date": "2026-11-17",
+   "titre": "Médiane on-demand H100 : +16 % sur 90 jours, à 3,99 $/GPU-h",
+   "source": "GetDeploying",
+   "url": "https://getdeploying.com/gpus/nvidia-h100"
+  },
+  {
+   "id": "3",
+   "date": "2026-11-14",
+   "titre": "Historique des prix de location H100 2023–2026 : Silicon Data à 3,06 $ et Ornn à 3,10 $ le 10 novembre",
+   "source": "Rillor",
+   "url": "https://rillor.com/insights/h100-rental-price-history-2023-to-2026"
+  },
+  {
+   "id": "4",
+   "date": "2026-11-13",
+   "titre": "Ornn : les prix de location montent sur toutes les générations, B200 vers 9,84 $ (+32 % sur un mois)",
+   "source": "Crypto Briefing",
+   "url": "https://cryptobriefing.com/ornn-exchange-gpu-rental-prices-rising/"
+  },
+  {
+   "id": "5",
+   "date": "2026-11-10",
+   "titre": "La CFTC prolonge jusqu'au 8 janvier 2027 la revue des futures NYMEX Silicon Data H100 et B200",
+   "source": "explainx.ai",
+   "url": "https://explainx.ai/blog/cftc-silicon-data-gpu-rental-futures-review-extended-january-2027-2026"
+  },
+  {
+   "id": "6",
+   "date": "2026-10-30",
+   "titre": "Ornn Research : un engagement 5 ans H100 marqué à 1,58 $ contre 3,12 $ on-demand (« Compute Certainty Tax »)",
+   "source": "Ornn Research",
+   "url": "https://ornncompute.substack.com/p/the-compute-certainty-tax"
+  }
+ ],
+ "meta": [
+  {
+   "label": "Source",
+   "value": "Google News (requêtes : GPU rental, H100 rental, Ornn, Silicon Data, Kalshi compute, futures compute, néoclouds) et sélection manuelle."
+  }
+ ]
+}

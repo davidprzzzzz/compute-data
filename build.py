@@ -123,6 +123,17 @@ if trows:
 elif not (OUT / "sd_term.json").exists() and (ST / "seed_sd_term.json").exists():
     shutil.copy(ST / "seed_sd_term.json", OUT / "sd_term.json")
 
+# ---------------- news : seed manuelle (data/static/news_seed.json) + flux automatique
+nw = (rd(D / "history" / "news.json") or []) + (rd(ST / "news_seed.json") or [])
+seen, nrows = set(), []
+for i in sorted(nw, key=lambda i: i["date"], reverse=True):
+    key = i["titre"].lower()
+    if key in seen:
+        continue
+    seen.add(key)
+    nrows.append({"id": str(len(nrows) + 1), "date": i["date"], "titre": i["titre"], "source": i.get("source", ""), "url": i.get("url", "")})
+write("news.json", nrows[:60], [{"label": "Source", "value": "Google News (requêtes : GPU rental, H100 rental, Ornn, Silicon Data, Kalshi compute, futures compute, néoclouds) et sélection manuelle."}])
+
 # ---------------- statiques et références
 shutil.copy(ST / "listes.json", OUT / "listes.json")
 shutil.copy(ST / "agenda.csv", OUT / "agenda.csv")

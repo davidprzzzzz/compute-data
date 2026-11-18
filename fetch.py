@@ -377,6 +377,48 @@ def fx():
         log("EUR/USD", row)
 
 
+# ---------------------------------------------------------------- News (Google News RSS)
+NEWS_QUERIES = ['"GPU rental" price', '"H100" rental price', 'Ornn compute', '"Silicon Data" GPU index',
+                'Kalshi compute GPU', 'GPU compute futures', 'neocloud GPU capacity contract', 'H200 OR B200 rental price']
+
+
+def news():
+    import email.utils, xml.etree.ElementTree as ET
+    p = D / "history" / "news.json"
+    items = json.loads(p.read_text()) if p.exists() else []
+    seen = {i["url"] for i in items} | {i["titre"].lower() for i in items}
+    added = 0
+    for q in NEWS_QUERIES:
+        url = "https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=" + urllib.request.quote(q + " when:14d")
+        x = get(url)
+        if not x:
+            continue
+        try:
+            root = ET.fromstring(x)
+        except ET.ParseError:
+            continue
+        for it in root.iter("item"):
+            title = (it.findtext("title") or "").strip()
+            link = (it.findtext("link") or "").strip()
+            src = (it.findtext("source") or "").strip()
+            pub = it.findtext("pubDate")
+            try:
+                d = email.utils.parsedate_to_datetime(pub).date().isoformat()
+            except Exception:
+                d = TODAY
+            if src and title.endswith(" - " + src):
+                title = title[: -len(" - " + src)]
+            if not title or link in seen or title.lower() in seen:
+                continue
+            seen |= {link, title.lower()}
+            items.append({"date": d, "titre": title, "source": src, "url": link, "requete": q})
+            added += 1
+    items.sort(key=lambda i: i["date"], reverse=True)
+    items = items[:400]
+    p.write_text(json.dumps(items, ensure_ascii=False, indent=1))
+    log("News:", added, "nouvelles,", len(items), "au total")
+
+
 # ---------------------------------------------------------------- aicomputetracker (contrôle)
 def tracker():
     j = get("https://aicomputetracker.com/forward-curves.json", as_json=True)
@@ -386,7 +428,7 @@ def tracker():
 
 
 if __name__ == "__main__":
-    steps = sys.argv[1:] or ["kalshi", "ornn", "silicon", "fx", "tracker"]
+    steps = sys.argv[1:] or ["kalshi", "ornn", "silicon", "fx", "news", "tracker"]
     raw = None
     for s in steps:
         try:
@@ -399,6 +441,8 @@ if __name__ == "__main__":
                 silicon()
             elif s == "fx":
                 fx()
+            elif s == "news":
+                news()
             elif s == "tracker":
                 tracker()
         except Exception as e:  # une source qui casse ne bloque pas les autres
