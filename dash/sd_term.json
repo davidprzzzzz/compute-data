@@ -1,13 +1,73 @@
 {
  "rows": [
   {
-   "mois": 6,
-   "terme": 3.08,
-   "forward": 2.91,
-   "date": "2026-11-15",
-   "var_1j": null,
+   "mois": 0,
+   "terme": 3.01,
+   "forward": 3.01,
+   "date": "2026-11-18",
+   "var_1j": 0.0,
    "var_1m": null,
    "var_3m": null
+  },
+  {
+   "mois": 1,
+   "terme": 2.88,
+   "forward": 2.94,
+   "date": "2026-11-18",
+   "var_1j": 0.0,
+   "var_1m": null,
+   "var_3m": null
+  },
+  {
+   "mois": 2,
+   "terme": 2.96,
+   "forward": 3.09,
+   "date": "2026-11-18",
+   "var_1j": 0.0,
+   "var_1m": null,
+   "var_3m": null
+  },
+  {
+   "mois": 3,
+   "terme": 2.99,
+   "forward": 2.98,
+   "date": "2026-11-18",
+   "var_1j": 0.0,
+   "var_1m": null,
+   "var_3m": null
+  },
+  {
+   "mois": 4,
+   "terme": 2.98,
+   "forward": 2.92,
+   "date": "2026-11-18",
+   "var_1j": 0.0,
+   "var_1m": null,
+   "var_3m": null
+  },
+  {
+   "mois": 5,
+   "terme": 2.96,
+   "forward": 2.85,
+   "date": "2026-11-18",
+   "var_1j": 0.0,
+   "var_1m": null,
+   "var_3m": null
+  },
+  {
+   "mois": 6,
+   "terme": 2.94,
+   "forward": 2.76,
+   "date": "2026-11-18",
+   "var_1j": 0.0,
+   "var_1m": null,
+   "var_3m": null
+  }
+ ],
+ "meta": [
+  {
+   "label": "Source",
+   "value": "silicondata.com/products/forward-curve (H100, taux de terme et forward implicite)."
   }
  ]
 }
