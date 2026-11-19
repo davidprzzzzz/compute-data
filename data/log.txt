@@ -1,10 +1,10 @@
-2026-11-19T00:40:05.816337+00:00
+2026-11-19T00:43:07.732111+00:00
 Kalshi KXH100MS marchés: 94
 Kalshi KXH200MS marchés: 149
 Kalshi KXB200MS marchés: 171
 Kalshi KXB300MS marchés: 0
 Kalshi KXA100MS marchés: 73
-Kalshi historique: 5016 lignes ; relevé 2026-11-19T00:39Z
+Kalshi historique: 5016 lignes ; relevé 2026-11-19T00:43Z
 Backfill Kalshi déjà fait ( 155 dates )
 Ornn: 5 GPU, settle 2026-11-17
 Silicon Data H100 30 points 2026-11-18
