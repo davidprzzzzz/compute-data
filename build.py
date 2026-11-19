@@ -142,8 +142,68 @@ for i in sorted(nw, key=lambda i: i["date"], reverse=True):
     nrows.append({"id": str(len(nrows) + 1), "date": i["date"], "titre": i["titre"], "source": i.get("source", ""), "url": i.get("url", "")})
 write("news.json", nrows[:60], [{"label": "Source", "value": "Google News (requêtes : GPU rental, H100 rental, Ornn, Silicon Data, Kalshi compute, futures compute, néoclouds) et sélection manuelle."}])
 
+# ---------------- indice des prix affichés (Compute Group)
+import statistics
+
+
+def med(v):
+    v = [x for x in v if x is not None]
+    return round(statistics.median(v), 3) if v else None
+
+
+lh = hist("listings")
+idx_rows = []
+by = {}
+for r in lh:
+    if r.get("prix") in (None, ""):
+        continue
+    by.setdefault((r["date"], r["gpu"]), []).append(r)
+for (d, g), rs in sorted(by.items()):
+    def prov_med(filt):
+        per = {}
+        for r in rs:
+            if filt(r):
+                per.setdefault(r["slug"], []).append(float(r["prix"]))
+        return [statistics.median(v) for v in per.values()]
+    neo = lambda r: r["hyperscaler"] != "True"
+    od = lambda r: r["facturation"] == "on-demand"
+    row = {"date": d, "gpu": g,
+           "od_med": med(prov_med(lambda r: od(r) and neo(r))),
+           "od_eu": med(prov_med(lambda r: od(r) and r["europe"] == "True")),
+           "od_hors_eu": med(prov_med(lambda r: od(r) and neo(r) and r["europe"] != "True")),
+           "od_hyper": med(prov_med(lambda r: od(r) and not neo(r))),
+           "n_od": len(prov_med(lambda r: od(r) and neo(r))),
+           "spot_med": med(prov_med(lambda r: r["facturation"] == "spot" and neo(r)))}
+    for t in (1, 3, 6, 12, 24, 36):
+        v = prov_med(lambda r, t=t: r["facturation"] == "réservé" and r["duree_mois"] == str(t) and neo(r))
+        row[f"r{t}"], row[f"n_r{t}"] = med(v), len(v)
+    st = [r["dispo"] for r in rs if r["dispo"] in ("In stock", "Out of stock")]
+    row["en_stock_pct"] = round(100 * st.count("In stock") / len(st), 1) if st else None
+    row["n_fournisseurs"] = len({r["slug"] for r in rs})
+    idx_rows.append(row)
+if idx_rows:
+    write("list_index.json", idx_rows, [{"label": "Méthode", "value": "Prix affichés relevés chaque jour sur les pages publiques des fournisseurs (via GetDeploying). Pour chaque fournisseur, médiane de ses configurations ; puis médiane entre fournisseurs. Néoclouds = hors AWS, Azure, Google Cloud, Oracle. Europe = siège du fournisseur en Europe. En stock = part des configurations dont la disponibilité est renseignée et positive."}])
+    last = max(r["date"] for r in idx_rows)
+    h = next((r for r in idx_rows if r["date"] == last and r["gpu"] == "H100"), None)
+    if h:
+        lab = {1: "1M", 3: "3M", 6: "6M", 12: "1A", 24: "2A", 36: "3A"}
+        lrows = [{"gpu": "H100", "mois": 0, "tenor": "On-demand", "mediane": h["od_med"], "q25": None, "q75": None, "n": h["n_od"], "fournisseurs": "", "date": last}]
+        for t in (1, 3, 6, 12, 24, 36):
+            if h[f"r{t}"] is not None:
+                vals = []
+                per = {}
+                for r in by[(last, "H100")]:
+                    if r["facturation"] == "réservé" and r["duree_mois"] == str(t) and r["hyperscaler"] != "True":
+                        per.setdefault(r["fournisseur"], []).append(float(r["prix"]))
+                vals = sorted(statistics.median(v) for v in per.values())
+                q = lambda p: round(vals[int((len(vals) - 1) * p)], 3) if len(vals) > 2 else None
+                lrows.append({"gpu": "H100", "mois": t, "tenor": lab[t], "mediane": h[f"r{t}"], "q25": q(.25), "q75": q(.75), "n": h[f"n_r{t}"],
+                              "fournisseurs": ", ".join(f"{k} {statistics.median(v):.2f}" for k, v in sorted(per.items())), "date": last})
+        write("listes.json", lrows, [{"label": "Source", "value": "Indice Compute Group des prix affichés (voir list_index.json), H100, néoclouds hors hyperscalers."}])
+
 # ---------------- statiques et références
-shutil.copy(ST / "listes.json", OUT / "listes.json")
+if not (OUT / "listes.json").exists() or not idx_rows:
+    shutil.copy(ST / "listes.json", OUT / "listes.json")
 shutil.copy(ST / "agenda.csv", OUT / "agenda.csv")
 fx = rd(D / "latest" / "fx.json") or {"date": "2026-11-18", "eurusd": 1.16}
 refs = [{"id": "eurusd", "label": "EUR/USD (BCE)", "valeur": fx["eurusd"], "unite": "USD par EUR", "date": fx["date"]},

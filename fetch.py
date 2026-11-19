@@ -480,13 +480,61 @@ LIST_PAGES = {
 }
 
 
+EUROPE = {"scaleway", "ovh", "verda", "nebius", "seeweb", "leaf-cloud", "sesterce", "upcloud", "gcore", "cloudferro", "lyceum",
+          "impossible-cloud", "hyperstack", "greenai-cloud", "leaseweb", "beyond-pl", "hostinger"}  # siège en Europe
+HYPERSCALERS = {"aws", "microsoft-azure", "google-cloud", "oracle-cloud"}
+
+
+def billing(b):
+    b = (b or "").strip()
+    if b.lower().startswith("on-demand"):
+        return "on-demand", 0
+    if b.lower().startswith("spot"):
+        return "spot", 0
+    m = re.match(r"Reserved \((\d+)mo\)", b)
+    if m:
+        return "réservé", int(m.group(1))
+    if b.lower().startswith("reserved"):
+        return "réservé", None
+    return "autre", None
+
+
+def parse_getdeploying(h, gpu):
+    """Une ligne par configuration affichée : fournisseur, format, nb de GPU, type de facturation, durée, prix par GPU-heure, disponibilité."""
+    rows = []
+    parts = re.split(r'<div id="configs-([a-z0-9\-]+)" data-configs', h)
+    for k in range(1, len(parts), 2):
+        slug, body = parts[k], parts[k + 1]
+        names = re.findall(r'alt="([^"]+?) logo"', parts[k - 1])
+        name = html.unescape(names[-1]) if names else slug
+        for tr in re.finditer(r'<tr data-gpus="(\d*)"(.*?)</tr>', body, re.S):
+            a = dict(re.findall(r'data-([a-z]+)="([^"]*)"', tr.group(0)[:500]))
+            tds = re.findall(r"<td>(.*?)</td>", tr.group(0), re.S)
+            cfg = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", tds[0])).strip() if tds else ""
+            badges = re.findall(r'<span class="badge[^"]*">([^<]+)</span>', tr.group(0))
+            typ, term = billing(badges[0] if badges else "")
+            price = float(a["pricegpu"]) if a.get("pricegpu") not in (None, "") else None
+            form = "SXM" if "SXM" in cfg else ("PCIe" if "PCIe" in cfg.replace("PCIE", "PCIe") else ("NVL" if "NVL" in cfg else ""))
+            rows.append({"date": TODAY, "gpu": gpu, "fournisseur": name, "slug": slug, "config": cfg[:80], "nb_gpu": int(a["gpus"]) if a.get("gpus") else None,
+                         "format": form, "facturation": typ, "duree_mois": term, "prix": price,
+                         "dispo": badges[-1].strip() if len(badges) > 1 else "", "europe": slug in EUROPE, "hyperscaler": slug in HYPERSCALERS})
+    return rows
+
+
 def listings_raw():
-    """Pages tarifs publiques, sauvegardées brutes (data/raw/list_*.html) avant parsing."""
+    """Pages tarifs publiques : sauvegarde brute, puis parsing des pages GetDeploying (H100, H200, B200)."""
+    allrows = []
     for name, url in LIST_PAGES.items():
         h = get(url)
         if h:
             (D / "raw" / f"list_{name}.html").write_text(h)
+            if name.startswith("getdeploying_"):
+                allrows += parse_getdeploying(h, name.split("_")[1].upper())
         log("Prix affichés", name, "OK" if h else "échec", len(h or ""))
+    if allrows:
+        (D / "latest" / "listings.json").write_text(json.dumps({"date": TODAY, "rows": allrows}, ensure_ascii=False, indent=1))
+        n = append_hist("listings", allrows, ["date", "gpu", "slug", "config", "facturation", "duree_mois"])
+        log("Prix affichés :", len(allrows), "configurations ;", n, "lignes d'historique")
 
 
 # ---------------------------------------------------------------- aicomputetracker (contrôle)
