@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Compute Group — Run GPU</title>
+<script src="vendor/d3.min.js"></script>
+<script src="shim.js"></script>
+</head>
+<body>
+<div id="dash-root">
+<style>
+@font-face { font-family:"CG Mono"; src:url(fonts/plexmono-400.woff2) format("woff2"); font-weight:400; }
+@font-face { font-family:"CG Mono"; src:url(fonts/plexmono-600.woff2) format("woff2"); font-weight:600; }
+@font-face { font-family:"CG Sans"; src:url(fonts/plexsans-400.woff2) format("woff2"); font-weight:400; }
+@font-face { font-family:"CG Sans"; src:url(fonts/plexsans-600.woff2) format("woff2"); font-weight:600; }
+html, body { margin:0; background:#06070a; }
+.cg { --bg:#06070a; --panel:#0c0e12; --line:#1b1f26; --lab:#8a94a3; --dim:#5c6573; --txt:#c5ccd6; --px:#ffffff; --up:#2bb673; --dn:#e5484d;
+  background:var(--bg); color:var(--txt); font-family:"CG Sans", -apple-system, "Segoe UI", Roboto, sans-serif; font-size:12px; padding:12px 12px 32px; min-height:100vh; }
+.cg .n { font-family:"CG Mono", "SF Mono", Menlo, Consolas, monospace; font-variant-numeric:tabular-nums; }
+.cg .top { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 22px; padding:4px 2px 10px; border-bottom:1px solid var(--line); }
+.cg .top h1 { margin:0; font-size:14px; font-weight:600; letter-spacing:.14em; color:var(--px); }
+.cg .kv { color:var(--lab); font-size:11px; letter-spacing:.04em; }
+.cg .kv b { color:var(--px); font-weight:400; margin-left:6px; }
+.cg .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(380px, 1fr)); gap:12px; margin-top:12px; align-items:start; }
+.cg .full { grid-column:1 / -1; }
+.cg .panel { background:var(--panel); border:1px solid var(--line); border-radius:3px; }
+.cg .ph { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:7px 10px; border-bottom:1px solid var(--line); }
+.cg .ph h2 { margin:0; font-size:10.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--txt); }
+.cg .ph .src { font-size:10px; color:var(--dim); letter-spacing:.06em; }
+.cg .tw { overflow-x:auto; }
+.cg table { border-collapse:collapse; width:100%; }
+.cg th { font-weight:400; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--lab); text-align:right; padding:6px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+.cg th.grp { text-align:center; color:var(--txt); border-bottom:1px solid #2a303a; }
+.cg td { text-align:right; padding:5px 10px; border-bottom:1px solid #12151b; white-space:nowrap; color:var(--txt); }
+.cg tr:last-child td { border-bottom:0; }
+.cg th.l, .cg td.l { text-align:left; }
+.cg td.k { color:var(--txt); font-weight:600; letter-spacing:.04em; }
+.cg td.p { color:var(--px); font-family:"CG Mono", "SF Mono", Menlo, monospace; font-variant-numeric:tabular-nums; }
+.cg td.v { font-family:"CG Mono", "SF Mono", Menlo, monospace; font-variant-numeric:tabular-nums; }
+.cg td.d { color:var(--dim); font-family:"CG Mono", "SF Mono", Menlo, monospace; font-size:11px; }
+.cg .up { color:var(--up); } .cg .dn { color:var(--dn); } .cg .na { color:#333a45; }
+.cg .sepl { border-left:1px solid var(--line); }
+.cg .q { font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--dim); }
+.cg .q.bon { color:var(--txt); }
+.cg .tabs { display:flex; gap:2px; }
+.cg .tabs button { background:transparent; border:1px solid var(--line); color:var(--lab); font:inherit; font-size:10.5px; letter-spacing:.08em; padding:3px 9px; border-radius:2px; cursor:pointer; }
+.cg .tabs button.on { color:var(--px); border-color:#5c6573; background:#151920; }
+.cg input.ten { width:92px; background:transparent; border:1px solid transparent; border-bottom:1px dashed #2f3541; color:var(--txt); font:inherit; font-weight:600; letter-spacing:.04em; padding:1px 3px; }
+.cg input.ten:focus { outline:none; border:1px solid #5c6573; background:#11141a; }
+.cg .rst { background:transparent; border:1px solid var(--line); color:var(--lab); font:inherit; font-size:10px; padding:2px 7px; border-radius:2px; cursor:pointer; }
+.cg .form { display:flex; flex-wrap:wrap; gap:8px 10px; padding:10px; align-items:flex-end; border-bottom:1px solid var(--line); }
+.cg .form label { display:flex; flex-direction:column; gap:3px; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--lab); }
+.cg .form input, .cg .form select { background:var(--bg); color:var(--px); border:1px solid #262b34; border-radius:2px; padding:5px 6px; font:inherit; font-family:"CG Mono", "SF Mono", Menlo, monospace; width:96px; }
+.cg .form input.w { width:150px; }
+.cg .form button { background:#e6e9ee; color:#06070a; border:0; border-radius:2px; padding:6px 12px; font:inherit; font-weight:600; letter-spacing:.06em; cursor:pointer; }
+.cg .kvt td { padding:6px 10px; }
+.cg .news { max-height:340px; overflow-y:auto; }
+.cg .news a { color:var(--txt); text-decoration:none; }
+.cg .news a:hover { color:var(--px); text-decoration:underline; }
+.cg td.wrap { white-space:normal; min-width:240px; }
+.cg .err { color:var(--dn); font-size:10.5px; padding:0 10px 8px; }
+
+.cg .chbtn { margin-left:auto; background:transparent; border:1px solid #2a303a; color:var(--lab); font:inherit; font-size:10px; letter-spacing:.14em; padding:3px 10px; border-radius:2px; cursor:pointer; }
+.cg .chbtn.on { color:var(--px); border-color:#5c6573; }
+.cg .chartp { margin-top:12px; }
+.cg .chartp .ttl { padding:12px 14px 2px; }
+.cg .chartp .ttl h3 { margin:0; font-size:15px; font-weight:600; color:var(--px); letter-spacing:.02em; }
+.cg .chartp .ttl .st { font-size:10px; letter-spacing:.12em; color:var(--lab); margin-top:3px; }
+.cg .chartbox { position:relative; min-height:360px; padding:4px 6px 0; }
+.cg .chartbox.over { outline:1px dashed #5c6573; outline-offset:-4px; }
+.cg .lg { display:flex; flex-wrap:wrap; gap:6px 16px; padding:6px 10px 0; font-size:11px; }
+.cg .lg span.it { display:inline-flex; align-items:center; gap:6px; color:var(--txt); }
+.cg .lg i { display:inline-block; width:14px; height:2px; }
+.cg .lg b { color:var(--px); font-weight:400; font-family:"CG Mono", monospace; }
+.cg .lg button { background:none; border:0; color:var(--dim); cursor:pointer; font:inherit; padding:0 2px; }
+.cg .empty { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:var(--dim); font-size:10.5px; letter-spacing:.14em; }
+.cg .tip { position:absolute; pointer-events:none; background:#0f1217; border:1px solid #2a303a; padding:6px 8px; font-size:11px; font-family:"CG Mono", monospace; color:var(--txt); white-space:nowrap; z-index:5; }
+.cg .tip b { color:var(--px); font-weight:400; }
+.cg .foot { display:flex; justify-content:space-between; gap:8px; padding:6px 14px 10px; font-size:9.5px; letter-spacing:.12em; color:var(--dim); }
+.cg svg text { font-family:"CG Mono", "SF Mono", Menlo, monospace; }
+.cg td[draggable="true"] { cursor:grab; }
+.cg.charting td[draggable="true"]:hover { background:#141820; cursor:copy; }
+</style>
+
+<div class="cg">
+  <div class="top" id="top">
+    <h1>COMPUTE GROUP · RUN GPU</h1>
+    <span class="kv">UNITÉ<b>USD / GPU-h</b></span>
+    <span class="kv">KALSHI<b class="n" data-draw="h_k" data-source="kalshi" data-field="date" data-row="0">—</b></span>
+    <span class="kv">EUR/USD<b class="n" data-draw="h_fx" data-source="refs" data-field="valeur" data-where="id=eurusd">—</b></span>
+    <button class="chbtn" id="chbtn" aria-label="Chart">CHART</button>
+  </div>
+
+  <div class="panel chartp" id="chart" hidden>
+    <div class="ph"><span class="src">GLISSER OU TOUCHER UN PRIX</span><button class="rst" id="chclear">EFFACER</button></div>
+    <div class="ttl"><h3 data-draw="c_title">—</h3><div class="st">USD / GPU-HEURE · QUOTIDIEN</div></div>
+    <div class="chartbox" id="chartbox" data-draw="chart" data-source="chart_data"></div>
+    <div class="foot"><span data-draw="c_src">—</span><span>COMPUTE GROUP</span></div>
+  </div>
+
+  <div class="grid">
+
+    <div class="panel full" id="spot">
+      <div class="ph"><h2>Spot</h2><span class="src">ORNN OCPI · SILICON DATA</span></div>
+      <div class="tw">
+        <table aria-label="Spot Ornn et Silicon Data">
+          <thead>
+            <tr><th></th><th class="grp" colspan="5">Ornn</th><th class="grp sepl" colspan="5">Silicon Data</th></tr>
+            <tr><th class="l">GPU</th><th>Prix</th><th>1j</th><th>1m</th><th>3m</th><th>Date</th><th class="sepl">Prix</th><th>1j</th><th>1m</th><th>3m</th><th>Date</th></tr>
+          </thead>
+          <tbody data-draw="spot"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel" id="kcurve">
+      <div class="ph">
+        <h2>Courbe Kalshi · terme</h2>
+        <div class="tabs" id="tabs">
+          <button data-gpu="H100">H100</button><button data-gpu="H200">H200</button><button data-gpu="B200">B200</button><button data-gpu="A100">A100</button>
+        </div>
+      </div>
+      <div class="tw">
+        <table id="kterm" data-source="kalshi_term" data-row-key="row" aria-label="Courbe Kalshi par ténor">
+          <thead><tr>
+            <th class="l" data-field="label">Ténor</th><th class="l" data-field="echeance">Échéance</th><th data-field="terme">Prix</th>
+            <th data-field="var_1j">1j</th><th data-field="var_1m">1m</th><th data-field="var_3m">3m</th>
+            <th data-field="bas">Q25</th><th data-field="haut">Q75</th><th class="l" data-field="statut">Statut</th>
+          </tr></thead>
+          <tbody data-draw="kterm"></tbody>
+        </table>
+      </div>
+      <div class="ph"><span class="src">TÉNOR MODIFIABLE : 3M · 18M · 2A · 27/12/2028</span><button class="rst" id="kreset">RÉINIT.</button></div>
+    </div>
+
+    <div class="panel" id="kstrip">
+      <div class="ph"><h2>Kalshi · forwards mensuels</h2><span class="src">MÉDIANE IMPLICITE</span></div>
+      <div class="tw">
+        <table aria-label="Forwards mensuels Kalshi">
+          <thead><tr><th class="l">Livraison</th><th>H100</th><th>H200</th><th>B200</th><th>A100</th></tr></thead>
+          <tbody data-draw="kstrip"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel" id="sdterm">
+      <div class="ph"><h2>Silicon Data · terme H100</h2><span class="src" data-draw="sd_d" data-source="sd_term" data-field="date" data-row="0">—</span></div>
+      <div class="tw">
+        <table data-source="sd_term" data-row-key="mois" aria-label="Structure par terme Silicon Data">
+          <thead><tr><th class="l">Ténor</th><th data-field="terme">Terme</th><th data-field="forward">Forward</th><th data-field="var_1j">1j</th><th data-field="var_1m">1m</th><th data-field="var_3m">3m</th></tr></thead>
+          <tbody data-draw="sdterm"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel" id="listes">
+      <div class="ph"><h2>Prix affichés · réservé H100</h2><span class="src">NÉOCLOUDS · HORS HYPERSCALERS</span></div>
+      <div class="tw">
+        <table id="lterm" data-source="listes_term" data-row-key="row" aria-label="Prix réservés affichés">
+          <thead><tr><th class="l" data-field="label">Ténor</th><th class="l" data-field="echeance">Échéance</th><th data-field="mediane">Médiane</th><th data-field="q25">Q25</th><th data-field="q75">Q75</th><th data-field="n">N</th><th class="l" data-field="statut">Statut</th></tr></thead>
+          <tbody data-draw="lterm"></tbody>
+        </table>
+      </div>
+      <div class="ph"><span class="src">ON-DEMAND MÉDIANE <b class="n" style="color:#fff;font-weight:400" data-draw="od" data-source="listes" data-field="mediane" data-where="tenor=On-demand">—</b></span><button class="rst" id="lreset">RÉINIT.</button></div>
+    </div>
+
+    <div class="panel" id="basis">
+      <div class="ph"><h2>Basis</h2><span class="src">$/GPU-h</span></div>
+      <div class="tw">
+        <table data-source="basis" data-row-key="id" aria-label="Basis">
+          <thead><tr><th class="l" data-field="label">Basis</th><th class="l" data-field="gpu">GPU</th><th data-field="valeur">Valeur</th></tr></thead>
+          <tbody data-draw="basis"></tbody>
+        </table>
+      </div>
+      <div class="ph"><h2>Spreads générations · spot</h2><span class="src">ORNN · SILICON DATA</span></div>
+      <div class="tw">
+        <table data-source="spreads_gen" data-row-key="id" aria-label="Spreads entre générations">
+          <thead><tr><th class="l" data-field="label">Spread</th><th data-field="ornn">Ornn</th><th class="sepl" data-field="sd">Silicon Data</th><th class="l" data-field="unite">Unité</th></tr></thead>
+          <tbody data-draw="spreads"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel" id="pricer">
+      <div class="ph"><h2>Pricer</h2><span class="src">CONTRAT À TERME</span></div>
+      <div class="form">
+        <label>Courbe<select id="q-curve"><option>Kalshi</option><option>Silicon Data</option><option>Affiché</option></select></label>
+        <label>GPU<select id="q-gpu"><option>H100</option><option>H200</option><option>B200</option><option>A100</option></select></label>
+        <label>Ténor<input id="q-ten" placeholder="6M ou 27/12/2028"></label>
+        <label>Nb GPU<input id="q-n" type="number" min="1" step="8"></label>
+        <label>Commission %<input id="q-comm" type="number" min="0" max="20" step="0.25"></label>
+      </div>
+      <table class="kvt" aria-label="Résultat du pricer">
+        <tbody>
+          <tr><td class="l q">Échéance</td><td class="d" data-draw="q_ech" data-source="pricer" data-field="echeance" data-row="0">—</td></tr>
+          <tr><td class="l q">Mois</td><td class="v" data-draw="q_m" data-source="pricer" data-field="mois" data-row="0">—</td></tr>
+          <tr><td class="l q">Prix $/GPU-h</td><td class="p" data-draw="q_usd" data-source="pricer" data-field="prix_usd" data-row="0">—</td></tr>
+          <tr><td class="l q">Prix €/GPU-h</td><td class="p" data-draw="q_eur" data-source="pricer" data-field="prix_eur" data-row="0">—</td></tr>
+          <tr><td class="l q">Valeur contrat €</td><td class="p" data-draw="q_val" data-source="pricer" data-field="valeur_eur" data-row="0">—</td></tr>
+          <tr><td class="l q">Commission €</td><td class="p" data-draw="q_comm" data-source="pricer" data-field="commission_eur" data-row="0">—</td></tr>
+          <tr><td class="l q">Statut</td><td class="q" data-draw="q_st" data-source="pricer" data-field="statut" data-row="0">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel" id="news">
+      <div class="ph"><h2>News marché</h2><span class="src">GOOGLE NEWS · SÉLECTION</span></div>
+      <div class="tw news">
+        <table data-source="news" data-row-key="id" aria-label="News">
+          <thead><tr><th class="l" data-field="date">Date</th><th class="l" data-field="source">Source</th><th class="l" data-field="titre">Titre</th></tr></thead>
+          <tbody data-draw="news"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel" id="agenda">
+      <div class="ph"><h2>Agenda</h2><span class="src">RÉGLEMENTAIRE · RÈGLEMENTS · INTERNE</span></div>
+      <div class="tw">
+        <table data-source="agenda" data-row-key="evenement" aria-label="Agenda">
+          <thead><tr><th class="l" data-field="date">Date</th><th class="l" data-field="evenement">Événement</th><th class="l" data-field="statut">Statut</th></tr></thead>
+          <tbody data-draw="agenda"></tbody>
+        </table>
+      </div>
+      <div class="ph"><h2>Références</h2></div>
+      <div class="tw">
+        <table data-source="refs" data-row-key="id" aria-label="Références">
+          <thead><tr><th class="l" data-field="label">Indicateur</th><th data-field="valeur">Valeur</th><th data-field="date">Date</th></tr></thead>
+          <tbody data-draw="refs"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  const DAY = 86400000, MO = 30.4375;
+  const iso = (d) => d.toISOString().slice(0, 10);
+  const fr = (s) => (s ? s.slice(8, 10) + '/' + s.slice(5, 7) + '/' + s.slice(0, 4) : '');
+  const parseTenor = (txt, asof) => {
+    const s = String(txt || '').trim().toUpperCase().replace(',', '.');
+    const base = new Date(asof + 'T00:00:00Z');
+    let m = s.match(/^(\d+(?:\.\d+)?)\s*(M|A|Y|J|D|S|W)$/);
+    if (m) {
+      const n = +m[1], u = m[2];
+      if (u === 'M' || u === 'A' || u === 'Y') {
+        const months = u === 'M' ? n : n * 12;
+        const whole = Math.floor(months), d = new Date(base);
+        d.setUTCMonth(d.getUTCMonth() + whole);
+        const e = new Date(d.getTime() + (months - whole) * MO * DAY);
+        return { mois: months, echeance: iso(e) };
+      }
+      const days = (u === 'J' || u === 'D') ? n : n * 7;
+      return { mois: days / MO, echeance: iso(new Date(base.getTime() + days * DAY)) };
+    }
+    m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/) || null;
+    let e = null;
+    if (m) e = new Date(Date.UTC(+m[3], +m[2] - 1, +m[1]));
+    m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (m) e = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+    if (!e || isNaN(e)) return null;
+    const mois = (e - base) / DAY / MO;
+    return mois < 0 ? null : { mois, echeance: iso(e) };
+  };
+  const interp = (pts, t) => {
+    if (!pts.length || t == null) return null;
+    const lerp = (a, b, w) => (a == null || b == null ? null : a + (b - a) * w);
+    if (t <= pts[0].m) return { ...pts[0], ext: t < pts[0].m ? 'bas' : '' };
+    const last = pts[pts.length - 1];
+    if (t >= last.m) return { ...last, ext: t > last.m ? 'haut' : '' };
+    let i = 0; while (pts[i + 1].m < t) i++;
+    const a = pts[i], b = pts[i + 1], w = (t - a.m) / (b.m - a.m);
+    return { m: t, p: lerp(a.p, b.p, w), lo: lerp(a.lo, b.lo, w), hi: lerp(a.hi, b.hi, w), ext: '', interp: w > 0 && w < 1 };
+  };
+  const monthDiff = (mois, dateIso) => (+mois.slice(0, 4) - +dateIso.slice(0, 4)) * 12 + (+mois.slice(5, 7) - +dateIso.slice(5, 7));
+  // Courbe de terme Kalshi : point 0 = contrat du mois en cours ; terme n mois = moyenne des forwards des mois 1..n, arrêtée au premier forward non borné.
+  const kalshiPts = (fwds) => {
+    const byK = {}; fwds.forEach((f) => { byK[f.k] = f; });
+    const pts = [];
+    if (byK[0] && byK[0].ok) pts.push({ m: 0, p: byK[0].p, lo: byK[0].lo, hi: byK[0].hi, q: byK[0].q });
+    let sum = 0, slo = 0, shi = 0, bandOk = true, worst = 'bon';
+    for (let k = 1; byK[k] && byK[k].ok; k++) {
+      sum += byK[k].p;
+      if (byK[k].lo == null || byK[k].hi == null) bandOk = false; else { slo += byK[k].lo; shi += byK[k].hi; }
+      if (byK[k].q !== 'bon') worst = byK[k].q;
+      pts.push({ m: k, p: sum / k, lo: bandOk ? slo / k : null, hi: bandOk ? shi / k : null, q: worst });
+    }
+    return pts;
+  };
+  window.CG = { parseTenor, interp, monthDiff, kalshiPts, fr };
+
+  const KDEF = ['1M', '2M', '3M', '4M', '5M', '6M', '9M'];
+  const LDEF = ['1M', '3M', '6M', '1A', '2A', '3A'];
+  window.CG.KDEF = KDEF; window.CG.LDEF = LDEF;
+  const pctchg = (a, b) => (a == null || b == null || !b ? null : +((a / b - 1) * 100).toFixed(2));
+
+  dash.calc('kalshi_term', {
+    title: 'Courbe Kalshi par ténor',
+    description: 'Terme à maturité constante tiré des forwards mensuels Kalshi du GPU choisi, pour chaque ténor saisi, avec ses variations sur 1 jour, 1 mois et 3 mois.',
+    inputs: ['kalshi', 'kalshi_hist'],
+    fn: (kalshi, kalshi_hist) => {
+      const prm = dash.params(), gpu = prm.p_gpu || 'H100';
+      if (!kalshi.length) return [];
+      const asof = kalshi[0].date;
+      const today = kalshi.filter((r) => r.gpu === gpu).map((r) => ({ k: +r.k, p: +r.prix, lo: r.q25 == null ? null : +r.q25, hi: r.q75 == null ? null : +r.q75, ok: !r.borne, q: r.qualite }));
+      const pts = window.CG.kalshiPts(today);
+      const byDate = {};
+      kalshi_hist.filter((r) => r.gpu === gpu).forEach((r) => { (byDate[r.date] = byDate[r.date] || []).push({ k: window.CG.monthDiff(r.mois, r.date), p: +r.prix, lo: null, hi: null, ok: true, q: 'bon' }); });
+      const dates = Object.keys(byDate).sort();
+      const near = (days) => {
+        const target = new Date(asof + 'T00:00:00Z').getTime() - days * 86400000;
+        let best = null;
+        dates.forEach((d) => { const g = Math.abs(new Date(d + 'T00:00:00Z') - target) / 86400000; if (g <= (days === 1 ? 3 : 6) && d < asof && (!best || g < best.g)) best = { d, g }; });
+        return best ? window.CG.kalshiPts(byDate[best.d]) : null;
+      };
+      const h1 = near(1), h30 = near(30), h91 = near(91);
+      return window.CG.KDEF.map((def, i) => {
+        const label = prm['k' + (i + 1)] || def;
+        const t = window.CG.parseTenor(label, asof);
+        const base = { row: String(i + 1), label, gpu };
+        if (!t) return { ...base, echeance: '', mois: null, terme: null, bas: null, haut: null, var_1j: null, var_1m: null, var_3m: null, statut: 'INVALIDE' };
+        const v = pts.length ? window.CG.interp(pts, t.mois) : null;
+        const out = !v || v.ext === 'haut';
+        const at = (h) => { if (!h || !h.length) return null; const x = window.CG.interp(h, t.mois); return x && !x.ext ? x.p : null; };
+        const p = out ? null : v.p;
+        return { ...base, echeance: t.echeance, mois: +t.mois.toFixed(2), terme: p == null ? null : +p.toFixed(3),
+          bas: out || v.lo == null ? null : +v.lo.toFixed(3), haut: out || v.hi == null ? null : +v.hi.toFixed(3),
+          var_1j: out ? null : pctchg(p, at(h1)), var_1m: out ? null : pctchg(p, at(h30)), var_3m: out ? null : pctchg(p, at(h91)),
+          statut: out ? 'HORS COURBE' : (v.interp ? 'INTERP · ' : '') + (v.q === 'bon' ? 'BON' : 'MINCE') };
+      });
+    },
+  });
+
+  dash.calc('listes_term', {
+    title: 'Prix affichés par ténor',
+    description: 'Médiane des prix réservés H100 publiés par les néoclouds, interpolée sur chaque ténor saisi.',
+    inputs: ['listes', 'kalshi'],
+    fn: (listes, kalshi) => {
+      const prm = dash.params();
+      const asof = kalshi.length ? kalshi[0].date : '2026-11-18';
+      const pts = listes.filter((r) => +r.mois > 0).map((r) => ({ m: +r.mois, p: +r.mediane, lo: r.q25 == null ? null : +r.q25, hi: r.q75 == null ? null : +r.q75, n: +r.n })).sort((a, b) => a.m - b.m);
+      return window.CG.LDEF.map((def, i) => {
+        const label = prm['l' + (i + 1)] || def;
+        const t = window.CG.parseTenor(label, asof);
+        const base = { row: String(i + 1), label };
+        if (!t) return { ...base, echeance: '', mediane: null, q25: null, q75: null, n: null, statut: 'INVALIDE' };
+        const v = window.CG.interp(pts, t.mois);
+        const exact = pts.find((x) => Math.abs(x.m - t.mois) < 0.05);
+        return { ...base, echeance: t.echeance, mediane: +v.p.toFixed(3), q25: v.lo == null ? null : +v.lo.toFixed(3), q75: v.hi == null ? null : +v.hi.toFixed(3),
+          n: exact ? exact.n : null, statut: v.ext ? 'EXTRAP. PLAT' : (exact ? 'OBSERVÉ' : 'INTERP') };
+      });
+    },
+  });
+
+  dash.calc('basis', {
+    title: 'Basis',
+    description: 'Écarts entre sources pour un même GPU : indices spot, Kalshi, Silicon Data et prix affichés.',
+    inputs: ['spot', 'kalshi', 'sd_term', 'listes'],
+    fn: (spot, kalshi, sd_term, listes) => {
+      const rows = [];
+      const add = (id, label, gpu, v) => { if (v != null && Number.isFinite(v)) rows.push({ id, label, gpu, valeur: +v.toFixed(3) }); };
+      spot.forEach((s) => { if (s.ornn != null && s.sd != null) add('sd_ornn_' + s.gpu, 'Silicon Data − Ornn', s.gpu, +s.sd - +s.ornn); });
+      spot.forEach((s) => {
+        const k0 = kalshi.find((r) => r.gpu === s.gpu && +r.k === 0 && !r.borne);
+        if (k0 && s.ornn != null) add('k0_ornn_' + s.gpu, 'Kalshi mois en cours − Ornn', s.gpu, +k0.prix - +s.ornn);
+      });
+      const h = kalshi.filter((r) => r.gpu === 'H100').map((r) => ({ k: +r.k, p: +r.prix, lo: null, hi: null, ok: !r.borne, q: r.qualite }));
+      const kp = window.CG.kalshiPts(h);
+      const kAt = (m) => { const v = kp.length ? window.CG.interp(kp, m) : null; return v && !v.ext ? v.p : null; };
+      const sdAt = (m) => { const r = sd_term.find((x) => +x.mois === m); return r ? +r.terme : null; };
+      const o = spot.find((s) => s.gpu === 'H100') || {};
+      const od = listes.find((r) => r.tenor === 'On-demand');
+      const l6 = listes.find((r) => +r.mois === 6);
+      if (kAt(1) != null && o.ornn != null) add('k1_ornn', 'Kalshi 1M − Ornn', 'H100', kAt(1) - +o.ornn);
+      if (kAt(6) != null && sdAt(6) != null) add('k6_sd6', 'Kalshi 6M − Silicon Data 6M', 'H100', kAt(6) - sdAt(6));
+      if (sdAt(0) != null && o.ornn != null) add('sd0_ornn', 'Silicon Data terme 0 − Ornn', 'H100', sdAt(0) - +o.ornn);
+      if (od && o.ornn != null) add('od_ornn', 'Affiché on-demand − Ornn', 'H100', +od.mediane - +o.ornn);
+      if (l6 && sdAt(6) != null) add('l6_sd6', 'Affiché 6M − Silicon Data 6M', 'H100', +l6.mediane - sdAt(6));
+      return rows;
+    },
+  });
+
+  dash.calc('spreads_gen', {
+    title: 'Spreads entre générations',
+    description: 'Écarts de prix spot entre GPU, mesurés séparément sur Ornn et sur Silicon Data.',
+    inputs: ['spot'],
+    fn: (spot) => {
+      const g = (id, f) => { const r = spot.find((s) => s.gpu === id); return r && r[f] != null ? +r[f] : null; };
+      const d = (a, b, f) => (g(a, f) == null || g(b, f) == null ? null : +(g(a, f) - g(b, f)).toFixed(3));
+      const x = (a, b, f) => (g(a, f) == null || !g(b, f) ? null : +(g(a, f) / g(b, f)).toFixed(3));
+      return [
+        { id: 'h200_h100', label: 'H200 − H100', ornn: d('H200', 'H100', 'ornn'), sd: d('H200', 'H100', 'sd'), unite: '$/h' },
+        { id: 'b200_h100', label: 'B200 − H100', ornn: d('B200', 'H100', 'ornn'), sd: d('B200', 'H100', 'sd'), unite: '$/h' },
+        { id: 'b200_h100x', label: 'B200 / H100', ornn: x('B200', 'H100', 'ornn'), sd: x('B200', 'H100', 'sd'), unite: 'x' },
+        { id: 'b300_b200', label: 'B300 − B200', ornn: d('B300', 'B200', 'ornn'), sd: d('B300', 'B200', 'sd'), unite: '$/h' },
+        { id: 'h100_a100', label: 'H100 − A100', ornn: d('H100', 'A100', 'ornn'), sd: d('H100', 'A100', 'sd'), unite: '$/h' },
+      ];
+    },
+  });
+
+  dash.calc('pricer', {
+    title: 'Pricer contrat à terme',
+    description: 'Prix interpolé sur la courbe choisie pour le GPU et le ténor saisis, en dollars et en euros, avec la valeur du contrat et la commission.',
+    inputs: ['kalshi', 'sd_term', 'listes', 'refs'],
+    fn: (kalshi, sd_term, listes, refs) => {
+      const prm = dash.params();
+      const curve = prm.q_curve || 'Kalshi', gpu = prm.q_gpu || 'H100', n = +prm.q_n, comm = +prm.q_comm;
+      const asof = kalshi.length ? kalshi[0].date : '2026-11-18';
+      const t = window.CG.parseTenor(prm.q_ten || '6M', asof);
+      const fx = +((refs.find((r) => r.id === 'eurusd') || {}).valeur);
+      if (!t) return [{ echeance: '', mois: null, prix_usd: null, prix_eur: null, valeur_eur: null, commission_eur: null, statut: 'TÉNOR INVALIDE' }];
+      let pts = [];
+      if (curve === 'Kalshi') pts = window.CG.kalshiPts(kalshi.filter((r) => r.gpu === gpu).map((r) => ({ k: +r.k, p: +r.prix, lo: null, hi: null, ok: !r.borne, q: r.qualite })));
+      else if (curve === 'Silicon Data') pts = gpu === 'H100' ? sd_term.map((r) => ({ m: +r.mois, p: +r.terme })).sort((a, b) => a.m - b.m) : [];
+      else pts = gpu === 'H100' ? listes.filter((r) => +r.mois > 0).map((r) => ({ m: +r.mois, p: +r.mediane })).sort((a, b) => a.m - b.m) : [];
+      const v = pts.length ? window.CG.interp(pts, t.mois) : null;
+      const hors = !v || (v.ext === 'haut' && curve !== 'Affiché');
+      if (hors) return [{ echeance: t.echeance, mois: +t.mois.toFixed(2), prix_usd: null, prix_eur: null, valeur_eur: null, commission_eur: null, statut: pts.length ? 'HORS COURBE' : 'PAS DE COURBE' }];
+      const val = v.p * 730 * t.mois * n;
+      return [{ echeance: t.echeance, mois: +t.mois.toFixed(2), prix_usd: +v.p.toFixed(3), prix_eur: +(v.p / fx).toFixed(3),
+        valeur_eur: Math.round(val / fx), commission_eur: Math.round(val / fx * comm / 100), statut: v.ext ? 'EXTRAP. PLAT' : (v.interp ? 'INTERP' : 'OBSERVÉ') }];
+    },
+  });
+
+  dash.calc('cot_eval', {
+    title: 'Cotations vs courbes',
+    description: 'Chaque cotation reçue comparée à la courbe Kalshi et aux prix affichés pour le même GPU et la même durée.',
+    inputs: ['cotations', 'kalshi', 'listes'],
+    fn: (cotations, kalshi, listes) => cotations.map((q) => {
+      const m = +q.duree;
+      const kp = window.CG.kalshiPts(kalshi.filter((r) => r.gpu === q.gpu).map((r) => ({ k: +r.k, p: +r.prix, lo: null, hi: null, ok: !r.borne, q: r.qualite })));
+      const kv = kp.length ? window.CG.interp(kp, m) : null;
+      const lp = q.gpu === 'H100' ? listes.filter((r) => +r.mois > 0).map((r) => ({ m: +r.mois, p: +r.mediane })).sort((a, b) => a.m - b.m) : [];
+      const lv = lp.length ? window.CG.interp(lp, m) : null;
+      const k = kv && !kv.ext ? +kv.p.toFixed(3) : null, a = lv ? +lv.p.toFixed(3) : null;
+      return { id: q.id, date: q.date, fournisseur: q.fournisseur, gpu: q.gpu, nb: +q.nb, duree: m, region: q.region || '', type: q.type, prix: +q.prix,
+        kalshi: k, ecart_kalshi: k ? +((q.prix / k - 1) * 100).toFixed(1) : null, affiche: a, ecart_affiche: a ? +((q.prix / a - 1) * 100).toFixed(1) : null };
+    }).sort((x, y) => String(y.date).localeCompare(String(x.date))),
+  });
+
+  dash.calc('chart_data', {
+    title: 'Séries du chart',
+    description: 'Historique quotidien de chaque prix glissé sur le chart.',
+    inputs: ['hist_spot', 'kalshi_hist', 'sd_term_hist'],
+    fn: (hist_spot, kalshi_hist, sd_term_hist) => {
+      const ids = String(dash.params().c_series || '').split(';').filter(Boolean);
+      const M = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+      const out = [];
+      ids.forEach((id) => {
+        const [kind, a, b, c] = id.split('|');
+        const push = (label, date, v) => { if (v != null && Number.isFinite(v)) out.push({ serie: id, label, date, valeur: +v.toFixed(4) }); };
+        if (kind === 'ornn' || kind === 'sd') hist_spot.filter((r) => r.source === kind && r.gpu === a).forEach((r) => push((kind === 'ornn' ? 'Ornn ' : 'Silicon Data ') + a, r.date, +r.prix));
+        else if (kind === 'kfwd') kalshi_hist.filter((r) => r.gpu === a && r.mois === b).forEach((r) => push('Kalshi ' + a + ' fwd ' + M[+b.slice(5, 7) - 1] + ' ' + b.slice(2, 4), r.date, +r.prix));
+        else if (kind === 'kcm') {
+          const by = {};
+          kalshi_hist.filter((r) => r.gpu === a).forEach((r) => { (by[r.date] = by[r.date] || []).push({ k: window.CG.monthDiff(r.mois, r.date), p: +r.prix, lo: null, hi: null, ok: true, q: 'bon' }); });
+          Object.keys(by).sort().forEach((d) => { const pts = window.CG.kalshiPts(by[d]); const v = pts.length ? window.CG.interp(pts, +b) : null; if (v && !v.ext) push('Kalshi ' + a + ' ' + c, d, v.p); });
+        } else if (kind === 'sdt') sd_term_hist.filter((r) => +r.mois === +a).forEach((r) => push('Silicon Data terme ' + (+a === 0 ? 'spot' : a + 'M'), r.date, +r.terme));
+      });
+      return out.sort((x, y) => (x.serie === y.serie ? x.date.localeCompare(y.date) : 0));
+    },
+  });
+})();
+</script>
+
+<script>
+(function () {
+  const f3 = d3.format('.3f'), f0 = (v) => d3.format(',.0f')(v).replace(/,/g, ' ');
+  const pct = (v) => (v == null || v === '' ? '—' : (+v > 0 ? '+' : '') + d3.format('.2f')(+v) + '%');
+  const cls = (v) => (v == null || v === '' ? 'v na' : (+v > 0 ? 'v up' : (+v < 0 ? 'v dn' : 'v')));
+
+  const PAL = ['#ffffff', '#4da3ff', '#2bb673', '#e5484d', '#b48cff', '#8fd3ff'];
+  const chartOpen = () => { const p = document.getElementById('chart'); return p && !p.hidden; };
+  const addSeries = (id) => {
+    const cur = String(dash.params().c_series || '').split(';').filter(Boolean);
+    if (!cur.includes(id) && cur.length < 6) dash.setParams({ c_series: cur.concat(id).join(';') });
+  };
+  const dragify = (td, id) => {
+    td.setAttribute('draggable', 'true');
+    td.addEventListener('dragstart', (e) => { e.dataTransfer.setData('text/plain', id); e.dataTransfer.effectAllowed = 'copy'; });
+    td.addEventListener('click', () => { if (chartOpen()) addSeries(id); });
+  };
+  document.querySelectorAll('#chbtn').forEach((b) => b.addEventListener('click', () => {
+    document.querySelectorAll('#chart').forEach((p) => { p.hidden = !p.hidden; b.className = p.hidden ? 'chbtn' : 'chbtn on'; });
+    document.querySelectorAll('.cg').forEach((c) => { c.className = chartOpen() ? 'cg charting' : 'cg'; });
+    dash.draw('chart'); dash.draw('c_title'); dash.draw('c_src');
+  }));
+  document.querySelectorAll('#chclear').forEach((b) => b.addEventListener('click', () => dash.setParams({ c_series: '' })));
+  document.querySelectorAll('#chartbox').forEach((box) => {
+    box.addEventListener('dragover', (e) => { e.preventDefault(); box.classList.add('over'); });
+    box.addEventListener('dragleave', () => box.classList.remove('over'));
+    box.addEventListener('drop', (e) => { e.preventDefault(); box.classList.remove('over'); const id = e.dataTransfer.getData('text/plain'); if (id) addSeries(id); });
+  });
+  const chartSeries = () => {
+    const d = dash.data('chart_data'); if (d.status !== 'ok' || !Array.isArray(d.data)) return [];
+    const ids = String(dash.params().c_series || '').split(';').filter(Boolean);
+    return ids.map((id, i) => ({ id, color: PAL[i % PAL.length], label: (d.data.find((r) => r.serie === id) || {}).label || id.split('|').join(' '),
+      pts: d.data.filter((r) => r.serie === id).map((r) => ({ d: new Date(r.date + 'T00:00:00Z'), v: +r.valeur, date: r.date })) }));
+  };
+  dash.draw('c_title', (el) => { const s = chartSeries(); el.textContent = s.length ? s.map((x) => x.label).join('  ·  ') : 'CHART'; });
+  dash.draw('c_src', (el) => {
+    const s = chartSeries(); if (!s.length) { el.textContent = 'SOURCES : —'; return; }
+    const src = new Set(); s.forEach((x) => { const k = x.id.split('|')[0]; src.add(k === 'ornn' ? 'ORNN OCPI' : (k === 'sd' || k === 'sdt' ? 'SILICON DATA' : 'KALSHI (MÉDIANE IMPLICITE)')); });
+    const last = d3.max(s.flatMap((x) => x.pts.map((p) => p.date)));
+    el.textContent = 'SOURCES : ' + [...src].join(' · ') + (last ? ' · AU ' + window.CG.fr(last) : '');
+  });
+  dash.draw('chart', (box) => {
+    box.replaceChildren();
+    const S = chartSeries().filter((x) => x.pts.length);
+    const lg = document.createElement('div'); lg.className = 'lg'; box.appendChild(lg);
+    chartSeries().forEach((x) => {
+      const it = document.createElement('span'); it.className = 'it';
+      const sw = document.createElement('i'); sw.style.background = x.color; it.appendChild(sw);
+      it.appendChild(document.createTextNode(x.label + ' '));
+      const b = document.createElement('b'); b.textContent = x.pts.length ? d3.format('.3f')(x.pts[x.pts.length - 1].v) : 'PAS D’HISTORIQUE'; it.appendChild(b);
+      const rm = document.createElement('button'); rm.textContent = '×'; rm.setAttribute('aria-label', 'Retirer');
+      rm.addEventListener('click', () => { const cur = String(dash.params().c_series || '').split(';').filter((y) => y && y !== x.id); dash.setParams({ c_series: cur.join(';') }); });
+      it.appendChild(rm); lg.appendChild(it);
+    });
+    if (!S.length) { const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'GLISSER UN PRIX ICI'; box.appendChild(e); return; }
+    const W = Math.max(300, box.clientWidth - 12), H = 320, m = { t: 14, r: 64, b: 26, l: 10 };
+    const all = S.flatMap((x) => x.pts);
+    const x = d3.scaleUtc().domain(d3.extent(all, (p) => p.d)).range([m.l, W - m.r]);
+    if (x.domain()[0].getTime() === x.domain()[1].getTime()) x.domain([new Date(x.domain()[0].getTime() - 86400000 * 3), new Date(x.domain()[1].getTime() + 86400000 * 3)]);
+    const [lo, hi] = d3.extent(all, (p) => p.v), pad = (hi - lo) * 0.08 || Math.max(0.05, hi * 0.02);
+    const y = d3.scaleLinear().domain([lo - pad, hi + pad]).nice(6).range([H - m.b, m.t]);
+    const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+      .attr('aria-label', 'Historique : ' + S.map((s) => s.label).join(', '));
+    svg.append('g').selectAll('line').data(y.ticks(6)).join('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', (d) => y(d)).attr('y2', (d) => y(d)).attr('stroke', '#161a21');
+    svg.append('g').attr('transform', `translate(${W - m.r},0)`).call(d3.axisRight(y).ticks(6).tickFormat(d3.format('.3f')).tickSize(0).tickPadding(8))
+      .call((g) => g.select('.domain').remove()).selectAll('text').attr('fill', '#8a94a3').attr('font-size', 10);
+    const fmt = d3.utcFormat('%d/%m'), nx = Math.max(2, Math.floor((W - m.l - m.r) / 80));
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(nx).tickFormat(fmt).tickSize(0).tickPadding(9))
+      .call((g) => g.select('.domain').attr('stroke', '#2a303a')).selectAll('text').attr('fill', '#8a94a3').attr('font-size', 10);
+    const line = d3.line().x((p) => x(p.d)).y((p) => y(p.v));
+    S.forEach((s) => {
+      svg.append('path').datum(s.pts).attr('fill', 'none').attr('stroke', s.color).attr('stroke-width', 1.6).attr('d', line);
+      if (s.pts.length < 3) svg.append('g').selectAll('circle').data(s.pts).join('circle').attr('cx', (p) => x(p.d)).attr('cy', (p) => y(p.v)).attr('r', 2.5).attr('fill', s.color);
+    });
+    const tip = document.createElement('div'); tip.className = 'tip'; tip.hidden = true; box.appendChild(tip);
+    const vline = svg.append('line').attr('y1', m.t).attr('y2', H - m.b).attr('stroke', '#3a414d').attr('stroke-dasharray', '2,3').style('display', 'none');
+    const dates = [...new Set(all.map((p) => p.date))].sort();
+    svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
+      .on('mousemove', (ev) => {
+        const [mx] = d3.pointer(ev); const t = x.invert(mx).getTime();
+        const d = dates.reduce((a, b) => (Math.abs(new Date(b + 'T00:00:00Z') - t) < Math.abs(new Date(a + 'T00:00:00Z') - t) ? b : a), dates[0]);
+        const xd = x(new Date(d + 'T00:00:00Z')); vline.attr('x1', xd).attr('x2', xd).style('display', null);
+        tip.replaceChildren(); const h = document.createElement('div'); h.textContent = window.CG.fr(d); tip.appendChild(h);
+        S.forEach((s) => { const p = s.pts.find((q) => q.date === d); if (!p) return; const r = document.createElement('div'); const sw = document.createElement('span'); sw.textContent = '— '; sw.style.color = s.color; r.appendChild(sw); r.appendChild(document.createTextNode(s.label + ' ')); const b = document.createElement('b'); b.textContent = d3.format('.3f')(p.v); r.appendChild(b); tip.appendChild(r); });
+        tip.hidden = false; const bw = box.clientWidth; const px = (xd / W) * bw;
+        tip.style.left = (px > bw / 2 ? px - tip.offsetWidth - 12 : px + 12) + 'px'; tip.style.top = '40px';
+      })
+      .on('mouseleave', () => { tip.hidden = true; vline.style('display', 'none'); });
+  });
+  const ok = (id) => dash.data(id).status === 'ok';
+  const rows = (id) => (ok(id) && Array.isArray(dash.data(id).data) ? dash.data(id).data : []);
+  const cell = (tr, txt, c, attrs) => { const td = document.createElement('td'); td.textContent = txt; td.className = c || ''; Object.entries(attrs || {}).forEach(([k, v]) => td.setAttribute(k, v)); tr.appendChild(td); return td; };
+
+  dash.draw('h_k', (el) => { const r = rows('kalshi')[0]; el.textContent = r ? window.CG.fr(r.date) : '—'; });
+  dash.draw('h_fx', (el) => { const r = rows('refs').find((x) => x.id === 'eurusd'); el.textContent = r ? d3.format('.4f')(+r.valeur) : '—'; });
+  dash.draw('sd_d', (el) => { const r = rows('sd_term')[0]; el.textContent = r ? 'AU ' + window.CG.fr(r.date) : '—'; });
+  dash.draw('od', (el) => { const r = rows('listes').find((x) => x.tenor === 'On-demand'); el.textContent = r ? f3(+r.mediane) : '—'; });
+
+  dash.draw('spot', (tb) => {
+    tb.replaceChildren();
+    rows('spot').forEach((s) => {
+      const tr = document.createElement('tr');
+      const m = (f) => ({ 'data-source': 'spot', 'data-field': f, 'data-where': 'gpu=' + s.gpu });
+      cell(tr, s.gpu, 'l k');
+      const co = cell(tr, s.ornn == null ? '—' : f3(+s.ornn), s.ornn == null ? 'v na' : 'p', m('ornn')); if (s.ornn != null) dragify(co, 'ornn|' + s.gpu);
+      ['ornn_1j', 'ornn_1m', 'ornn_3m'].forEach((f) => cell(tr, pct(s[f]), cls(s[f]), m(f)));
+      cell(tr, s.ornn_date ? window.CG.fr(s.ornn_date) : '—', 'd');
+      const cs = cell(tr, s.sd == null ? '—' : f3(+s.sd), (s.sd == null ? 'v na' : 'p') + ' sepl', m('sd')); if (s.sd != null) dragify(cs, 'sd|' + s.gpu);
+      ['sd_1j', 'sd_1m', 'sd_3m'].forEach((f) => cell(tr, pct(s[f]), cls(s[f]), m(f)));
+      cell(tr, s.sd_date ? window.CG.fr(s.sd_date) : '—', 'd');
+      tb.appendChild(tr);
+    });
+  });
+
+  // Onglets GPU
+  const setTabs = () => document.querySelectorAll('#tabs button').forEach((b) => { b.className = b.getAttribute('data-gpu') === (dash.params().p_gpu || 'H100') ? 'on' : ''; });
+  document.querySelectorAll('#tabs button').forEach((b) => b.addEventListener('click', () => { dash.setParams({ p_gpu: b.getAttribute('data-gpu') }); setTabs(); }));
+  setTabs();
+
+  const editable = (tr, label, name) => {
+    const td = document.createElement('td'); td.className = 'l';
+    const inp = document.createElement('input'); inp.className = 'ten'; inp.value = label; inp.setAttribute('aria-label', 'Ténor');
+    inp.addEventListener('change', () => { const v = inp.value.trim(); if (v) dash.setParams({ [name]: v }); });
+    inp.addEventListener('keydown', (e) => { if (e.key === 'Enter') inp.blur(); });
+    td.appendChild(inp); tr.appendChild(td);
+  };
+
+  dash.draw('kterm', (tb) => {
+    tb.replaceChildren();
+    rows('kalshi_term').forEach((r) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', r.row);
+      editable(tr, r.label, 'k' + r.row);
+      cell(tr, r.echeance ? window.CG.fr(r.echeance) : '—', 'l d');
+      const ct = cell(tr, r.terme == null ? '—' : f3(r.terme), r.terme == null ? 'v na' : 'p'); if (r.terme != null) dragify(ct, 'kcm|' + r.gpu + '|' + r.mois + '|' + r.label);
+      ['var_1j', 'var_1m', 'var_3m'].forEach((f) => cell(tr, pct(r[f]), cls(r[f])));
+      cell(tr, r.bas == null ? '—' : f3(r.bas), r.bas == null ? 'v na' : 'v');
+      cell(tr, r.haut == null ? '—' : f3(r.haut), r.haut == null ? 'v na' : 'v');
+      cell(tr, r.statut, 'l q' + (/BON/.test(r.statut) ? ' bon' : ''));
+      tb.appendChild(tr);
+    });
+  });
+  document.querySelectorAll('#kreset').forEach((b) => b.addEventListener('click', () => { const o = {}; window.CG.KDEF.forEach((d, i) => { o['k' + (i + 1)] = d; }); dash.setParams(o); }));
+
+  dash.draw('kstrip', (tb) => {
+    tb.replaceChildren();
+    const k = rows('kalshi');
+    const months = [...new Set(k.map((r) => r.mois))].sort();
+    const M = ['JAN', 'FÉV', 'MAR', 'AVR', 'MAI', 'JUIN', 'JUIL', 'AOÛT', 'SEP', 'OCT', 'NOV', 'DÉC'];
+    months.forEach((mo) => {
+      const tr = document.createElement('tr');
+      const r0 = k.find((r) => r.mois === mo);
+      cell(tr, M[+mo.slice(5, 7) - 1] + ' ' + mo.slice(2, 4) + (r0 && +r0.k === 0 ? ' · M0' : ''), 'l k');
+      ['H100', 'H200', 'B200', 'A100'].forEach((g) => {
+        const r = k.find((x) => x.gpu === g && x.mois === mo);
+        if (!r) { cell(tr, '—', 'v na'); return; }
+        const b = r.borne === '>=' ? '≥' : (r.borne === '<=' ? '≤' : '');
+        const ck = cell(tr, b + f3(+r.prix), b ? 'v na' : 'p', { 'data-source': 'kalshi', 'data-field': 'prix', 'data-where': 'cle=' + r.cle }); if (!b) dragify(ck, 'kfwd|' + g + '|' + mo);
+      });
+      tb.appendChild(tr);
+    });
+  });
+
+  dash.draw('sdterm', (tb) => {
+    tb.replaceChildren();
+    rows('sd_term').slice().sort((a, b) => a.mois - b.mois).forEach((r) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', String(r.mois));
+      cell(tr, +r.mois === 0 ? 'SPOT' : r.mois + 'M', 'l k');
+      dragify(cell(tr, f3(+r.terme), 'p'), 'sdt|' + r.mois); cell(tr, f3(+r.forward), 'v');
+      ['var_1j', 'var_1m', 'var_3m'].forEach((f) => cell(tr, pct(r[f]), cls(r[f])));
+      tb.appendChild(tr);
+    });
+  });
+
+  dash.draw('lterm', (tb) => {
+    tb.replaceChildren();
+    rows('listes_term').forEach((r) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', r.row);
+      editable(tr, r.label, 'l' + r.row);
+      cell(tr, r.echeance ? window.CG.fr(r.echeance) : '—', 'l d');
+      cell(tr, r.mediane == null ? '—' : f3(r.mediane), r.mediane == null ? 'v na' : 'p');
+      cell(tr, r.q25 == null ? '—' : f3(r.q25), r.q25 == null ? 'v na' : 'v');
+      cell(tr, r.q75 == null ? '—' : f3(r.q75), r.q75 == null ? 'v na' : 'v');
+      cell(tr, r.n == null ? '—' : String(r.n), r.n == null ? 'v na' : 'v');
+      cell(tr, r.statut, 'l q' + (r.statut === 'OBSERVÉ' ? ' bon' : ''));
+      tb.appendChild(tr);
+    });
+  });
+  document.querySelectorAll('#lreset').forEach((b) => b.addEventListener('click', () => { const o = {}; window.CG.LDEF.forEach((d, i) => { o['l' + (i + 1)] = d; }); dash.setParams(o); }));
+
+  dash.draw('basis', (tb) => {
+    tb.replaceChildren();
+    rows('basis').forEach((r) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', r.id);
+      cell(tr, r.label, 'l'); cell(tr, r.gpu, 'l k');
+      cell(tr, (r.valeur > 0 ? '+' : '') + f3(r.valeur), 'p');
+      tb.appendChild(tr);
+    });
+  });
+
+  dash.draw('spreads', (tb) => {
+    tb.replaceChildren();
+    rows('spreads_gen').forEach((r) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', r.id);
+      const fm = (v) => (v == null ? '—' : (r.unite === 'x' ? f3(v) + 'x' : (v > 0 ? '+' : '') + f3(v)));
+      cell(tr, r.label, 'l k'); cell(tr, fm(r.ornn), r.ornn == null ? 'v na' : 'p'); cell(tr, fm(r.sd), (r.sd == null ? 'v na' : 'p') + ' sepl'); cell(tr, r.unite, 'l d');
+      tb.appendChild(tr);
+    });
+  });
+
+  // Pricer
+  const P = dash.params();
+  const bind = (id, name, num) => document.querySelectorAll('#' + id).forEach((el) => {
+    if (P[name] != null) el.value = P[name];
+    el.addEventListener('change', () => { const v = num ? Number(el.value) : el.value.trim(); if ((num && Number.isFinite(v)) || (!num && v)) dash.setParams({ [name]: v }); });
+  });
+  bind('q-curve', 'q_curve'); bind('q-gpu', 'q_gpu'); bind('q-ten', 'q_ten'); bind('q-n', 'q_n', true); bind('q-comm', 'q_comm', true);
+  const pr = () => rows('pricer')[0] || null;
+  dash.draw('q_ech', (el) => { const r = pr(); el.textContent = r && r.echeance ? window.CG.fr(r.echeance) : '—'; });
+  dash.draw('q_m', (el) => { const r = pr(); el.textContent = r && r.mois != null ? d3.format('.2f')(r.mois) : '—'; });
+  dash.draw('q_usd', (el) => { const r = pr(); el.textContent = r && r.prix_usd != null ? f3(r.prix_usd) : '—'; });
+  dash.draw('q_eur', (el) => { const r = pr(); el.textContent = r && r.prix_eur != null ? f3(r.prix_eur) : '—'; });
+  dash.draw('q_val', (el) => { const r = pr(); el.textContent = r && r.valeur_eur != null ? f0(r.valeur_eur) : '—'; });
+  dash.draw('q_comm', (el) => { const r = pr(); el.textContent = r && r.commission_eur != null ? f0(r.commission_eur) : '—'; });
+  dash.draw('q_st', (el) => { const r = pr(); el.textContent = r ? r.statut : '—'; });
+
+  dash.draw('cot', (tb) => {
+    tb.replaceChildren();
+    rows('cot_eval').forEach((r) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', r.id);
+      cell(tr, window.CG.fr(r.date), 'l d'); cell(tr, r.fournisseur, 'l'); cell(tr, r.gpu, 'l k'); cell(tr, String(r.nb), 'v'); cell(tr, String(r.duree), 'v');
+      cell(tr, r.region, 'l d'); cell(tr, String(r.type || '').toUpperCase(), 'l q'); cell(tr, f3(r.prix), 'p');
+      cell(tr, r.kalshi == null ? '—' : f3(r.kalshi), (r.kalshi == null ? 'v na' : 'v') + ' sepl'); cell(tr, pct(r.ecart_kalshi), cls(r.ecart_kalshi));
+      cell(tr, r.affiche == null ? '—' : f3(r.affiche), (r.affiche == null ? 'v na' : 'v') + ' sepl'); cell(tr, pct(r.ecart_affiche), cls(r.ecart_affiche));
+      tb.appendChild(tr);
+    });
+  });
+
+  dash.draw('news', (tb) => {
+    tb.replaceChildren();
+    rows('news').forEach((r) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', r.id);
+      cell(tr, window.CG.fr(r.date), 'l d'); cell(tr, r.source, 'l q');
+      const td = document.createElement('td'); td.className = 'l wrap';
+      if (/^https:\/\//.test(r.url || '')) { const a = document.createElement('a'); a.textContent = r.titre; a.setAttribute('href', r.url); a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener noreferrer'); td.appendChild(a); }
+      else td.textContent = r.titre;
+      tr.appendChild(td); tb.appendChild(tr);
+    });
+  });
+
+  dash.draw('agenda', (tb) => {
+    tb.replaceChildren();
+    rows('agenda').forEach((r) => { const tr = document.createElement('tr'); cell(tr, /^\d{4}-/.test(r.date) ? window.CG.fr(r.date) : r.date, 'l d'); cell(tr, r.evenement, 'l wrap'); cell(tr, String(r.statut || '').toUpperCase(), 'l q'); tb.appendChild(tr); });
+  });
+  dash.draw('refs', (tb) => {
+    tb.replaceChildren();
+    rows('refs').forEach((r) => { const tr = document.createElement('tr'); tr.setAttribute('data-key', r.id); cell(tr, r.label, 'l'); cell(tr, r.unite === 'USD' ? f0(+r.valeur) + ' $' : d3.format('.4f')(+r.valeur), 'p'); cell(tr, window.CG.fr(r.date), 'd'); tb.appendChild(tr); });
+  });
+
+  document.querySelectorAll('#cot-form').forEach((form) => form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const row = { date: fd.get('date'), fournisseur: String(fd.get('fournisseur')).trim(), gpu: fd.get('gpu'), nb: Number(fd.get('nb')),
+      duree: Number(fd.get('duree')), region: String(fd.get('region') || '').trim(), prix: Number(fd.get('prix')), type: fd.get('type') };
+    let saved = true;
+    try { const db = await claude.use('db'); await db.collection('data/desk/cotations').add(row); form.reset(); } catch { saved = false; }
+    document.querySelectorAll('#cot-unsaved').forEach((p) => { p.hidden = saved; });
+  }));
+})();
+</script>
+
+</div>
+</body>
+</html>
