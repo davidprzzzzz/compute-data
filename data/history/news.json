@@ -1,5 +1,47 @@
 [
  {
+  "date": "2026-11-19",
+  "titre": "[News] NVIDIA Highlights Rising GPU Rental Rates: Hopper Up to 2X, B300 Up Over 60%",
+  "source": "TrendForce",
+  "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOV3RnTlpQQldNNkp6TjFZYmhGbXVQay0wU1Bpc1dqRzJJVlM2cGxxRnVHOTlsb1duSnJaMlNlY3R6T3dfak5Sa0RkZThReVBqWndpYzZDeU1LcE12YjBFenZxNXdXbTJEZmZjWVd4SXBNblhZeGJNckpGWGcybjJseGtuaDJicFB1NkNTMmhqVVFtNUVRQUZZdGpVbnVZOGpaZWtyRjBXU2NUM3NPaG1YekpNbl85cE9GZ2ZFRHBvMA?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "NVIDIA Announces GPU Rental Price Increases: Hopper Doubles, B300 Rises Over 60%",
+  "source": "KuCoin",
+  "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdzMycEdfZ3NxTDk0WjlSNW5INE1hR0czckF6dFFodGNGNmNUcUdPOWxpS3kxRkhnZDZGY3Y5d0ZDUnpwYlFIWFJHdmZyQkdicjY5T0tmYThpZnVneE9EYjNxQ0lpRmNFUW5SNl9rV1RVRTYzbXNCTEJXTzVPZFJFYmRuR3FmLTMwLTNzVno4cE5UTnMtTVdzSjhzX3A1bGxfOG1ScA?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "Starfield Lists New York City Edge GPU Capacity on NATIVX",
+  "source": "Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMUhRLUlqa1lFYTU3c1VlczZwRHJRanZIejg2N3d2TE50MTVmTE16OUZGTWpWQlBZbndYd2hXMjV1Z2ZZUXN6VEVpb240NUJPdFg4SDYtNXBRM3hHcE9nU1V4Z28tVGNCcWg0S1N4dW5KRXpBb0tmMVByc2J1S2l0NC1UeS1TU3F5UTZETEpNUHBlRTcyREs4ZGpR?oc=5",
+  "requete": "GPU compute futures"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "TensorWave’s 457 MW Deal With OpenAI Signals Neocloud Era for Frontier AI",
+  "source": "The Futurum Group",
+  "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMzNyTi1OUEE5ZkRFelVqZXUxVW96OHFzaW5XWVJUcTRVSWFNSlhWb3FwVlEweFFFbFFQUXJpbEhaaDI4dkp3YmF5VU9oOWtuS01jek9XZ1NXS3ZCSDB3NGw3ejIxV3RhRC1jSUtBQTRQYWdXQUZyVnljNDB5REthY25zempQcWZJVWdqeE1TNmQtSHRxMzFuUGs2YmNEbHRDMmI0YXdvMmVZeTA?oc=5",
+  "requete": "neocloud GPU capacity contract"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "Nvidia trims neocloud commitments to $32bn: What tighter vendor support means for data centre landlords",
+  "source": "Capacity Media",
+  "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1IX3o1c2ZKSFM1c2NmNTRabG00TEZJVWl4MlJGVkZYaHBpMUlyd2VCQnR4OE1KRmhCNFdSVElkQkNqeGlKcVR5MWY4UWlmVGhFUEFQc3lFREpKQWQxYzJtZkUwT01qbEZ4UzVQZEdwdUt3bEYy?oc=5",
+  "requete": "neocloud GPU capacity contract"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "AI Call Button: Why Artificial Intelligence Needs a Physical & Instant Call Button for Seamless Human-AI Interaction",
+  "source": "36Kr",
+  "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9ybnRuSVJQNGJkRkxHQVNRM292ZzBmR1lva1hCUTRENDU1aU9SY3AxVldyRl95YVk2N01fblZmQ1FwOUc2eUJ4T2JQQzlZN2c5TU5R?oc=5",
+  "requete": "H200 OR B200 rental price"
+ },
+ {
   "date": "2026-11-18",
   "titre": "NVIDIA GPU Rental Prices Have Doubled, Asserts Interim CEO Kress As She Reports A Whopping $390 Billion In Supply Commitments Fueled By Pricey Memory Chips",
   "source": "Wccftech",
@@ -96,6 +138,20 @@
   "source": "The Dark Side Of The Boom",
   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1oN0J3LUU5WjZCLTQ1ekIwd0dyOXE0WE4ybV8wcmtDOHM0U1MxZkJfWFBXdWJRMnpabTRLYmNsX2JpRmFtQlVpWFREaVdDUm16VFhhMEFjZnBINzY5YVpPZThESFdVZjI0NjVZ?oc=5",
   "requete": "H200 OR B200 rental price"
+ },
+ {
+  "date": "2026-11-18",
+  "titre": "Kalshi teams with Compute Desk to bring AI compute costs into futures",
+  "source": "Briefs Finance",
+  "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPLWpIWFAyMk15M3dqQ3R0R1FNR2pDeVB2NDNCLUVtVHdFdnJ1dV9IUk43TFlYMUVoYW44UE1hbl9kdGVVQVpRSVg1UDZHVFFXMVp6QjgzRno4YnhZOFgwbmEyMHNZdzdpVDlTNkRhdHdMcVZhUnlMY0hFem5ZOGRSNFBFOGdRWVpSbDVoMFNlNFFnUQ?oc=5",
+  "requete": "Kalshi compute GPU"
+ },
+ {
+  "date": "2026-11-18",
+  "titre": "Compute Desk Raises $45 Million To Build Compute Risk Markets",
+  "source": "Pulse 2.0",
+  "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPR2hFSGJ0SlNFM29tQW1HM0dwRDRTdEVzNU5NWHAwTVY2bHNPVE9WNDdWMktOaDQ4S1lWSDVoZVVhcVdXbmlncGM3MHNoOFRfS1ZEXzcxblQwdVJiWXhzR2FDNmdWZTRNVmU3S1pqMmJHSklKYWhydlVPbjVEYm1ySlFRUEIyZjA?oc=5",
+  "requete": "GPU compute futures"
  },
  {
   "date": "2026-11-17",
@@ -525,6 +581,13 @@
   "requete": "\"H100\" rental price"
  },
  {
+  "date": "2026-11-12",
+  "titre": "[SMM Computing Power Midday Review] H100 in Western China breaks 90,000, long-term rental premium emerges",
+  "source": "Shanghai Metals Market",
+  "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQa3NSc0RCb1pFLXF3UXQ5RW1ENUVrS3BGeC10VXA0Y05mV1VWZjdsLW9KbU01WXFLNUJSRWlDTUNkLUFnUFZzS2lveXV5am9MTjNKS3pNQmxESHBzZEV0Zm5GY2JqRzQ2cmNDREpPNVZGUVRicWxxY0xqZzRiTDdBNm9LVVhreENwN2ZGTWRGaU5JQ0VIREl6SExLbVJIelJBNl9iM01pN0hveUtlcV9uM3ZHdm9nMWh0RTVOTWwzVWZsVjVCZV9MR3BOYVJfWmc2czVLOHNIbW1ycTNQR0x2QkxieGZDWFNJM1gtd3c5aGl6SzRzemt4RnRjTFBCN3lOUVpnOFlWaw?oc=5",
+  "requete": "\"H100\" rental price"
+ },
+ {
   "date": "2026-11-11",
   "titre": "AI's pricing paradox: GPU rental prices rise as AI model costs fall",
   "source": "Yahoo Finance",
@@ -658,6 +721,13 @@
   "requete": "neocloud GPU capacity contract"
  },
  {
+  "date": "2026-11-10",
+  "titre": "Nota optimizes Kimi K3.1 Pro to cut GPU costs by up to 20%",
+  "source": "Chosunbiz",
+  "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5kNlRaNjBrUjZ1SjhzZTRFNmxIeDZRMzRwc19UcEN6ZzdWTmxvWUM4SXB3TExnSUlSX2VSc0xpOC1IT2tUV3hMLVJZMXlINjhHS0wxcmJHbEZLUXI1RnBxaVd1RjVOTWlBbC03cEltQWlKQlZCcjVNY0Fn0gGOAUFVX3lxTE9rYkt1S2Q2bFgxU2VvLUYyazNtSk1KbWhhT1k0eEhzc3lOSjBPZkdSa2JnSU9zLTVYMTdWXy02V0YwUndUa3FGbTIxbGtvS3pnc3RTUVFnVXh0WFA0Y3F6X1Z4aFBQeWVBc1NqVS16d2FaRWZsOG1YOUVwN3hqZERGYnhLSFRORzZWTFNkZVE?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
   "date": "2026-11-09",
   "titre": "Nvidia’s B200 GPU rental rates surge 74% in three months",
   "source": "Crypto Briefing",
@@ -739,6 +809,13 @@
   "titre": "Microsoft is renting less AI capacity, and the neoclouds that built on its contracts are exposed",
   "source": "MLQ.ai",
   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQRHV4Y0xyWW1saTNLRUQ2XzM1V0RlT05LSDF4Tm5CVUFsT1pLSjNDbXFvOUhMalJWdzdkR2pLVy1nY1JHbFlrSGlLY2V0aFU3U1hHa0dIei00bF9aY0hTQnMtVk9SQUdsY0NFNDI3ZFhaWWpfUHZKQk1vWHVlazdMdGhaWGYxdUFienB6dFdTSnU0OVJFVDZoNEdFQnUwUDVLTk1HWFgzcDlIWXNReGtJbWhLWHA0YXc?oc=5",
+  "requete": "neocloud GPU capacity contract"
+ },
+ {
+  "date": "2026-11-07",
+  "titre": "IREN Falls 13% in a Week, Hits $17.16 Low [2026]",
+  "source": "shattered.io",
+  "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaXpKUVpST2gxNW9ZdGJFLUNoY1JZeWItaWpxMW1aTmhfSXZuR2ZzeWpaeG1vR2J4VENWZUlIalhuNHZjSGk1b094WW9yYnRoMmpVOTl2dlRmMzAtWkxqSGk2OHpiR3lUdTBiYXJsdkVpS1RhdGN6SnNyVndyVlJYYjA0NmI?oc=5",
   "requete": "neocloud GPU capacity contract"
  },
  {

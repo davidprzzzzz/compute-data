@@ -7,7 +7,7 @@
    "mediane": 3.473,
    "q25": null,
    "q75": null,
-   "n": 36,
+   "n": 34,
    "fournisseurs": "",
    "date": "2026-11-19"
   },
@@ -59,11 +59,11 @@
    "gpu": "H100",
    "mois": 24,
    "tenor": "2A",
-   "mediane": 3.705,
+   "mediane": 3.725,
    "q25": null,
    "q75": null,
    "n": 2,
-   "fournisseurs": "Verda 4.05, Yotta Shakti Cloud 3.36",
+   "fournisseurs": "Verda 4.09, Yotta Shakti Cloud 3.36",
    "date": "2026-11-19"
   },
   {
