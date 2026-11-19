@@ -42,6 +42,62 @@
   "requete": "H200 OR B200 rental price"
  },
  {
+  "date": "2026-11-19",
+  "titre": "Stanley Lee: GPU Rental Rates Are Rising Because Credit Is Tightening, Not Just Because AI Demand Is",
+  "source": "BigGo Finance",
+  "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5aRDFNQXpXeVpGYmVyWlFndVdFdHFWMjh5a29uN09VbW9EbEk4RVFNRC03dUxXUUttaTRXZ29EUlkzTWRmVk5oODlHUlBzYm1qNTdaQjRrOC1KeXM?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "This Is The Problem With AI's Most Bullish Chart | Odd Lots｜Odd Lots (Video)",
+  "source": "finance.biggo.com",
+  "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ETGpNRTZySG94M1ZJODMwWXhscno0ellGaFFsS1ItT01PUW1UYjF0eUNhTE5yV3BCNkt5SDlIWkMzQVhQQVd3RHo5WXlpTEFmc2FHVWkwQWkzSmtxNzJZ?oc=5",
+  "requete": "\"Silicon Data\" GPU index"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "Kalshi Asks States for Help in Restricting Problem Gamblers",
+  "source": "Bloomberg.com",
+  "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNYjZxdjlFMk1pWm03ZnJzMnVpMjJQZ0Q1OXJWSDZuNllhd0ItLWU0Nm9ZV0ZVcGNFRFB2RGtDS01JYWdJTTNIWFgzRjNWUEZwVGZHaG9uS1RSUE9taFp6WlVqRGk4S2ktZ0dNNnJ0RW1ORWpDWTNKOEJXS2hYQkxSSzdCaHRGUG9vZnJpOVBTaG1jRmlHNkNENGc5T0l0UElTaHBaaml3cWpLMU0tRVozWlZIa3REM1ZFdzJGQmRvM2xESHVDVUx3?oc=5",
+  "requete": "Kalshi compute GPU"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "Nvidia CEO odds: Rene Haas rises to 27% as board’s search firm contacts Arm chief",
+  "source": "Kalshi News",
+  "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAxRkl0S1J0YW96MjVFMXNhczhBNHAxWVRELUNQeUJzWFFzWWdES1JOUlNHZXE5eFVzRVE5WWtEY1NVWVdjUzlxRHJQQUhxZDVmZURSS0pyejBzYjZWR0h1MA?oc=5",
+  "requete": "Kalshi compute GPU"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "Akash Unveils Akash Forwards, Bringing Commodity-Style Forward Trading to AI Compute",
+  "source": "Crypto Reporter",
+  "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQYTNOcTY2NkNxMTE5RHg3ZUFMbWllS3plalBnRHVLWkUyMHRjXy1nVWhaWmJUSU5KSkpUWGw4anJIamV1dVpZdXJmTU1LVEhYODdaY3p4ZTZDYlh5VlREWGtJb3pOb01WczB2QmtOMkVvNEY1X0U1NWZJTTYzMFA5NnRIOWdULUl3eW4tdnh3aS11X0N1NmNhY2pXTml4MGxuQkNkTlVhRFdXTWdTNndob2JrSGF5Ri1Mbk8xMFRIVE5nZkpCOWNQMGQwVFNlb0pyTTRrOQ?oc=5",
+  "requete": "GPU compute futures"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "Moonshot AI Cancels $150 Million Nvidia B300 GPU Rental Deal in Indonesia",
+  "source": "Gadget Review",
+  "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdVgtNlR6STVqOVNwSEZHZVVJZzVxb1MzbTZfVXdIcTI5Z1A4LUFlNjRKTmRZWS14eUFFOEhROGFnZkF2alAxamJiRDhJNnFXLS1jOFNBQVJmRGtDdEVoc3U2cktuYk9SQ3pfOURHT0V6QURDY09IQkJhMlhaeVRWMGJtVXdXaXVpd1R3TnVGLTNFZEp5R0hVdzcwQ016ajlHNVBV?oc=5",
+  "requete": "neocloud GPU capacity contract"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "Nvidia Stops H200 Sales to China. Its Bigger China Risk Is Renters",
+  "source": "Business Model Analyst",
+  "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQam5yUTZJX3hlUXBwY21qVXhrd0tIbE1pNHpxUS04d3B2VFNyNE81bnJYLS11a19iVkhlRUJZdUcwMWdSZ1E3dHFxMTBKSnRiMzc2a2VJQ1BEdGM4TmxFLWxZYXNmZ2JZbDJ2UTl4YjJRMVhJeFFkWUU3Vl83ZlNoSC1SX2lBT1Vk?oc=5",
+  "requete": "H200 OR B200 rental price"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "Vultr Opens Chennai Cloud Region Amid AI Data Rules",
+  "source": "Wisevoter",
+  "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOTljYkJRcW5ZeU1GN1JUYUt0S29oc2puSjlMdGJ5RnJ2Ym1lWVFKMFpSd2owSlRpMUFjcDlQNkg2QmxhTlctVk10YXhUNXIxU1ZZcWszZHhZY3FFeXZvMGZPRnJhYVoxLVhJQXFHRl9mNnhFS3I2RjlRUmpBb05KcGRLR1FrN0JrZkgyUjBB?oc=5",
+  "requete": "H200 OR B200 rental price"
+ },
+ {
   "date": "2026-11-18",
   "titre": "NVIDIA GPU Rental Prices Have Doubled, Asserts Interim CEO Kress As She Reports A Whopping $390 Billion In Supply Commitments Fueled By Pricey Memory Chips",
   "source": "Wccftech",
@@ -357,6 +413,13 @@
   "requete": "H200 OR B200 rental price"
  },
  {
+  "date": "2026-11-16",
+  "titre": "EverXCloud GPU Marketplace: 0% Seller Fee to Jan. 12",
+  "source": "shattered.io",
+  "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVXQzUzhsc2hSN29iVE5pMkRUbVp0RXBEQkV2dTdzQ19uTFcyaHVWR1Z0WWdCWUxKNmRaZEhUeUJ6R0lUNEVQUC02VTg2Y0thaUd6c1BUYjBITTZOaHRhemhvWlhoTTcwMnl3R1d1QktPX0xIOHVacGQzV2RzLTZqYjBUM2ZqazlVVS1sMk5TN2liQQ?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
   "date": "2026-11-15",
   "titre": "Microsoft Neocloud Pullback Piles Pressure on CoreWeave, Nebius",
   "source": "FinanceX Magazine",
@@ -460,6 +523,13 @@
   "source": "TOKENPOST",
   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4wZ0h1X1gwd25RclZmV1FLdHlDTEVOUDl5ZlRUci1vNTJIRUNyalR6aXYxS192UW5wQURVZEZfYXlZOUI4Ql9BVXNJZGdHRkNneEFpZjdQWDl4TjQ?oc=5",
   "requete": "Ornn compute"
+ },
+ {
+  "date": "2026-11-13",
+  "titre": "Kalshi in talks to raise funds at $65 billion valuation for compute futures platform, source says By Reuters",
+  "source": "Investing.com",
+  "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPR0tnNEF2U2ZiOGoxY1hCZHhpNG1lSW9WVUJtbXdpTjZ6OEpHVTcybUFJQWJoaWxXTzFFdzItQ3hYbi10VUJMUFZBUVNMODBIY1o0ZFIxWlo1UEFrS1BOdTNiNjFSeWNLU1N5c1RCVk8tMUoya2gyejdPRGdENmE4NllGU2d4OTVrblJlMmhVZGlwQXBiQ2t1QmdUM0t6MEZZeHN3M21WTzhPUjdKUTZBRHZRVHVhS2xRQXJVQ1RaZnZhaHZLTnhzdXZOX0NfRVE?oc=5",
+  "requete": "Kalshi compute GPU"
  },
  {
   "date": "2026-11-12",
@@ -669,6 +739,13 @@
   "titre": "Wall Street’s dream of an AI computing power futures market faces another setback! U.S. regulators have delayed approval, with the first trades not expected until at least 2027.",
   "source": "富途牛牛",
   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQQm9rMGhhdXpWZl9ZQy0xdHU2VXBIVER2Zkh4QklyN0FlUVhVU1UwNWRGdWQwZDEwOVpHRENYa0xlZzlOWnRncGhQM1c0UHdtYl9rTlFSTEtVSWJ6NGI0NlAxYjV3aDAyeTE5S3FVQWpXaG9FQmlwX1VXbjZkS3ZQR0c1Q2t3UUhWS1RWS0xyczVmRGF4MzBCQzMtNA?oc=5",
+  "requete": "GPU compute futures"
+ },
+ {
+  "date": "2026-11-11",
+  "titre": "Singapore goes full throttle on AI to secure future for workforce; allocates S$500m for advanced hardware",
+  "source": "Singapore Economic Development Board (EDB)",
+  "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQNk5wZVpxTnlrcjRNeUpmdERlUzNjWDZzN0VXUllXQm53OW1QN1NsbFJrXzN3dFFtWjRsOUNSanhJX3l5dVUwalQzeU5XTi1FbExiV29RYjJqZnVrU0o4Sm1Kd01VS1Rza1dicTdLMnJYRHlMa3J4bDItUUNSYnpobmtGWnZkVjVFU3VzUjN5cnNlbnFJWGotS2l6Y1k5RHVXSXZaUFktVVF3QmNpd1dJVHZzWldFakgtcVZJcWRGUnBZMHo5RlBRWkxibWlLcXlfZ1ktU1NQY3ZPNmZ0T2VQdg?oc=5",
   "requete": "GPU compute futures"
  },
  {
