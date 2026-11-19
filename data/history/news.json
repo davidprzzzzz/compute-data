@@ -392,6 +392,13 @@
   "requete": "neocloud GPU capacity contract"
  },
  {
+  "date": "2026-11-13",
+  "titre": "Nvidia GPU Rental Rates Rise, With H200 Up Nearly 49% in a Month",
+  "source": "TOKENPOST",
+  "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4wZ0h1X1gwd25RclZmV1FLdHlDTEVOUDl5ZlRUci1vNTJIRUNyalR6aXYxS192UW5wQURVZEZfYXlZOUI4Ql9BVXNJZGdHRkNneEFpZjdQWDl4TjQ?oc=5",
+  "requete": "Ornn compute"
+ },
+ {
   "date": "2026-11-12",
   "titre": "Amid the Global Anti-Data-Center Wave: How Far Can AI Trading Go? The Critical Key Lies in GPU Rental Price Trends",
   "source": "eu.36kr.com",
@@ -502,6 +509,13 @@
   "source": "The Tech Buzz",
   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQMGRxa0h1NGVhcTB2M2x3a2xQQXZmVWpodVVNQ2l4LTZhMnlQVlAyMURuTnNIc0IwRGJKRzN0dmdudmVkcUxEcUZ4MEF2MWJETTNzY1JqRVpKT2ZyRnp5ODJXWkJmS1FZb2JDbndSMnA0aGxzOThKeUhDY2hfY1FiVVZtM2NOaGtJblkwanZZcw?oc=5",
   "requete": "neocloud GPU capacity contract"
+ },
+ {
+  "date": "2026-11-12",
+  "titre": "Michael Burry Warned About This AI Risk a Year Ago. Microsoft May Have Just Proved His Point",
+  "source": "24/7 Wall St.",
+  "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOVVVnVVVKZkhSTDZkQ3pSOWdDYkdBZEpEaTFyTVdYTlBodWNycTFkSGFJVWstaWZRME9lZlBRZEpoRkNMcjBGczJ3OUJsTWZQQlJYV184bEU3ZndiX1llcFNpOG9NSXFQSFFjM3VvcWRLaVBWdGI3a2ZLTC1jWGNuUkxtcWNJa2QwbUZDUlRnR2c3WHU1X3hIOTgtTDMxUnpFbloyd2xER2hWZTZVYUgwNm5iOEZ3YzhEaXMyamdKczlya21JWEVoTWxYUWNZLXlF?oc=5",
+  "requete": "\"H100\" rental price"
  },
  {
   "date": "2026-11-11",
@@ -700,6 +714,13 @@
   "requete": "H200 OR B200 rental price"
  },
  {
+  "date": "2026-11-09",
+  "titre": "Nvidia's Biggest Southeast Asian Buyer Revealed: Over 70% of China's Offshore Computing Power Lands in Southeast Asia",
+  "source": "BigGo Finance",
+  "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1zV1pqT05TX3A2REJuT2tqcmQ3OUNvTEJ6RDhpQWlVOWttbEV6aV9nUEhHUk5vYUk3NkQxX0ZzeEpWNUVQUDh4REhDSk1UR1h5SW9ZcXdnUWZVU3RCTlNNX2JRV0xrQWxISjg5ZFNHSXZaeURCM2c?oc=5",
+  "requete": "\"H100\" rental price"
+ },
+ {
   "date": "2026-11-08",
   "titre": "Investigation Finds Chinese Military-Linked Firms Somehow Gained Approval To Assemble NVIDIA H200 AI GPUs, Highlighting A Half-Baked U.S. Approval System",
   "source": "Wccftech",
@@ -775,5 +796,12 @@
   "source": "Yahoo Finance",
   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNTWNPVjRQUkY3M1RtSzc1aDZZbFQ0Sm5Eb2RQVFJEQzhhcTd0NEM1Wmwwa3IwSXB2TWVPTVdlYWJaWFNVWTRkdDFSVmhlaGRLRTJ5MkkwdGs2SUUzTllUV1Y1WGVrc2FqMnNNS092Wm1TWWlsZXhqcy1mSTkzN2tsSjZMSnVFWHU1anhLQXB2QjBBT2NwS21VMXlDYzQxM3pWSmhoTjRvQQ?oc=5",
   "requete": "neocloud GPU capacity contract"
+ },
+ {
+  "date": "2026-11-05",
+  "titre": "AI Chip Renter IREN Gets Twice the Price on New Deals for Older Nvidia Chips",
+  "source": "Stock Titan",
+  "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPOW5GVEV5NzZZR3ZTZVlsVWR1RnFGT1pjQk9QcmZJSDVMLUpGU3pHaGpkUlpHSUtMNGZyZHptbEFNb01kN1VrYlVUZUlpWnhNaGlpZ3hKQ3NMZWdyWW41OFZwV0c1aGd1Uk04Tl9zc0RMZjVkbE9uUkJ2Yi00SFlfZm5sRQ?oc=5",
+  "requete": "\"H100\" rental price"
  }
 ]
