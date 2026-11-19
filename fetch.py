@@ -541,7 +541,7 @@ def listings_raw():
         log("Prix affichés", name, "OK" if h else "échec", len(h or ""))
     if allrows:
         (D / "latest" / "listings.json").write_text(json.dumps({"date": TODAY, "rows": allrows}, ensure_ascii=False, indent=1))
-        n = append_hist("listings", allrows, ["date", "gpu", "slug", "config", "facturation", "duree_mois"])
+        n = append_hist("listings", allrows, ["date"])  # relevé complet : le dernier du jour remplace les précédents
         log("Prix affichés :", len(allrows), "configurations ;", n, "lignes d'historique")
 
 
