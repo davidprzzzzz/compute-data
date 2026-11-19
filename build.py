@@ -106,6 +106,14 @@ kh = [r for r in hist("kalshi_forwards") if r.get("borne", "") == "" and r.get("
 write("kalshi_hist.json", [{"date": r["date"], "gpu": r["gpu"], "mois": r["mois"], "prix": float(r["prix"])} for r in kh],
       [{"label": "Contenu", "value": "Historique quotidien des forwards Kalshi bornés (médiane implicite), reconstruit à partir des chandeliers journaliers de chaque contrat puis complété chaque jour."}])
 
+# ---------------- historiques pour le chart
+hs = [{"date": r["date"], "source": "ornn", "gpu": r["gpu"], "prix": float(r["prix"])} for r in hist("ornn_spot") if r.get("prix")]
+hs += [{"date": r["date"], "source": "sd", "gpu": r["gpu"], "prix": float(r["prix"])} for r in hist("silicondata_spot") if r.get("prix")]
+write("hist_spot.json", sorted(hs, key=lambda r: (r["source"], r["gpu"], r["date"])),
+      [{"label": "Contenu", "value": "Historique quotidien des fixings Ornn OCPI et des indices Silicon Data, par GPU."}])
+write("sd_term_hist.json", [{"date": r["date"], "mois": int(r["mois"]), "terme": float(r["terme"])} for r in hist("silicondata_term")],
+      [{"label": "Contenu", "value": "Historique quotidien des taux de terme Silicon Data H100."}])
+
 # ---------------- Silicon Data terme
 term = (sdl.get("terme") or [])
 th = hist("silicondata_term")
