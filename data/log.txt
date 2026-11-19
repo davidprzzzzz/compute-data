@@ -1,4 +1,4 @@
-2026-11-19T00:00:39.449497+00:00
+2026-11-19T00:04:43.953647+00:00
 Kalshi KXH100MS marchés: 94
 Kalshi KXH200MS marchés: 149
 Kalshi KXB200MS marchés: 171
@@ -13,5 +13,5 @@ Silicon Data B200 30 points 2026-11-18
 Silicon Data A100 30 points 2026-11-18
 Silicon Data terme: 7 points, au 2026-11-18
 EUR/USD {'date': '2026-11-18', 'eurusd': 1.0968}
-News: 1 nouvelles, 110 au total
+News: 0 nouvelles, 110 au total
 aicomputetracker: asOf 2026-11-18T18:37:45.109Z

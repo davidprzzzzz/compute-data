@@ -1,7 +1,8 @@
 {
- "built": "2026-11-19T00:00:39.623809+00:00",
+ "built": "2026-11-19T00:04:44.036255+00:00",
  "files": [
   "agenda.csv",
+  "hist_spot.json",
   "kalshi.json",
   "kalshi_hist.json",
   "listes.json",
@@ -9,6 +10,7 @@
   "news.json",
   "refs.json",
   "sd_term.json",
+  "sd_term_hist.json",
   "spot.json"
  ]
 }
