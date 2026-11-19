@@ -1,10 +1,10 @@
-2026-11-19T01:11:12.356392+00:00
+2026-11-19T01:12:06.249915+00:00
 Kalshi KXH100MS marchés: 94
 Kalshi KXH200MS marchés: 149
 Kalshi KXB200MS marchés: 171
 Kalshi KXB300MS marchés: 0
 Kalshi KXA100MS marchés: 73
-Kalshi historique: 5016 lignes ; relevé 2026-11-19T01:10Z
+Kalshi historique: 5016 lignes ; relevé 2026-11-19T01:11Z
 Backfill Kalshi déjà fait ( 155 dates )
 Ornn: 5 GPU, settle 2026-11-17
 Silicon Data H100 30 points 2026-11-18
@@ -14,14 +14,14 @@ Silicon Data A100 30 points 2026-11-18
 Silicon Data terme: 7 points, au 2026-11-18
 EUR/USD {'date': '2026-11-18', 'eurusd': 1.0968}
 News: 0 nouvelles, 115 au total
-Prix affichés getdeploying_h100 OK 999697
-Prix affichés getdeploying_h200 OK 878181
-Prix affichés getdeploying_b200 OK 815443
+Prix affichés getdeploying_h100 OK 999698
+Prix affichés getdeploying_h200 OK 870112
+Prix affichés getdeploying_b200 OK 815158
 Prix affichés nebius OK 280204
 Prix affichés lambda OK 87687
 HTTP 403 https://www.scaleway.com/en/pricing/gpu/
 Prix affichés scaleway échec 0
 Prix affichés verda OK 489694
 Prix affichés runpod OK 342447
-Prix affichés : 332 configurations ; 332 lignes d'historique
+Prix affichés : 329 configurations ; 661 lignes d'historique
 aicomputetracker: asOf 2026-11-19T00:37:43.070Z
