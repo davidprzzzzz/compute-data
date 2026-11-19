@@ -4,23 +4,23 @@
    "gpu": "H100",
    "mois": 0,
    "tenor": "On-demand",
-   "mediane": 3.99,
+   "mediane": 3.49,
    "q25": null,
    "q75": null,
-   "n": 65,
-   "fournisseurs": "médiane getdeploying (65 fournisseurs)",
-   "date": "2026-11-17"
+   "n": 51,
+   "fournisseurs": "",
+   "date": "2026-11-19"
   },
   {
    "gpu": "H100",
    "mois": 1,
    "tenor": "1M",
-   "mediane": 1.75,
-   "q25": 1.508,
-   "q75": 2.4,
+   "mediane": 1.752,
+   "q25": 1.444,
+   "q75": 1.973,
    "n": 4,
-   "fournisseurs": "Together AI 3.69, HyperAI 1.53, Database Mart (GPU Mart) 1.44, Leaseweb 1.97",
-   "date": "2026-11-18"
+   "fournisseurs": "Database Mart 1.44, HyperAI 1.53, Leaseweb 1.97, Together AI 3.69",
+   "date": "2026-11-19"
   },
   {
    "gpu": "H100",
@@ -30,41 +30,41 @@
    "q25": null,
    "q75": null,
    "n": 2,
-   "fournisseurs": "Together AI 3.45, E2E Networks 3.72",
-   "date": "2026-11-18"
+   "fournisseurs": "E2E Networks 3.72, Together AI 3.45",
+   "date": "2026-11-19"
   },
   {
    "gpu": "H100",
    "mois": 6,
    "tenor": "6M",
-   "mediane": 3.045,
+   "mediane": 3.3,
    "q25": null,
    "q75": null,
-   "n": 2,
-   "fournisseurs": "Civo 2.79, TheAI (pré-commande) 3.30",
-   "date": "2026-11-18"
+   "n": 1,
+   "fournisseurs": "TheAI 3.30",
+   "date": "2026-11-19"
   },
   {
    "gpu": "H100",
    "mois": 12,
    "tenor": "1A",
-   "mediane": 2.445,
-   "q25": 1.958,
-   "q75": 3.105,
-   "n": 10,
-   "fournisseurs": "DigitalOcean 3.26, Seeweb 1.76, Cyfuture AI 2.20, Novita 2.79, Latitude.sh 1.18, Jarvislabs 3.21, AceCloud 3.31, Civo 2.69, Impossible Cloud (US) 1.89, Impossible Cloud (EU) 2.16",
-   "date": "2026-11-18"
+   "mediane": 2.795,
+   "q25": 1.765,
+   "q75": 3.21,
+   "n": 7,
+   "fournisseurs": "AceCloud 3.31, Cyfuture AI 2.20, DigitalOcean 3.26, Jarvislabs 3.21, Latitude.sh 1.18, Novita 2.79, Seeweb 1.76",
+   "date": "2026-11-19"
   },
   {
    "gpu": "H100",
    "mois": 24,
    "tenor": "2A",
-   "mediane": 2.975,
-   "q25": 2.375,
-   "q75": 3.532,
-   "n": 4,
-   "fournisseurs": "Verda 4.05, Civo 2.59, Yotta Shakti 3.36, Impossible Cloud (EU) 1.73",
-   "date": "2026-11-18"
+   "mediane": 3.36,
+   "q25": 1.73,
+   "q75": 3.36,
+   "n": 3,
+   "fournisseurs": "Impossible Cloud 1.73, Verda 4.05, Yotta Shakti Cloud 3.36",
+   "date": "2026-11-19"
   },
   {
    "gpu": "H100",
@@ -75,13 +75,13 @@
    "q75": null,
    "n": 2,
    "fournisseurs": "Civo 2.49, Oblivus 2.56",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   }
  ],
  "meta": [
   {
-   "label": "Sources",
-   "value": "getdeploying.com/gpus/nvidia-h100 et savrn.com/ai-index/pricing/gpus/h100, relevés du 18/11/2026. Néoclouds uniquement, hyperscalers exclus. Prix affichés, pas des transactions."
+   "label": "Source",
+   "value": "Indice Compute Group des prix affichés (voir list_index.json), H100, néoclouds hors hyperscalers."
   }
  ]
 }
