@@ -38,7 +38,7 @@ jobs:
           git push
       - name: Site autonome
         run: python build_site.py
-      - name: Déploiement Cloudflare Pages
+      - name: Vérification du jeton Cloudflare
         if: ${{ env.CF_TOKEN != '' }}
         env:
           CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -59,8 +59,21 @@ jobs:
           a = get("/accounts?per_page=50")
           ids = [x["id"] for x in a.get("result") or []]
           print("comptes visibles par le jeton :", len(ids), "; account id du secret parmi eux :", acc in ids)
+          if acc not in ids and len(ids) == 1:
+              acc = ids[0]
+              print("::add-mask::" + acc)
+              print("account id corrigé : celui du seul compte visible par le jeton")
+          with open(os.environ["GITHUB_ENV"], "a") as f:
+              f.write("CF_ACCOUNT=" + acc + "\n")
           p = get(f"/accounts/{acc}/pages/projects")
           print("accès Pages :", p.get("success"), p.get("errors"))
           PY
+      - name: Publication Cloudflare Pages
+        if: ${{ env.CF_TOKEN != '' }}
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          export CLOUDFLARE_ACCOUNT_ID="$CF_ACCOUNT"
           npx --yes wrangler@4 pages project create compute-desk --production-branch=main || true
           npx --yes wrangler@4 pages deploy site --project-name=compute-desk --branch=main --commit-dirty=true
