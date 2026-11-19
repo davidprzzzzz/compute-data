@@ -1,329 +1,361 @@
 date,gpu,fournisseur,slug,config,nb_gpu,format,facturation,duree_mois,prix,dispo,europe,hyperscaler
+2026-11-19,B200,Amazon Web Services,aws,8x B200 p6-b200.48xlarge,8,,on-demand,0,14.2416,Not reported,False,True
+2026-11-19,B200,Amazon Web Services,aws,8x B200 p6-b200.48xlarge,8,,réservé,36,6.152375,Not reported,False,True
+2026-11-19,B200,Beam,beam,1x B200 SXM,1,SXM,on-demand,0,4.11,Not reported,False,False
+2026-11-19,B200,Beam,beam,8x B200 SXM,8,SXM,autre,,,Not reported,False,False
+2026-11-19,B200,Bentaus,bentaus,8x B200 SXM,8,SXM,autre,,,Not reported,False,False
+2026-11-19,B200,Beyond.pl,beyond-pl,8x B200 SXM,8,SXM,réservé,,5.1,Not reported,True,False
+2026-11-19,B200,Canopy Wave,canopywave,2x B200 SXM5,2,SXM,autre,,,Not reported,False,False
+2026-11-19,B200,Cerebrium,cerebrium,1x B200 BLACKWELL_B200,1,,on-demand,0,6.012,Not reported,False,False
+2026-11-19,B200,Cirrascale,cirrascale,8x B200,8,,réservé,,4.79,Not reported,False,False
+2026-11-19,B200,Civo,civo,8x B200,8,,réservé,36,3.79,Not reported,False,False
+2026-11-19,B200,CoreWeave,coreweave,8x B200 SXM,8,SXM,on-demand,0,8.6,Not reported,False,False
+2026-11-19,B200,CoreWeave,coreweave,8x B200 SXM,8,SXM,spot,0,4.26375,Not reported,False,False
+2026-11-19,B200,Crusoe,crusoe,8x B200 SXM,8,SXM,autre,,,Not reported,False,False
+2026-11-19,B200,CUDO Compute,cudo-compute,1x B200 SXM,1,SXM,autre,,,Not reported,False,False
+2026-11-19,B200,Daytona,daytona,1x B200 GPU-only,1,,on-demand,0,7.49,Not reported,False,False
+2026-11-19,B200,Daytona,daytona,1x B200 GPU-only,1,,spot,0,4.3,Not reported,False,False
+2026-11-19,B200,Denvr,denvr,8x B200 SXM,8,SXM,autre,,,Waitlist,False,False
+2026-11-19,B200,E2E Networks,e2e-networks,1x B200,1,,on-demand,0,8.12,Not reported,False,False
+2026-11-19,B200,E2E Networks,e2e-networks,1x B200,1,,réservé,3,7.31,Not reported,False,False
+2026-11-19,B200,EmpirioLabs AI,empiriolabs,1x B200 b200-1x,1,,on-demand,0,14.0,In stock,False,False
+2026-11-19,B200,Fal.ai,fal-ai,1x B200,1,,autre,,5.49,Not reported,False,False
+2026-11-19,B200,Fal.ai,fal-ai,1x B200,1,,on-demand,0,7.99,Not reported,False,False
+2026-11-19,B200,Geodd,geodd,8x B200 SXM gpu_8x_b200,8,SXM,réservé,,4.5,Not reported,False,False
+2026-11-19,B200,GMI Cloud,gmi-cloud,1x B200,1,,on-demand,0,5.0,Not reported,False,False
+2026-11-19,B200,Google Cloud,google-cloud,8x B200 a4-highgpu-8g,8,,réservé,36,7.162375,Not reported,False,True
+2026-11-19,B200,Google Cloud,google-cloud,8x B200 a4-highgpu-8g,8,,spot,0,3.9804875,Not reported,False,True
+2026-11-19,B200,GPU.ai,gpu-ai,1x B200 SXM,1,SXM,on-demand,0,7.49,In stock,False,False
+2026-11-19,B200,GPU.ai,gpu-ai,2x B200 SXM,2,SXM,on-demand,0,13.365,In stock,False,False
+2026-11-19,B200,GPUaaS,gpuaas,8x B200,8,,autre,,7.0,In stock,False,False
+2026-11-19,B200,Green AI Cloud,greenai-cloud,8x B200 SXM,8,SXM,réservé,,3.75,Not reported,True,False
+2026-11-19,B200,HIGHRESO,highreso,8x B200 SXM,8,SXM,on-demand,0,7.5275,Not reported,False,False
+2026-11-19,B200,Hostinger,hostinger,1x B200,1,,on-demand,0,4.5,Not reported,True,False
+2026-11-19,B200,Hyperstack,hyperstack,1x B200,1,,réservé,,5.1,Not reported,True,False
+2026-11-19,B200,Hyperstack,hyperstack,8x B200 SXM n3-B200-SXM6x8,8,SXM,on-demand,0,6.0,Out of stock,True,False
+2026-11-19,B200,Impossible Cloud,impossible-cloud,8x B200 SXM 273-B200-12mo,8,SXM,réservé,12,4.21,In stock,True,False
+2026-11-19,B200,Impossible Cloud,impossible-cloud,8x B200 SXM 346-B200-12mo,8,SXM,réservé,12,7.36,Not reported,True,False
+2026-11-19,B200,Impossible Cloud,impossible-cloud,8x B200 SXM 373-B200-12mo,8,SXM,réservé,12,6.02,Pre-order,True,False
+2026-11-19,B200,Koyeb,koyeb,1x B200 gpu-nvidia-b200,1,,on-demand,0,5.5,Not reported,False,False
+2026-11-19,B200,Lambda Labs,lambda-labs,8x B200 SXM gpu_8x_b200_sxm6,8,SXM,on-demand,0,7.69,Out of stock,False,False
+2026-11-19,B200,Lightning AI,lightning-ai,8x B200 lit-b200-8,8,,on-demand,0,9.86,Not reported,False,False
+2026-11-19,B200,Lium,lium,1x B200 SXM,1,SXM,on-demand,0,7.0,In stock,False,False
+2026-11-19,B200,Lium,lium,1x B200 SXM,1,SXM,spot,0,5.0,In stock,False,False
+2026-11-19,B200,Lyceum,lyceum,1x B200,1,,on-demand,0,9.99,In stock,True,False
+2026-11-19,B200,Lyceum,lyceum,1x B200,1,,spot,0,4.99,Out of stock,True,False
+2026-11-19,B200,Lyceum,lyceum,2x B200,2,,on-demand,0,9.99,In stock,True,False
+2026-11-19,B200,Lyceum,lyceum,2x B200,2,,spot,0,4.99,Out of stock,True,False
+2026-11-19,B200,Lyceum,lyceum,4x B200,4,,on-demand,0,9.99,In stock,True,False
+2026-11-19,B200,Lyceum,lyceum,4x B200,4,,spot,0,4.99,Out of stock,True,False
+2026-11-19,B200,Lyceum,lyceum,8x B200,8,,on-demand,0,9.99,Out of stock,True,False
+2026-11-19,B200,Lyceum,lyceum,8x B200,8,,réservé,,,Not reported,True,False
+2026-11-19,B200,Lyceum,lyceum,8x B200,8,,spot,0,4.99,Out of stock,True,False
+2026-11-19,B200,Massed Compute,massed-compute,8x B200 SXM gpu_8x_b200_SXM6,8,SXM,on-demand,0,5.4325,Out of stock,False,False
+2026-11-19,B200,Nebius,nebius,1x B200 SXM NVIDIA HGX B200,1,SXM,on-demand,0,8.5,Not reported,True,False
+2026-11-19,B200,Oblivus,oblivus,8x B200 SXM B200_SXM_x8,8,SXM,on-demand,0,8.4,Out of stock,False,False
+2026-11-19,B200,OpenRelay,openrelay,1x B200,1,,on-demand,0,6.3,Not reported,False,False
+2026-11-19,B200,Oracle Cloud,oracle-cloud,8x B200 BM.GPU.B200.8,8,,on-demand,0,14.0,Not reported,False,True
+2026-11-19,B200,Orion AI Factory,orion-ai-factory,1x B200 SXM max,1,SXM,on-demand,0,9.76,Not reported,False,False
+2026-11-19,B200,Orion AI Factory,orion-ai-factory,1x B200 SXM max,1,SXM,réservé,36,7.81,Not reported,False,False
+2026-11-19,B200,Packet·ai,packet-ai,1x B200 nvidia-b200-1gpu-dynamic,1,,on-demand,0,4.25,Not reported,False,False
+2026-11-19,B200,Packet·ai,packet-ai,2x B200 nvidia-b200-2gpu-monthly,2,,réservé,1,7.99,Not reported,False,False
+2026-11-19,B200,Packet·ai,packet-ai,8x B200 SXM nvidia-b200-8gpu-sxm-cluster,8,SXM,autre,,,In stock,False,False
+2026-11-19,B200,Runcrate,runcrate,1x B200 NVL,1,NVL,on-demand,0,10.01,In stock,False,False
+2026-11-19,B200,Runpod,runpod,16x B200 SXM Instant Cluster,16,SXM,on-demand,0,9.59,Not reported,False,False
+2026-11-19,B200,Runpod,runpod,1x B200 SXM Community Cloud,1,SXM,on-demand,0,5.98,Out of stock,False,False
+2026-11-19,B200,Runpod,runpod,1x B200 SXM Secure Cloud,1,SXM,on-demand,0,7.99,Out of stock,False,False
+2026-11-19,B200,Runpod,runpod,8x B200 SXM Secure Cloud,8,SXM,réservé,,,Not reported,False,False
+2026-11-19,B200,Runware,runware,1x B200,1,,on-demand,0,6.0,Not reported,False,False
+2026-11-19,B200,Sesterce,sesterce,8x B200,8,,on-demand,0,4.114,Out of stock,True,False
+2026-11-19,B200,Spheron,spheron,1x B200 SXM ME West 1::gpu-b200-sxm-a::1gpu-20vcpu-224gb,1,SXM,on-demand,0,11.115,In stock,False,False
+2026-11-19,B200,Spheron,spheron,1x B200 SXM ME West 1::gpu-b200-sxm-a::1gpu-20vcpu-224gb::spot,1,SXM,spot,0,5.2518,In stock,False,False
+2026-11-19,B200,Spheron,spheron,1x B200 SXM US Central 1::gpu-b200-sxm::1gpu-20vcpu-224gb::spot,1,SXM,spot,0,5.7105,In stock,False,False
+2026-11-19,B200,Spheron,spheron,8x B200 SXM ME West 1::gpu-b200-sxm-a::8gpu-160vcpu-1792gb,8,SXM,on-demand,0,11.058125,In stock,False,False
+2026-11-19,B200,Spheron,spheron,8x B200 SXM ME West 1::gpu-b200-sxm-a::8gpu-160vcpu-1792gb::spot,8,SXM,spot,0,5.2249625,In stock,False,False
+2026-11-19,B200,Spheron,spheron,8x B200 SXM US Central 1::gpu-b200-sxm::8gpu-160vcpu-1792gb::spot,8,SXM,spot,0,5.6750625,In stock,False,False
+2026-11-19,B200,STN,stn-inc,8x B200 SXM,8,SXM,réservé,60,4.55,Not reported,False,False
+2026-11-19,B200,TheAI,theai-cloud,512x B200 SXM B200_SXM_180GB,512,SXM,réservé,36,3.6,Pre-order,False,False
+2026-11-19,B200,Together AI,together-ai,1x B200 SXM,1,SXM,on-demand,0,9.29,Out of stock,False,False
+2026-11-19,B200,Together AI,together-ai,1x B200 SXM,1,SXM,réservé,1,8.69,Out of stock,False,False
+2026-11-19,B200,Together AI,together-ai,1x B200 SXM,1,SXM,réservé,3,7.99,Out of stock,False,False
+2026-11-19,B200,Together AI,together-ai,1x B200 SXM,1,SXM,spot,0,4.65,In stock,False,False
+2026-11-19,B200,UpCloud,upcloud,1x B200 SXM GPU-24xCPU-240GB-1xB200,1,SXM,on-demand,0,6.05,In stock,True,False
+2026-11-19,B200,UpCloud,upcloud,1x B200 SXM GPU-SPOT-24xCPU-240GB-1xB200,1,SXM,spot,0,4.23,In stock,True,False
+2026-11-19,B200,UpCloud,upcloud,2x B200 SXM GPU-48xCPU-480GB-2xB200,2,SXM,on-demand,0,6.05,In stock,True,False
+2026-11-19,B200,UpCloud,upcloud,2x B200 SXM GPU-SPOT-48xCPU-480GB-2xB200,2,SXM,spot,0,4.235,In stock,True,False
+2026-11-19,B200,UpCloud,upcloud,4x B200 SXM GPU-96xCPU-960GB-4xB200,4,SXM,on-demand,0,6.05,In stock,True,False
+2026-11-19,B200,UpCloud,upcloud,4x B200 SXM GPU-SPOT-96xCPU-960GB-4xB200,4,SXM,spot,0,4.235,In stock,True,False
+2026-11-19,B200,UpCloud,upcloud,8x B200 SXM Dedicated GPU Cluster,8,SXM,réservé,36,4.37625,Pre-order,True,False
+2026-11-19,B200,UpCloud,upcloud,8x B200 SXM GPU-192xCPU-1920GB-8xB200,8,SXM,on-demand,0,6.04875,Out of stock,True,False
+2026-11-19,B200,UpCloud,upcloud,8x B200 SXM GPU-SPOT-192xCPU-1920GB-8xB200,8,SXM,spot,0,4.23375,Out of stock,True,False
+2026-11-19,B200,Verda,verda,4x B200 SXM 4B200.120V,4,SXM,spot,0,4.8975,Out of stock,True,False
+2026-11-19,B200,Verda,verda,8x B200 SXM 8B200.240V.CC.AMD,8,SXM,on-demand,0,9.9925,In stock,True,False
+2026-11-19,B200,Verda,verda,8x B200 SXM 8B200.240V.CC.AMD,8,SXM,réservé,24,7.494375,In stock,True,False
+2026-11-19,B200,Vultr,vultr,8x B200 vbm-256c-3072gb-8-b200-gpu,8,,spot,0,3.2,Out of stock,False,False
+2026-11-19,B200,Yotta Shakti Cloud,yotta-shakti-cloud,8x B200 SXM,8,SXM,réservé,60,2.98625,Not reported,False,False
+2026-11-19,H100,AceCloud,acecloud,1x H100 SXM N.HGXH100.250,1,SXM,réservé,12,3.3088,Not reported,False,False
+2026-11-19,H100,Amazon Web Services,aws,1x H100 p5.4xlarge,1,,on-demand,0,6.88,Not reported,False,True
+2026-11-19,H100,Amazon Web Services,aws,8x H100 p5.48xlarge,8,,réservé,36,2.9721625,Not reported,False,True
+2026-11-19,H100,Beam,beam,1x H100 PCIe,1,PCIe,on-demand,0,1.83,Not reported,False,False
+2026-11-19,H100,Beam,beam,8x H100 SXM,8,SXM,autre,,,Not reported,False,False
+2026-11-19,H100,Canopy Wave,canopywave,2x H100 SXM5,2,SXM,on-demand,0,3.25,Not reported,False,False
+2026-11-19,H100,Cerebrium,cerebrium,1x H100 HOPPER_H100,1,,on-demand,0,3.3984,Not reported,False,False
+2026-11-19,H100,Civo,civo,1x H100 SXM,1,SXM,on-demand,0,2.99,Not reported,False,False
+2026-11-19,H100,Civo,civo,1x H100 SXM,1,SXM,réservé,36,2.49,Not reported,False,False
+2026-11-19,H100,CloudFerro,cloudferro,1x H100 h100.1,1,,on-demand,0,6.9,Not reported,True,False
+2026-11-19,H100,CoreWeave,coreweave,8x H100 SXM,8,SXM,on-demand,0,6.155,Not reported,False,False
+2026-11-19,H100,CoreWeave,coreweave,8x H100 SXM,8,SXM,spot,0,2.46375,Not reported,False,False
+2026-11-19,H100,Crusoe,crusoe,8x H100 SXM h100-80gb-sxm-ib.8x,8,SXM,on-demand,0,3.9,Out of stock,False,False
+2026-11-19,H100,Crusoe,crusoe,8x H100 SXM h100-80gb-sxm-ib.8x,8,SXM,réservé,,,Not reported,False,False
+2026-11-19,H100,Crusoe,crusoe,8x H100 SXM h100-80gb-sxm-ib.8x,8,SXM,spot,0,,Not reported,False,False
+2026-11-19,H100,CUDO Compute,cudo-compute,1x H100 SXM,1,SXM,autre,,,Not reported,False,False
+2026-11-19,H100,Cyfuture AI,cyfuture,8x H100 SXM 8H100.128v.2048m SXM,8,SXM,on-demand,0,3.41375,Not reported,False,False
+2026-11-19,H100,Cyfuture AI,cyfuture,8x H100 SXM 8H100.128v.2048m SXM-12mo,8,SXM,réservé,12,2.20125,Not reported,False,False
+2026-11-19,H100,Database Mart,database-mart,1x H100,1,,réservé,1,1.4439,Not reported,False,False
+2026-11-19,H100,Daytona,daytona,1x H100,1,,on-demand,0,6.34,In stock,False,False
+2026-11-19,H100,Daytona,daytona,1x H100,1,,spot,0,3.66,In stock,False,False
+2026-11-19,H100,Daytona,daytona,1x H100 GPU-only,1,,on-demand,0,4.29,Not reported,False,False
+2026-11-19,H100,Daytona,daytona,1x H100 GPU-only,1,,spot,0,2.47,Not reported,False,False
+2026-11-19,H100,Daytona,daytona,2x H100,2,,on-demand,0,6.34,In stock,False,False
+2026-11-19,H100,Daytona,daytona,2x H100,2,,spot,0,3.655,In stock,False,False
+2026-11-19,H100,Daytona,daytona,4x H100,4,,on-demand,0,6.34,Not reported,False,False
+2026-11-19,H100,Daytona,daytona,4x H100,4,,spot,0,3.655,Not reported,False,False
+2026-11-19,H100,Daytona,daytona,8x H100,8,,on-demand,0,6.34125,Not reported,False,False
+2026-11-19,H100,Daytona,daytona,8x H100,8,,spot,0,3.65625,Not reported,False,False
+2026-11-19,H100,Denvr,denvr,8x H100 SXM,8,SXM,on-demand,0,2.45,Not reported,False,False
+2026-11-19,H100,DigitalOcean,digitalocean,1x H100 SXM,1,SXM,réservé,12,3.26,Not reported,False,False
+2026-11-19,H100,DigitalOcean,digitalocean,1x H100 SXM gpu-h100x1-80gb,1,SXM,on-demand,0,4.41,Not reported,False,False
+2026-11-19,H100,E2E Networks,e2e-networks,1x H100,1,,réservé,3,3.72,Not reported,False,False
+2026-11-19,H100,E2E Networks,e2e-networks,1x H100,1,,spot,0,0.75,Not reported,False,False
+2026-11-19,H100,E2E Networks,e2e-networks,2x H100,2,,on-demand,0,4.055,Not reported,False,False
+2026-11-19,H100,EmpirioLabs AI,empiriolabs,1x H100 NVL h100-nvl-1x,1,NVL,on-demand,0,5.6,In stock,False,False
+2026-11-19,H100,EmpirioLabs AI,empiriolabs,1x H100 PCIe h100-pcie-1x,1,PCIe,on-demand,0,4.1,In stock,False,False
+2026-11-19,H100,EmpirioLabs AI,empiriolabs,1x H100 PCIe h100-pcie-1x,1,PCIe,spot,0,3.0,In stock,False,False
+2026-11-19,H100,EmpirioLabs AI,empiriolabs,1x H100 SXM h100-80gb-1x,1,SXM,on-demand,0,4.9,Out of stock,False,False
+2026-11-19,H100,EmpirioLabs AI,empiriolabs,1x H100 SXM h100-80gb-1x,1,SXM,spot,0,4.0,In stock,False,False
+2026-11-19,H100,EmpirioLabs AI,empiriolabs,2x H100 NVL h100-nvl-2x,2,NVL,on-demand,0,5.6,In stock,False,False
+2026-11-19,H100,EmpirioLabs AI,empiriolabs,2x H100 PCIe h100-pcie-2x,2,PCIe,spot,0,3.0,In stock,False,False
+2026-11-19,H100,EmpirioLabs AI,empiriolabs,4x H100 PCIe h100-pcie-4x,4,PCIe,spot,0,3.0,In stock,False,False
+2026-11-19,H100,EmpirioLabs AI,empiriolabs,8x H100 PCIe h100-pcie-8x,8,PCIe,spot,0,3.2,In stock,False,False
+2026-11-19,H100,Enverge,enverge,1x H100 PCIe,1,PCIe,on-demand,0,4.0,Not reported,False,False
+2026-11-19,H100,Fal.ai,fal-ai,1x H100,1,,autre,,2.49,Not reported,False,False
+2026-11-19,H100,Fal.ai,fal-ai,1x H100,1,,on-demand,0,4.5,Not reported,False,False
+2026-11-19,H100,Gcore,gcore,4x H100,4,,on-demand,0,2.59,Not reported,True,False
+2026-11-19,H100,Geodd,geodd,1x H100 SXM gpu_1x_h100,1,SXM,on-demand,0,3.0,In stock,False,False
+2026-11-19,H100,Geodd,geodd,2x H100 SXM gpu_2x_h100,2,SXM,on-demand,0,3.0,Out of stock,False,False
+2026-11-19,H100,Geodd,geodd,4x H100 SXM gpu_4x_h100,4,SXM,on-demand,0,3.0,Out of stock,False,False
+2026-11-19,H100,Geodd,geodd,8x H100 SXM gpu_8x_H100_SXM5,8,SXM,on-demand,0,3.125,Out of stock,False,False
+2026-11-19,H100,Geodd,geodd,8x H100 SXM gpu_8x_h100,8,SXM,on-demand,0,3.0,Out of stock,False,False
+2026-11-19,H100,GMI Cloud,gmi-cloud,1x H100,1,,on-demand,0,2.6,Not reported,False,False
+2026-11-19,H100,Google Cloud,google-cloud,8x H100 SXM a3-highgpu-8g,8,SXM,on-demand,0,11.069475,Not reported,False,True
+2026-11-19,H100,Google Cloud,google-cloud,8x H100 SXM a3-highgpu-8g,8,SXM,réservé,36,4.86175,Not reported,False,True
+2026-11-19,H100,Google Cloud,google-cloud,8x H100 SXM a3-megagpu-8g,8,SXM,spot,0,4.7379,Not reported,False,True
+2026-11-19,H100,GPU.ai,gpu-ai,1x H100 PCIe,1,PCIe,on-demand,0,2.52,In stock,False,False
+2026-11-19,H100,GPU.ai,gpu-ai,1x H100 SXM,1,SXM,on-demand,0,2.03,In stock,False,False
+2026-11-19,H100,GPUaaS,gpuaas,8x H100 SXM,8,SXM,autre,,2.5,In stock,False,False
+2026-11-19,H100,Green AI Cloud,greenai-cloud,8x H100 SXM,8,SXM,autre,,,Not reported,True,False
+2026-11-19,H100,Hikube,hikube,1x H100 gpu.h100,1,,on-demand,0,3.77,Not reported,False,False
+2026-11-19,H100,HyperAI,hyper-ai,1x H100 h100,1,,on-demand,0,1.8,Not reported,False,False
+2026-11-19,H100,HyperAI,hyper-ai,1x H100 h100,1,,réservé,1,1.53,Not reported,False,False
+2026-11-19,H100,Hyperstack,hyperstack,1x H100 PCIe,1,PCIe,réservé,,1.75,Not reported,True,False
+2026-11-19,H100,Hyperstack,hyperstack,1x H100 PCIe n3-H100x1,1,PCIe,on-demand,0,2.5,Out of stock,True,False
+2026-11-19,H100,Hyperstack,hyperstack,1x H100 PCIe n3-H100x1-spot,1,PCIe,spot,0,2.0,In stock,True,False
+2026-11-19,H100,Impossible Cloud,impossible-cloud,1x H100 PCIe 314-H100-24mo,1,PCIe,réservé,24,1.73,Not reported,True,False
+2026-11-19,H100,Jarvislabs,jarvislabs,1x H100 SXM,1,SXM,on-demand,0,3.49,Out of stock,False,False
+2026-11-19,H100,Jarvislabs,jarvislabs,1x H100 SXM,1,SXM,réservé,12,3.21,Out of stock,False,False
+2026-11-19,H100,Koyeb,koyeb,1x H100 gpu-nvidia-h100,1,,on-demand,0,2.5,Not reported,False,False
+2026-11-19,H100,Lambda Labs,lambda-labs,1x H100 PCIe gpu_1x_h100_pcie,1,PCIe,on-demand,0,3.79,Out of stock,False,False
+2026-11-19,H100,Latitude.sh,latitude-sh,1x H100 g3-h100-small,1,,on-demand,0,3.37,Out of stock,False,False
+2026-11-19,H100,Latitude.sh,latitude-sh,1x H100 g3-h100-small-12mo,1,,réservé,12,1.1795,Out of stock,False,False
+2026-11-19,H100,Leafcloud,leaf-cloud,8x H100 SXM eg1.h100x1.V24_96,8,SXM,on-demand,0,3.455,Not reported,True,False
+2026-11-19,H100,Leaseweb,leaseweb,3x H100 PREMIUM_DL385G11-9334-3xH100,3,,réservé,1,1.9733333333333334,Not reported,True,False
+2026-11-19,H100,Lightning AI,lightning-ai,1x H100 lit-h100-1,1,,on-demand,0,5.45,Not reported,False,False
+2026-11-19,H100,Lium,lium,1x H100 PCIe,1,PCIe,on-demand,0,2.24,In stock,False,False
+2026-11-19,H100,Lium,lium,1x H100 SXM,1,SXM,spot,0,1.8,In stock,False,False
+2026-11-19,H100,Lyceum,lyceum,1x H100,1,,on-demand,0,5.39,Out of stock,True,False
+2026-11-19,H100,Lyceum,lyceum,1x H100,1,,spot,0,2.69,In stock,True,False
+2026-11-19,H100,Lyceum,lyceum,8x H100,8,,réservé,,,Not reported,True,False
+2026-11-19,H100,Massed Compute,massed-compute,1x H100 gpu_1x_h100,1,,on-demand,0,2.73,In stock,False,False
+2026-11-19,H100,Microsoft Azure,microsoft-azure,1x H100 NVL NCadsH100v5,1,NVL,on-demand,0,6.98,Not reported,False,True
+2026-11-19,H100,Microsoft Azure,microsoft-azure,1x H100 NVL NCadsH100v5,1,NVL,réservé,36,3.839,Not reported,False,True
+2026-11-19,H100,Microsoft Azure,microsoft-azure,1x H100 NVL NCadsH100v5,1,NVL,spot,0,1.4183,Not reported,False,True
+2026-11-19,H100,Nebius,nebius,1x H100 SXM NVIDIA HGX H100,1,SXM,on-demand,0,4.5,Not reported,True,False
+2026-11-19,H100,Novita,novita-ai,1x H100 SXM,1,SXM,on-demand,0,3.39,Out of stock,False,False
+2026-11-19,H100,Novita,novita-ai,1x H100 SXM,1,SXM,réservé,12,2.7948,Out of stock,False,False
+2026-11-19,H100,Novita,novita-ai,1x H100 SXM,1,SXM,spot,0,1.7,Out of stock,False,False
+2026-11-19,H100,Oblivus,oblivus,1x H100 PCIe H100_PCIE_80GB_x1,1,PCIe,on-demand,0,3.5,Out of stock,False,False
+2026-11-19,H100,Oblivus,oblivus,1x H100 PCIe H100_PCIE_80GB_x1,1,PCIe,réservé,36,2.56,Not reported,False,False
+2026-11-19,H100,OpenRelay,openrelay,1x H100 PCIe,1,PCIe,on-demand,0,2.2,Out of stock,False,False
+2026-11-19,H100,Oracle Cloud,oracle-cloud,8x H100 SXM BM.GPU.H100.8,8,SXM,on-demand,0,10.0,Not reported,False,True
+2026-11-19,H100,OVHcloud,ovh,1x H100 h100-380,1,,on-demand,0,2.99,Not reported,True,False
+2026-11-19,H100,Packet·ai,packet-ai,8x H100 SXM5 nvidia-h100-8gpu-sxm5-cluster,8,SXM,autre,,,In stock,False,False
+2026-11-19,H100,Paperspace,paperspace,1x H100 SXM H100,1,SXM,on-demand,0,5.95,Not reported,False,False
+2026-11-19,H100,Replicate,replicate,1x H100 gpu-h100,1,,on-demand,0,5.49,Not reported,False,False
+2026-11-19,H100,Runcrate,runcrate,1x H100 SXM5,1,SXM,on-demand,0,3.58,In stock,False,False
+2026-11-19,H100,Runpod,runpod,16x H100 SXM Instant Cluster,16,SXM,on-demand,0,4.79,Not reported,False,False
+2026-11-19,H100,Runpod,runpod,1x H100 NVL Community Cloud,1,NVL,on-demand,0,2.59,Out of stock,False,False
+2026-11-19,H100,Runpod,runpod,1x H100 NVL Secure Cloud,1,NVL,on-demand,0,3.19,Out of stock,False,False
+2026-11-19,H100,Runpod,runpod,1x H100 PCIe Community Cloud,1,PCIe,on-demand,0,1.99,Out of stock,False,False
+2026-11-19,H100,Runpod,runpod,1x H100 PCIe Secure Cloud,1,PCIe,on-demand,0,2.89,Out of stock,False,False
+2026-11-19,H100,Runpod,runpod,1x H100 SXM Community Cloud,1,SXM,on-demand,0,2.69,Out of stock,False,False
+2026-11-19,H100,Runpod,runpod,1x H100 SXM Secure Cloud,1,SXM,on-demand,0,4.39,In stock,False,False
+2026-11-19,H100,Runpod,runpod,8x H100 NVL Secure Cloud,8,NVL,réservé,,,Not reported,False,False
+2026-11-19,H100,Runpod,runpod,8x H100 PCIe Secure Cloud,8,PCIe,réservé,,,Not reported,False,False
+2026-11-19,H100,Runpod,runpod,8x H100 SXM Secure Cloud,8,SXM,réservé,,,Not reported,False,False
+2026-11-19,H100,Runware,runware,1x H100,1,,on-demand,0,3.95,Not reported,False,False
+2026-11-19,H100,Scaleway,scaleway,1x H100 PCIe H100-1-80G,1,PCIe,on-demand,0,3.14,In stock,True,False
+2026-11-19,H100,Scaleway,scaleway,2x H100 PCIe H100-2-80G,2,PCIe,on-demand,0,3.145,In stock,True,False
+2026-11-19,H100,Scaleway,scaleway,2x H100 SXM H100-SXM-2-80G,2,SXM,on-demand,0,3.63,In stock,True,False
+2026-11-19,H100,Scaleway,scaleway,4x H100 SXM H100-SXM-4-80G,4,SXM,on-demand,0,3.5025,Out of stock,True,False
+2026-11-19,H100,Scaleway,scaleway,8x H100 SXM H100-SXM-8-80G,8,SXM,on-demand,0,3.4725,Not reported,True,False
+2026-11-19,H100,Seeweb,seeweb,1x H100 SXM,1,SXM,on-demand,0,2.07,Not reported,True,False
+2026-11-19,H100,Seeweb,seeweb,2x H100 SXM,2,SXM,réservé,12,1.765,Not reported,True,False
+2026-11-19,H100,Sesterce,sesterce,1x H100,1,,on-demand,0,2.75,In stock,True,False
+2026-11-19,H100,Spheron,spheron,4x H100 PCIe n3-H100x4-bigroot-spot__CANADA-1,4,PCIe,spot,0,2.20185,In stock,False,False
+2026-11-19,H100,Spheron,spheron,8x H100 SXM EU North 1::gpu-h100-sxm::8gpu-128vcpu-1600gb,8,SXM,on-demand,0,5.858125,In stock,False,False
+2026-11-19,H100,TheAI,theai-cloud,8x H100 SXM H100_SXM5_80GB,8,SXM,réservé,6,3.3,Pre-order,False,False
 2026-11-19,H100,Thunder Compute,thunder-compute,1x H100 SXM h100_x1,1,SXM,on-demand,0,3.2,In stock,False,False
 2026-11-19,H100,Thunder Compute,thunder-compute,2x H100 SXM h100_x2,2,SXM,on-demand,0,3.2,Out of stock,False,False
 2026-11-19,H100,Thunder Compute,thunder-compute,4x H100 SXM h100_x4,4,SXM,on-demand,0,3.2,Out of stock,False,False
 2026-11-19,H100,Thunder Compute,thunder-compute,8x H100 SXM h100_x8,8,SXM,on-demand,0,3.2,Out of stock,False,False
-2026-11-19,H100,Runpod,runpod,1x H100 NVL Secure Cloud,1,NVL,on-demand,0,3.19,In stock,False,False
-2026-11-19,H100,Runpod,runpod,8x H100 SXM Secure Cloud,8,SXM,réservé,,,Not reported,False,False
-2026-11-19,H100,Massed Compute,massed-compute,1x H100 gpu_1x_h100,1,,on-demand,0,2.73,In stock,False,False
-2026-11-19,H100,Together AI,together-ai,1x H100 SXM,1,SXM,spot,0,1.99,In stock,False,False
-2026-11-19,H100,Together AI,together-ai,1x H100 SXM,1,SXM,réservé,3,3.45,In stock,False,False
-2026-11-19,H100,Together AI,together-ai,1x H100 SXM,1,SXM,réservé,1,3.69,In stock,False,False
 2026-11-19,H100,Together AI,together-ai,1x H100 SXM,1,SXM,on-demand,0,3.99,In stock,False,False
-2026-11-19,H100,Geodd,geodd,1x H100 SXM gpu_1x_h100,1,SXM,on-demand,0,3.0,In stock,False,False
-2026-11-19,H100,Geodd,geodd,2x H100 SXM gpu_2x_h100,2,SXM,on-demand,0,3.0,Out of stock,False,False
-2026-11-19,H100,Geodd,geodd,4x H100 SXM gpu_4x_h100,4,SXM,on-demand,0,3.0,Out of stock,False,False
-2026-11-19,H100,Geodd,geodd,8x H100 SXM gpu_8x_h100,8,SXM,on-demand,0,3.0,Out of stock,False,False
-2026-11-19,H100,Geodd,geodd,8x H100 SXM gpu_8x_H100_SXM5,8,SXM,on-demand,0,3.125,Out of stock,False,False
-2026-11-19,H100,Daytona,daytona,1x H100 GPU-only,1,,spot,0,2.47,In stock,False,False
-2026-11-19,H100,Daytona,daytona,1x H100,1,,spot,0,3.66,In stock,False,False
-2026-11-19,H100,Daytona,daytona,1x H100 GPU-only,1,,on-demand,0,4.29,In stock,False,False
-2026-11-19,H100,Daytona,daytona,1x H100,1,,on-demand,0,6.34,In stock,False,False
-2026-11-19,H100,Daytona,daytona,2x H100,2,,spot,0,3.655,In stock,False,False
-2026-11-19,H100,Daytona,daytona,2x H100,2,,on-demand,0,6.34,In stock,False,False
-2026-11-19,H100,Daytona,daytona,4x H100,4,,spot,0,3.655,Not reported,False,False
-2026-11-19,H100,Daytona,daytona,4x H100,4,,on-demand,0,6.34,Not reported,False,False
-2026-11-19,H100,Daytona,daytona,8x H100,8,,spot,0,3.65625,Not reported,False,False
-2026-11-19,H100,Daytona,daytona,8x H100,8,,on-demand,0,6.34125,Not reported,False,False
-2026-11-19,H100,EmpirioLabs AI,empiriolabs,1x H100 PCIe h100-pcie-1x,1,PCIe,spot,0,3.0,In stock,False,False
-2026-11-19,H100,EmpirioLabs AI,empiriolabs,1x H100 PCIe h100-pcie-1x,1,PCIe,on-demand,0,4.1,In stock,False,False
-2026-11-19,H100,EmpirioLabs AI,empiriolabs,1x H100 SXM h100-80gb-1x,1,SXM,on-demand,0,4.9,Out of stock,False,False
-2026-11-19,H100,EmpirioLabs AI,empiriolabs,1x H100 NVL h100-nvl-1x,1,NVL,on-demand,0,5.6,In stock,False,False
-2026-11-19,H100,EmpirioLabs AI,empiriolabs,2x H100 PCIe h100-pcie-2x,2,PCIe,spot,0,3.0,In stock,False,False
-2026-11-19,H100,EmpirioLabs AI,empiriolabs,2x H100 NVL h100-nvl-2x,2,NVL,on-demand,0,5.6,In stock,False,False
-2026-11-19,H100,EmpirioLabs AI,empiriolabs,4x H100 PCIe h100-pcie-4x,4,PCIe,spot,0,3.0,In stock,False,False
-2026-11-19,H100,EmpirioLabs AI,empiriolabs,8x H100 PCIe h100-pcie-8x,8,PCIe,spot,0,3.2,In stock,False,False
-2026-11-19,H100,Runcrate,runcrate,1x H100 SXM5,1,SXM,on-demand,0,4.72,In stock,False,False
-2026-11-19,H100,Sesterce,sesterce,1x H100,1,,on-demand,0,3.63,In stock,True,False
-2026-11-19,H100,UpCloud,upcloud,1x H100 SXM GPU-SPOT-12xCPU-240GB-1xH100,1,SXM,spot,0,2.06,In stock,True,False
+2026-11-19,H100,Together AI,together-ai,1x H100 SXM,1,SXM,réservé,1,3.69,In stock,False,False
+2026-11-19,H100,Together AI,together-ai,1x H100 SXM,1,SXM,réservé,3,3.45,In stock,False,False
+2026-11-19,H100,Together AI,together-ai,1x H100 SXM,1,SXM,spot,0,1.99,In stock,False,False
 2026-11-19,H100,UpCloud,upcloud,1x H100 SXM GPU-12xCPU-240GB-1xH100,1,SXM,on-demand,0,2.5,In stock,True,False
-2026-11-19,H100,UpCloud,upcloud,2x H100 SXM GPU-SPOT-24xCPU-480GB-2xH100,2,SXM,spot,0,2.06,Out of stock,True,False
+2026-11-19,H100,UpCloud,upcloud,1x H100 SXM GPU-SPOT-12xCPU-240GB-1xH100,1,SXM,spot,0,2.06,In stock,True,False
 2026-11-19,H100,UpCloud,upcloud,2x H100 SXM GPU-24xCPU-480GB-2xH100,2,SXM,on-demand,0,2.495,Out of stock,True,False
-2026-11-19,H100,UpCloud,upcloud,4x H100 SXM GPU-SPOT-48xCPU-960GB-4xH100,4,SXM,spot,0,2.0575,Out of stock,True,False
+2026-11-19,H100,UpCloud,upcloud,2x H100 SXM GPU-SPOT-24xCPU-480GB-2xH100,2,SXM,spot,0,2.06,Out of stock,True,False
 2026-11-19,H100,UpCloud,upcloud,4x H100 SXM GPU-48xCPU-960GB-4xH100,4,SXM,on-demand,0,2.495,Out of stock,True,False
-2026-11-19,H100,UpCloud,upcloud,8x H100 SXM GPU-SPOT-96xCPU-1920GB-8xH100,8,SXM,spot,0,2.05875,Out of stock,True,False
+2026-11-19,H100,UpCloud,upcloud,4x H100 SXM GPU-SPOT-48xCPU-960GB-4xH100,4,SXM,spot,0,2.0575,Out of stock,True,False
 2026-11-19,H100,UpCloud,upcloud,8x H100 SXM GPU-96xCPU-1920GB-8xH100,8,SXM,on-demand,0,2.495,Out of stock,True,False
-2026-11-19,H100,Scaleway,scaleway,1x H100 PCIe H100-1-80G,1,PCIe,on-demand,0,3.14,In stock,True,False
-2026-11-19,H100,VoltageGPU,voltagegpu,8x H100 SXM bm-a5-h100-sxm,8,SXM,on-demand,0,6.3,In stock,False,False
-2026-11-19,H100,GPU.ai,gpu-ai,1x H100 PCIe,1,PCIe,on-demand,0,2.52,In stock,False,False
-2026-11-19,H100,Lium,lium,1x H100 PCIe,1,PCIe,on-demand,0,2.24,In stock,False,False
-2026-11-19,H100,Spheron,spheron,4x H100 PCIe n3-H100x4-bigroot-spot__CANADA-1,4,PCIe,spot,0,2.20185,In stock,False,False
-2026-11-19,H100,Spheron,spheron,8x H100 SXM EU North 1::gpu-h100-sxm::8gpu-128vcpu-1600gb,8,SXM,on-demand,0,5.858125,In stock,False,False
-2026-11-19,H100,GPUaaS,gpuaas,8x H100 SXM,8,SXM,autre,,2.5,In stock,False,False
-2026-11-19,H100,Hyperstack,hyperstack,1x H100 PCIe,1,PCIe,réservé,,1.75,Not reported,True,False
-2026-11-19,H100,Hyperstack,hyperstack,1x H100 PCIe n3-H100x1-spot,1,PCIe,spot,0,2.0,In stock,True,False
-2026-11-19,H100,Hyperstack,hyperstack,1x H100 PCIe n3-H100x1,1,PCIe,on-demand,0,2.5,Out of stock,True,False
+2026-11-19,H100,UpCloud,upcloud,8x H100 SXM GPU-SPOT-96xCPU-1920GB-8xH100,8,SXM,spot,0,2.05875,Out of stock,True,False
 2026-11-19,H100,Verda,verda,1x H100 SXM5 1H100.80S.30V,1,SXM,spot,0,2.7,In stock,True,False
-2026-11-19,H100,Verda,verda,8x H100 SXM5 8H100.80S.176V,8,SXM,réservé,24,4.0490625,Out of stock,True,False
 2026-11-19,H100,Verda,verda,8x H100 SXM5 8H100.80S.176V,8,SXM,on-demand,0,5.39875,Out of stock,True,False
-2026-11-19,H100,Lyceum,lyceum,1x H100,1,,spot,0,2.69,In stock,True,False
-2026-11-19,H100,Lyceum,lyceum,1x H100,1,,on-demand,0,5.39,Out of stock,True,False
-2026-11-19,H100,Lyceum,lyceum,8x H100,8,,réservé,,,Not reported,True,False
-2026-11-19,H100,Packet·ai,packet-ai,8x H100 SXM5 nvidia-h100-8gpu-sxm5-cluster,8,SXM,autre,,,In stock,False,False
-2026-11-19,H100,TheAI,theai-cloud,8x H100 SXM H100_SXM5_80GB,8,SXM,réservé,6,3.3,Pre-order,False,False
-2026-11-19,H100,GMI Cloud,gmi-cloud,1x H100,1,,on-demand,0,2.6,Not reported,False,False
-2026-11-19,H100,Beam,beam,1x H100 PCIe,1,PCIe,on-demand,0,1.83,Not reported,False,False
-2026-11-19,H100,Beam,beam,8x H100 SXM,8,SXM,autre,,,Not reported,False,False
-2026-11-19,H100,Cerebrium,cerebrium,1x H100 HOPPER_H100,1,,on-demand,0,3.3984,Not reported,False,False
-2026-11-19,H100,Enverge,enverge,1x H100 PCIe,1,PCIe,on-demand,0,4.0,Not reported,False,False
-2026-11-19,H100,DigitalOcean,digitalocean,1x H100 SXM,1,SXM,réservé,12,3.26,Not reported,False,False
-2026-11-19,H100,DigitalOcean,digitalocean,1x H100 SXM gpu-h100x1-80gb,1,SXM,on-demand,0,4.41,Not reported,False,False
-2026-11-19,H100,Lightning AI,lightning-ai,1x H100 lit-h100-1,1,,on-demand,0,5.45,Not reported,False,False
-2026-11-19,H100,Fal.ai,fal-ai,1x H100,1,,autre,,2.49,Not reported,False,False
-2026-11-19,H100,Fal.ai,fal-ai,1x H100,1,,on-demand,0,4.5,Not reported,False,False
-2026-11-19,H100,Replicate,replicate,1x H100 gpu-h100,1,,on-demand,0,5.49,Not reported,False,False
-2026-11-19,H100,Microsoft Azure,microsoft-azure,1x H100 NVL NCadsH100v5,1,NVL,spot,0,1.4183,Not reported,False,True
-2026-11-19,H100,Microsoft Azure,microsoft-azure,1x H100 NVL NCadsH100v5,1,NVL,réservé,36,3.839,Not reported,False,True
-2026-11-19,H100,Microsoft Azure,microsoft-azure,1x H100 NVL NCadsH100v5,1,NVL,on-demand,0,6.98,Not reported,False,True
-2026-11-19,H100,Paperspace,paperspace,1x H100 SXM H100,1,SXM,on-demand,0,5.95,Not reported,False,False
-2026-11-19,H100,Amazon Web Services,aws,1x H100 p5.4xlarge,1,,on-demand,0,6.88,Not reported,False,True
-2026-11-19,H100,Amazon Web Services,aws,8x H100 p5.48xlarge,8,,réservé,36,2.9721625,Not reported,False,True
-2026-11-19,H100,Koyeb,koyeb,1x H100 gpu-nvidia-h100,1,,on-demand,0,2.5,Not reported,False,False
-2026-11-19,H100,OVHcloud,ovh,1x H100 h100-380,1,,on-demand,0,2.99,Not reported,True,False
-2026-11-19,H100,Civo,civo,1x H100 SXM,1,SXM,réservé,36,2.49,Not reported,False,False
-2026-11-19,H100,Civo,civo,1x H100 SXM,1,SXM,on-demand,0,2.99,Not reported,False,False
-2026-11-19,H100,Gcore,gcore,4x H100,4,,on-demand,0,2.59,Not reported,True,False
-2026-11-19,H100,Denvr,denvr,8x H100 SXM,8,SXM,on-demand,0,2.45,Not reported,False,False
-2026-11-19,H100,Nebius,nebius,1x H100 SXM NVIDIA HGX H100,1,SXM,on-demand,0,4.5,Not reported,True,False
-2026-11-19,H100,Canopy Wave,canopywave,2x H100 SXM5,2,SXM,on-demand,0,3.25,Not reported,False,False
-2026-11-19,H100,Seeweb,seeweb,1x H100 SXM,1,SXM,on-demand,0,2.07,Not reported,True,False
-2026-11-19,H100,Seeweb,seeweb,2x H100 SXM,2,SXM,réservé,12,1.765,Not reported,True,False
-2026-11-19,H100,Runware,runware,1x H100,1,,on-demand,0,3.95,Not reported,False,False
-2026-11-19,H100,Hikube,hikube,1x H100 gpu.h100,1,,on-demand,0,3.77,Not reported,False,False
-2026-11-19,H100,CoreWeave,coreweave,8x H100 SXM,8,SXM,spot,0,2.46375,Not reported,False,False
-2026-11-19,H100,CoreWeave,coreweave,8x H100 SXM,8,SXM,on-demand,0,6.155,Not reported,False,False
-2026-11-19,H100,CloudFerro,cloudferro,1x H100 h100.1,1,,on-demand,0,6.9,Not reported,True,False
-2026-11-19,H100,Leafcloud,leaf-cloud,8x H100 SXM eg1.h100x1.V24_96,8,SXM,on-demand,0,3.455,Not reported,True,False
-2026-11-19,H100,Oracle Cloud,oracle-cloud,8x H100 SXM BM.GPU.H100.8,8,SXM,on-demand,0,10.0,Not reported,False,True
-2026-11-19,H100,Google Cloud,google-cloud,8x H100 SXM a3-megagpu-8g,8,SXM,spot,0,4.7379,Not reported,False,True
-2026-11-19,H100,Google Cloud,google-cloud,8x H100 SXM a3-highgpu-8g,8,SXM,réservé,36,4.86175,Not reported,False,True
-2026-11-19,H100,Google Cloud,google-cloud,8x H100 SXM a3-highgpu-8g,8,SXM,on-demand,0,11.069475,Not reported,False,True
-2026-11-19,H100,HyperAI,hyper-ai,1x H100 h100,1,,réservé,1,1.53,Not reported,False,False
-2026-11-19,H100,HyperAI,hyper-ai,1x H100 h100,1,,on-demand,0,1.8,Not reported,False,False
-2026-11-19,H100,Cyfuture AI,cyfuture,8x H100 SXM 8H100.128v.2048m SXM-12mo,8,SXM,réservé,12,2.20125,Not reported,False,False
-2026-11-19,H100,Cyfuture AI,cyfuture,8x H100 SXM 8H100.128v.2048m SXM,8,SXM,on-demand,0,3.41375,Not reported,False,False
-2026-11-19,H100,E2E Networks,e2e-networks,1x H100,1,,spot,0,0.75,Not reported,False,False
-2026-11-19,H100,E2E Networks,e2e-networks,1x H100,1,,réservé,3,3.72,Not reported,False,False
-2026-11-19,H100,E2E Networks,e2e-networks,2x H100,2,,on-demand,0,4.055,Not reported,False,False
+2026-11-19,H100,Verda,verda,8x H100 SXM5 8H100.80S.176V,8,SXM,réservé,24,4.0490625,Out of stock,True,False
+2026-11-19,H100,VoltageGPU,voltagegpu,8x H100 SXM bm-a5-h100-sxm,8,SXM,on-demand,0,6.3,In stock,False,False
+2026-11-19,H100,Vultr,vultr,8x H100 vbm-112c-2048gb-8-h100-gpu,8,,spot,0,2.3,Out of stock,False,False
 2026-11-19,H100,Yotta Shakti Cloud,yotta-shakti-cloud,4x H100 SXM,4,SXM,on-demand,0,6.26,Not reported,False,False
 2026-11-19,H100,Yotta Shakti Cloud,yotta-shakti-cloud,8x H100 SXM,8,SXM,réservé,24,3.36,Not reported,False,False
-2026-11-19,H100,Database Mart,database-mart,1x H100,1,,réservé,1,1.4439,Not reported,False,False
-2026-11-19,H100,Oblivus,oblivus,1x H100 PCIe H100_PCIE_80GB_x1,1,PCIe,réservé,36,2.56,Not reported,False,False
-2026-11-19,H100,Oblivus,oblivus,1x H100 PCIe H100_PCIE_80GB_x1,1,PCIe,on-demand,0,3.5,Out of stock,False,False
-2026-11-19,H100,Impossible Cloud,impossible-cloud,1x H100 PCIe 314-H100-24mo,1,PCIe,réservé,24,1.73,Not reported,True,False
-2026-11-19,H100,Leaseweb,leaseweb,3x H100 PREMIUM_DL385G11-9334-3xH100,3,,réservé,1,1.9733333333333334,Not reported,True,False
-2026-11-19,H100,AceCloud,acecloud,1x H100 SXM N.HGXH100.250,1,SXM,réservé,12,3.3088,Not reported,False,False
-2026-11-19,H100,CUDO Compute,cudo-compute,1x H100 SXM,1,SXM,autre,,,Not reported,False,False
-2026-11-19,H100,Crusoe,crusoe,8x H100 SXM h100-80gb-sxm-ib.8x,8,SXM,on-demand,0,3.9,Out of stock,False,False
-2026-11-19,H100,Crusoe,crusoe,8x H100 SXM h100-80gb-sxm-ib.8x,8,SXM,spot,0,,Not reported,False,False
-2026-11-19,H100,Crusoe,crusoe,8x H100 SXM h100-80gb-sxm-ib.8x,8,SXM,réservé,,,Not reported,False,False
-2026-11-19,H100,Green AI Cloud,greenai-cloud,8x H100 SXM,8,SXM,autre,,,Not reported,True,False
-2026-11-19,H100,OpenRelay,openrelay,1x H100 PCIe,1,PCIe,on-demand,0,2.2,Out of stock,False,False
-2026-11-19,H100,Novita,novita-ai,1x H100 SXM,1,SXM,spot,0,1.7,Out of stock,False,False
-2026-11-19,H100,Novita,novita-ai,1x H100 SXM,1,SXM,réservé,12,2.7948,Out of stock,False,False
-2026-11-19,H100,Novita,novita-ai,1x H100 SXM,1,SXM,on-demand,0,3.39,Out of stock,False,False
-2026-11-19,H100,Lambda Labs,lambda-labs,1x H100 PCIe gpu_1x_h100_pcie,1,PCIe,on-demand,0,3.79,Out of stock,False,False
-2026-11-19,H100,Latitude.sh,latitude-sh,1x H100 g3-h100-small-12mo,1,,réservé,12,1.1795,Out of stock,False,False
-2026-11-19,H100,Latitude.sh,latitude-sh,1x H100 g3-h100-small,1,,on-demand,0,3.37,Out of stock,False,False
-2026-11-19,H100,Jarvislabs,jarvislabs,1x H100 SXM,1,SXM,réservé,12,3.21,Out of stock,False,False
-2026-11-19,H100,Jarvislabs,jarvislabs,1x H100 SXM,1,SXM,on-demand,0,3.49,Out of stock,False,False
-2026-11-19,H100,Vultr,vultr,8x H100 vbm-112c-2048gb-8-h100-gpu,8,,spot,0,2.3,Out of stock,False,False
-2026-11-19,H200,Lyceum,lyceum,1x H200,1,,spot,0,3.59,Out of stock,True,False
-2026-11-19,H200,Lyceum,lyceum,1x H200,1,,on-demand,0,7.09,Out of stock,True,False
-2026-11-19,H200,Lyceum,lyceum,2x H200,2,,spot,0,3.59,Out of stock,True,False
-2026-11-19,H200,Lyceum,lyceum,2x H200,2,,on-demand,0,7.09,Out of stock,True,False
-2026-11-19,H200,Lyceum,lyceum,4x H200,4,,spot,0,3.59,Out of stock,True,False
-2026-11-19,H200,Lyceum,lyceum,4x H200,4,,on-demand,0,7.09,Out of stock,True,False
-2026-11-19,H200,Lyceum,lyceum,8x H200,8,,spot,0,3.59,Out of stock,True,False
-2026-11-19,H200,Lyceum,lyceum,8x H200,8,,on-demand,0,7.09,Out of stock,True,False
-2026-11-19,H200,Lyceum,lyceum,8x H200,8,,réservé,,,Not reported,True,False
-2026-11-19,H200,Runpod,runpod,1x H200 SXM Community Cloud,1,SXM,on-demand,0,3.59,In stock,False,False
-2026-11-19,H200,Runpod,runpod,1x H200 NVL Secure Cloud,1,NVL,on-demand,0,3.79,Out of stock,False,False
-2026-11-19,H200,Runpod,runpod,1x H200 SXM Secure Cloud,1,SXM,on-demand,0,5.29,In stock,False,False
-2026-11-19,H200,Runpod,runpod,2x H200 SXM Secure Cloud,2,SXM,on-demand,0,5.29,In stock,False,False
-2026-11-19,H200,Runpod,runpod,16x H200 SXM Instant Cluster,16,SXM,on-demand,0,6.35,Not reported,False,False
-2026-11-19,H200,Runpod,runpod,8x H200 NVL Secure Cloud,8,NVL,réservé,,,Not reported,False,False
-2026-11-19,H200,Runpod,runpod,8x H200 SXM Secure Cloud,8,SXM,réservé,,,Not reported,False,False
-2026-11-19,H200,Daytona,daytona,1x H200 GPU-only,1,,spot,0,2.87,In stock,False,False
+2026-11-19,H200,AceCloud,acecloud,1x H200 NVL N.H200.16.128,1,NVL,réservé,12,3.2977,Not reported,False,False
+2026-11-19,H200,Amazon Web Services,aws,8x H200 p5en.48xlarge,8,,on-demand,0,7.912,Not reported,False,True
+2026-11-19,H200,Amazon Web Services,aws,8x H200 p5en.48xlarge,8,,réservé,36,3.4179875,Not reported,False,True
+2026-11-19,H200,Beam,beam,1x H200 SXM5,1,SXM,on-demand,0,2.09,Not reported,False,False
+2026-11-19,H200,Beam,beam,8x H200 SXM,8,SXM,autre,,,Not reported,False,False
+2026-11-19,H200,Canopy Wave,canopywave,2x H200 SXM5,2,SXM,on-demand,0,4.0,Not reported,False,False
+2026-11-19,H200,Cerebrium,cerebrium,1x H200 HOPPER_H200,1,,on-demand,0,4.1976,Not reported,False,False
+2026-11-19,H200,Civo,civo,1x H200 SXM,1,SXM,on-demand,0,3.49,Not reported,False,False
+2026-11-19,H200,Civo,civo,1x H200 SXM,1,SXM,réservé,36,2.99,Not reported,False,False
+2026-11-19,H200,CloudFerro,cloudferro,1x H200 gpu.h200,1,,on-demand,0,7.93,Not reported,True,False
+2026-11-19,H200,CoreWeave,coreweave,8x H200 SXM,8,SXM,on-demand,0,6.305,Not reported,False,False
+2026-11-19,H200,CoreWeave,coreweave,8x H200 SXM,8,SXM,spot,0,2.61625,Not reported,False,False
+2026-11-19,H200,Crusoe,crusoe,8x H200 SXM,8,SXM,on-demand,0,4.29,Not reported,False,False
+2026-11-19,H200,Crusoe,crusoe,8x H200 SXM,8,SXM,réservé,,,Not reported,False,False
+2026-11-19,H200,Crusoe,crusoe,8x H200 SXM,8,SXM,spot,0,,Not reported,False,False
+2026-11-19,H200,CUDO Compute,cudo-compute,1x H200 SXM,1,SXM,autre,,,Not reported,False,False
+2026-11-19,H200,Daytona,daytona,1x H200,1,,on-demand,0,7.04,In stock,False,False
 2026-11-19,H200,Daytona,daytona,1x H200,1,,spot,0,4.06,In stock,False,False
 2026-11-19,H200,Daytona,daytona,1x H200 GPU-only,1,,on-demand,0,4.99,In stock,False,False
-2026-11-19,H200,Daytona,daytona,1x H200,1,,on-demand,0,7.04,In stock,False,False
-2026-11-19,H200,Daytona,daytona,2x H200,2,,spot,0,4.055,Not reported,False,False
-2026-11-19,H200,Daytona,daytona,2x H200,2,,on-demand,0,7.04,Not reported,False,False
-2026-11-19,H200,Daytona,daytona,4x H200,4,,spot,0,4.055,Not reported,False,False
+2026-11-19,H200,Daytona,daytona,1x H200 GPU-only,1,,spot,0,2.87,In stock,False,False
+2026-11-19,H200,Daytona,daytona,2x H200,2,,on-demand,0,7.04,In stock,False,False
+2026-11-19,H200,Daytona,daytona,2x H200,2,,spot,0,4.055,In stock,False,False
 2026-11-19,H200,Daytona,daytona,4x H200,4,,on-demand,0,7.04,Not reported,False,False
-2026-11-19,H200,Daytona,daytona,8x H200,8,,spot,0,4.05625,Not reported,False,False
+2026-11-19,H200,Daytona,daytona,4x H200,4,,spot,0,4.055,Not reported,False,False
 2026-11-19,H200,Daytona,daytona,8x H200,8,,on-demand,0,7.04125,Not reported,False,False
-2026-11-19,H200,Together AI,together-ai,1x H200 SXM,1,SXM,spot,0,2.99,In stock,False,False
-2026-11-19,H200,Together AI,together-ai,1x H200 SXM,1,SXM,réservé,3,4.15,In stock,False,False
-2026-11-19,H200,Together AI,together-ai,1x H200 SXM,1,SXM,réservé,1,4.99,In stock,False,False
-2026-11-19,H200,Together AI,together-ai,1x H200 SXM,1,SXM,on-demand,0,5.99,In stock,False,False
-2026-11-19,H200,Runcrate,runcrate,1x H200 NVL,1,NVL,on-demand,0,4.67,In stock,False,False
-2026-11-19,H200,Runcrate,runcrate,1x H200 SXM5,1,SXM,on-demand,0,5.13,In stock,False,False
+2026-11-19,H200,Daytona,daytona,8x H200,8,,spot,0,4.05625,Not reported,False,False
+2026-11-19,H200,Denvr,denvr,8x H200 SXM,8,SXM,autre,,,Not reported,False,False
+2026-11-19,H200,DigitalOcean,digitalocean,1x H200 SXM,1,SXM,réservé,12,3.4,Not reported,False,False
+2026-11-19,H200,DigitalOcean,digitalocean,1x H200 SXM gpu-h200x1-141gb,1,SXM,on-demand,0,4.47,Not reported,False,False
+2026-11-19,H200,E2E Networks,e2e-networks,1x H200,1,,réservé,3,4.95,Not reported,False,False
+2026-11-19,H200,E2E Networks,e2e-networks,1x H200,1,,spot,0,0.94,Not reported,False,False
+2026-11-19,H200,E2E Networks,e2e-networks,4x H200,4,,on-demand,0,5.3775,Not reported,False,False
 2026-11-19,H200,EmpirioLabs AI,empiriolabs,1x H200 NVL h200-nvl-1x,1,NVL,on-demand,0,7.5,In stock,False,False
 2026-11-19,H200,EmpirioLabs AI,empiriolabs,1x H200 h200-1x,1,,on-demand,0,7.6,In stock,False,False
 2026-11-19,H200,EmpirioLabs AI,empiriolabs,2x H200 h200-2x,2,,on-demand,0,8.7,In stock,False,False
 2026-11-19,H200,EmpirioLabs AI,empiriolabs,4x H200 h200-4x,4,,on-demand,0,10.8,In stock,False,False
 2026-11-19,H200,EmpirioLabs AI,empiriolabs,8x H200 h200-8x,8,,on-demand,0,10.8,In stock,False,False
-2026-11-19,H200,Lium,lium,1x H200 NVL,1,NVL,on-demand,0,3.75,In stock,False,False
-2026-11-19,H200,GPU.ai,gpu-ai,1x H200 SXM,1,SXM,on-demand,0,4.04,In stock,False,False
-2026-11-19,H200,Spheron,spheron,4x H200 SXM H200_SXM5-4-od-200g__noida-india,4,SXM,on-demand,0,5.5164,In stock,False,False
-2026-11-19,H200,Spheron,spheron,8x H200 SXM EU West 1::gpu-h200-sxm::8gpu-128vcpu-1600gb::spot,8,SXM,spot,0,3.3207875,In stock,False,False
-2026-11-19,H200,Jarvislabs,jarvislabs,1x H200 SXM,1,SXM,spot,0,2.29,In stock,False,False
-2026-11-19,H200,Jarvislabs,jarvislabs,1x H200 SXM,1,SXM,réservé,12,4.22,In stock,False,False
-2026-11-19,H200,Jarvislabs,jarvislabs,1x H200 SXM,1,SXM,on-demand,0,4.59,In stock,False,False
-2026-11-19,H200,GPUaaS,gpuaas,1x H200 SXM,1,SXM,autre,,2.75,In stock,False,False
-2026-11-19,H200,Packet·ai,packet-ai,8x H200 NVL nvidia-h200-8gpu-nvl-cluster,8,NVL,autre,,,In stock,False,False
-2026-11-19,H200,Impossible Cloud,impossible-cloud,8x H200 349-H200-24mo,8,,réservé,24,3.16,Not reported,True,False
-2026-11-19,H200,TheAI,theai-cloud,8x H200 NVL H200_NVL_141GB,8,NVL,réservé,12,2.55,Pre-order,False,False
-2026-11-19,H200,GMI Cloud,gmi-cloud,1x H200,1,,on-demand,0,3.2,Not reported,False,False
-2026-11-19,H200,Beam,beam,1x H200 SXM5,1,SXM,on-demand,0,2.09,Not reported,False,False
-2026-11-19,H200,Beam,beam,8x H200 SXM,8,SXM,autre,,,Not reported,False,False
-2026-11-19,H200,Cerebrium,cerebrium,1x H200 HOPPER_H200,1,,on-demand,0,4.1976,Not reported,False,False
-2026-11-19,H200,Lightning AI,lightning-ai,1x H200 lit-h200-1,1,,on-demand,0,4.5,Not reported,False,False
-2026-11-19,H200,Theta EdgeCloud,theta-edgecloud,1x H200 vm_gh200x1,1,,on-demand,0,3.69,Not reported,False,False
-2026-11-19,H200,Replicate,replicate,1x H200 gpu-h200,1,,on-demand,0,5.49,Not reported,False,False
 2026-11-19,H200,Enverge,enverge,1x H200,1,,on-demand,0,5.5,Not reported,False,False
-2026-11-19,H200,DigitalOcean,digitalocean,1x H200 SXM,1,SXM,réservé,12,3.4,Not reported,False,False
-2026-11-19,H200,DigitalOcean,digitalocean,1x H200 SXM gpu-h200x1-141gb,1,SXM,on-demand,0,4.47,Not reported,False,False
-2026-11-19,H200,Hugging Face,huggingface,1x H200 h200,1,,on-demand,0,5.0,Not reported,False,False
 2026-11-19,H200,Fal.ai,fal-ai,1x H200,1,,autre,,2.99,Not reported,False,False
 2026-11-19,H200,Fal.ai,fal-ai,1x H200,1,,on-demand,0,6.0,Not reported,False,False
-2026-11-19,H200,Koyeb,koyeb,1x H200 gpu-nvidia-h200,1,,on-demand,0,3.0,Not reported,False,False
-2026-11-19,H200,Civo,civo,1x H200 SXM,1,SXM,réservé,36,2.99,Not reported,False,False
-2026-11-19,H200,Civo,civo,1x H200 SXM,1,SXM,on-demand,0,3.49,Not reported,False,False
-2026-11-19,H200,Nebius,nebius,1x H200 SXM NVIDIA HGX H200,1,SXM,on-demand,0,5.4,Not reported,True,False
-2026-11-19,H200,Crusoe,crusoe,8x H200 SXM,8,SXM,on-demand,0,4.29,Not reported,False,False
-2026-11-19,H200,Crusoe,crusoe,8x H200 SXM,8,SXM,spot,0,,Not reported,False,False
-2026-11-19,H200,Crusoe,crusoe,8x H200 SXM,8,SXM,réservé,,,Not reported,False,False
-2026-11-19,H200,Canopy Wave,canopywave,2x H200 SXM5,2,SXM,on-demand,0,4.0,Not reported,False,False
 2026-11-19,H200,Gcore,gcore,8x H200 SXM,8,SXM,on-demand,0,3.48875,Not reported,True,False
-2026-11-19,H200,Seeweb,seeweb,1x H200 SXM,1,SXM,réservé,12,2.42,Not reported,True,False
-2026-11-19,H200,Seeweb,seeweb,1x H200 SXM,1,SXM,on-demand,0,2.85,Not reported,True,False
-2026-11-19,H200,Runware,runware,1x H200,1,,on-demand,0,4.5,Not reported,False,False
-2026-11-19,H200,CoreWeave,coreweave,8x H200 SXM,8,SXM,spot,0,2.61625,Not reported,False,False
-2026-11-19,H200,CoreWeave,coreweave,8x H200 SXM,8,SXM,on-demand,0,6.305,Not reported,False,False
-2026-11-19,H200,Hikube,hikube,1x H200 gpu.h200,1,,on-demand,0,4.58,Not reported,False,False
-2026-11-19,H200,CloudFerro,cloudferro,1x H200 gpu.h200,1,,on-demand,0,7.93,Not reported,True,False
-2026-11-19,H200,Amazon Web Services,aws,8x H200 p5en.48xlarge,8,,réservé,36,3.4179875,Not reported,False,True
-2026-11-19,H200,Amazon Web Services,aws,8x H200 p5en.48xlarge,8,,on-demand,0,7.912,Not reported,False,True
-2026-11-19,H200,OVHcloud,ovh,8x H200 h200-1920,8,,on-demand,0,6.195,Not reported,True,False
-2026-11-19,H200,Oracle Cloud,oracle-cloud,8x H200 BM.GPU.H200.8,8,,on-demand,0,10.0,Not reported,False,True
-2026-11-19,H200,Microsoft Azure,microsoft-azure,8x H200 NDsrH200v5,8,,réservé,36,6.8610625,Not reported,False,True
-2026-11-19,H200,Microsoft Azure,microsoft-azure,8x H200 NDsrH200v5,8,,on-demand,0,13.78,Not reported,False,True
-2026-11-19,H200,Microsoft Azure,microsoft-azure,8x H200 NDsrH200v5,8,,spot,0,13.78,Not reported,False,True
-2026-11-19,H200,E2E Networks,e2e-networks,1x H200,1,,spot,0,0.94,Not reported,False,False
-2026-11-19,H200,E2E Networks,e2e-networks,1x H200,1,,réservé,3,4.95,Not reported,False,False
-2026-11-19,H200,E2E Networks,e2e-networks,4x H200,4,,on-demand,0,5.3775,Not reported,False,False
-2026-11-19,H200,Hyperstack,hyperstack,1x H200 SXM,1,SXM,réservé,,2.79,Not reported,True,False
-2026-11-19,H200,Hyperstack,hyperstack,8x H200 SXM n3-H200-SXM5x8,8,SXM,on-demand,0,3.99,Out of stock,True,False
+2026-11-19,H200,Geodd,geodd,1x H200 NVL gpu_1x_h200_nvl,1,NVL,on-demand,0,3.5,Out of stock,False,False
+2026-11-19,H200,GMI Cloud,gmi-cloud,1x H200,1,,on-demand,0,3.2,Not reported,False,False
 2026-11-19,H200,Google Cloud,google-cloud,8x H200 SXM a3-ultragpu-8g,8,SXM,réservé,36,4.65845,Not reported,False,True
 2026-11-19,H200,Google Cloud,google-cloud,8x H200 SXM a3-ultragpu-8g,8,SXM,spot,0,5.4356125,Not reported,False,True
-2026-11-19,H200,Leaseweb,leaseweb,2x H200 PREMIUM_DL385G11-9334-2xH200,2,,réservé,1,2.65,Not reported,True,False
-2026-11-19,H200,Oblivus,oblivus,8x H200 SXM H200_SXM5_141GB_x8,8,SXM,réservé,36,4.47,Not reported,False,False
-2026-11-19,H200,Oblivus,oblivus,8x H200 SXM H200_SXM5_141GB_x8,8,SXM,on-demand,0,5.5,Out of stock,False,False
-2026-11-19,H200,Utho,utho,1x H200,1,,réservé,36,2.64,Not reported,False,False
-2026-11-19,H200,AceCloud,acecloud,1x H200 NVL N.H200.16.128,1,NVL,réservé,12,3.2977,Not reported,False,False
-2026-11-19,H200,CUDO Compute,cudo-compute,1x H200 SXM,1,SXM,autre,,,Not reported,False,False
+2026-11-19,H200,GPU.ai,gpu-ai,1x H200 NVL,1,NVL,on-demand,0,4.06,In stock,False,False
+2026-11-19,H200,GPU.ai,gpu-ai,1x H200 SXM,1,SXM,on-demand,0,4.27,In stock,False,False
+2026-11-19,H200,GPU.ai,gpu-ai,2x H200 NVL,2,NVL,on-demand,0,4.415,In stock,False,False
+2026-11-19,H200,GPU.ai,gpu-ai,2x H200 SXM,2,SXM,on-demand,0,4.895,In stock,False,False
+2026-11-19,H200,GPU.ai,gpu-ai,3x H200 SXM,3,SXM,on-demand,0,4.8933333333333335,In stock,False,False
+2026-11-19,H200,GPU.ai,gpu-ai,4x H200 SXM,4,SXM,on-demand,0,6.0525,In stock,False,False
+2026-11-19,H200,GPU.ai,gpu-ai,8x H200 SXM,8,SXM,on-demand,0,6.0525,In stock,False,False
+2026-11-19,H200,GPUaaS,gpuaas,1x H200 SXM,1,SXM,autre,,2.75,In stock,False,False
 2026-11-19,H200,Green AI Cloud,greenai-cloud,8x H200 SXM,8,SXM,autre,,,Not reported,True,False
 2026-11-19,H200,HIGHRESO,highreso,8x H200 SXM h141-8-a-bare,8,SXM,autre,,,Not reported,False,False
-2026-11-19,H200,Denvr,denvr,8x H200 SXM,8,SXM,autre,,,Not reported,False,False
-2026-11-19,H200,Geodd,geodd,1x H200 NVL gpu_1x_h200_nvl,1,NVL,on-demand,0,3.5,Out of stock,False,False
+2026-11-19,H200,Hikube,hikube,1x H200 gpu.h200,1,,on-demand,0,4.58,Not reported,False,False
+2026-11-19,H200,Hugging Face,huggingface,1x H200 h200,1,,on-demand,0,5.0,Not reported,False,False
+2026-11-19,H200,Hyperstack,hyperstack,1x H200 SXM,1,SXM,réservé,,2.79,Not reported,True,False
+2026-11-19,H200,Hyperstack,hyperstack,8x H200 SXM n3-H200-SXM5x8,8,SXM,on-demand,0,3.99,Out of stock,True,False
+2026-11-19,H200,Impossible Cloud,impossible-cloud,8x H200 349-H200-24mo,8,,réservé,24,3.16,Not reported,True,False
+2026-11-19,H200,Jarvislabs,jarvislabs,1x H200 SXM,1,SXM,on-demand,0,4.59,In stock,False,False
+2026-11-19,H200,Jarvislabs,jarvislabs,1x H200 SXM,1,SXM,réservé,12,4.22,In stock,False,False
+2026-11-19,H200,Jarvislabs,jarvislabs,1x H200 SXM,1,SXM,spot,0,2.29,In stock,False,False
+2026-11-19,H200,Koyeb,koyeb,1x H200 gpu-nvidia-h200,1,,on-demand,0,3.0,Not reported,False,False
+2026-11-19,H200,Leaseweb,leaseweb,2x H200 PREMIUM_DL385G11-9334-2xH200,2,,réservé,1,2.65,Not reported,True,False
+2026-11-19,H200,Lightning AI,lightning-ai,1x H200 lit-h200-1,1,,on-demand,0,4.5,Not reported,False,False
+2026-11-19,H200,Lium,lium,1x H200 NVL,1,NVL,on-demand,0,3.75,In stock,False,False
+2026-11-19,H200,Lium,lium,1x H200 SXM,1,SXM,on-demand,0,3.8,In stock,False,False
+2026-11-19,H200,Lium,lium,1x H200 SXM,1,SXM,on-demand,0,4.254,In stock,False,False
+2026-11-19,H200,Lium,lium,1x H200 SXM,1,SXM,on-demand,0,4.35,In stock,False,False
+2026-11-19,H200,Lium,lium,1x H200 SXM,1,SXM,on-demand,0,5.38,In stock,False,False
+2026-11-19,H200,Lium,lium,8x H200 SXM,8,SXM,on-demand,0,5.38,In stock,False,False
+2026-11-19,H200,Lyceum,lyceum,1x H200,1,,on-demand,0,7.09,Out of stock,True,False
+2026-11-19,H200,Lyceum,lyceum,1x H200,1,,spot,0,3.59,Out of stock,True,False
+2026-11-19,H200,Lyceum,lyceum,2x H200,2,,on-demand,0,7.09,Out of stock,True,False
+2026-11-19,H200,Lyceum,lyceum,2x H200,2,,spot,0,3.59,Out of stock,True,False
+2026-11-19,H200,Lyceum,lyceum,4x H200,4,,on-demand,0,7.09,In stock,True,False
+2026-11-19,H200,Lyceum,lyceum,4x H200,4,,spot,0,3.59,In stock,True,False
+2026-11-19,H200,Lyceum,lyceum,8x H200,8,,on-demand,0,7.09,Out of stock,True,False
+2026-11-19,H200,Lyceum,lyceum,8x H200,8,,réservé,,,Not reported,True,False
+2026-11-19,H200,Lyceum,lyceum,8x H200,8,,spot,0,3.59,Out of stock,True,False
 2026-11-19,H200,Massed Compute,massed-compute,1x H200 NVL gpu_1x_h200_nvl,1,NVL,on-demand,0,3.62,Out of stock,False,False
+2026-11-19,H200,Microsoft Azure,microsoft-azure,8x H200 NDsrH200v5,8,,on-demand,0,13.78,Not reported,False,True
+2026-11-19,H200,Microsoft Azure,microsoft-azure,8x H200 NDsrH200v5,8,,réservé,36,6.8610625,Not reported,False,True
+2026-11-19,H200,Microsoft Azure,microsoft-azure,8x H200 NDsrH200v5,8,,spot,0,13.78,Not reported,False,True
+2026-11-19,H200,Nebius,nebius,1x H200 SXM NVIDIA HGX H200,1,SXM,on-demand,0,5.4,Not reported,True,False
+2026-11-19,H200,Oblivus,oblivus,8x H200 SXM H200_SXM5_141GB_x8,8,SXM,on-demand,0,5.5,Out of stock,False,False
+2026-11-19,H200,Oblivus,oblivus,8x H200 SXM H200_SXM5_141GB_x8,8,SXM,réservé,36,4.47,Not reported,False,False
+2026-11-19,H200,Oracle Cloud,oracle-cloud,8x H200 BM.GPU.H200.8,8,,on-demand,0,10.0,Not reported,False,True
+2026-11-19,H200,OVHcloud,ovh,8x H200 h200-1920,8,,on-demand,0,6.195,Not reported,True,False
+2026-11-19,H200,Packet·ai,packet-ai,8x H200 NVL nvidia-h200-8gpu-nvl-cluster,8,NVL,autre,,,In stock,False,False
+2026-11-19,H200,Replicate,replicate,1x H200 gpu-h200,1,,on-demand,0,5.49,Not reported,False,False
+2026-11-19,H200,Runcrate,runcrate,1x H200 NVL,1,NVL,on-demand,0,4.67,In stock,False,False
+2026-11-19,H200,Runcrate,runcrate,1x H200 SXM5,1,SXM,on-demand,0,5.13,In stock,False,False
+2026-11-19,H200,Runpod,runpod,16x H200 SXM Instant Cluster,16,SXM,on-demand,0,6.35,Not reported,False,False
+2026-11-19,H200,Runpod,runpod,1x H200 NVL Secure Cloud,1,NVL,on-demand,0,3.79,Out of stock,False,False
+2026-11-19,H200,Runpod,runpod,1x H200 SXM Community Cloud,1,SXM,on-demand,0,3.59,Out of stock,False,False
+2026-11-19,H200,Runpod,runpod,1x H200 SXM Secure Cloud,1,SXM,on-demand,0,5.29,In stock,False,False
+2026-11-19,H200,Runpod,runpod,2x H200 SXM Secure Cloud,2,SXM,on-demand,0,5.29,In stock,False,False
+2026-11-19,H200,Runpod,runpod,8x H200 NVL Secure Cloud,8,NVL,réservé,,,Not reported,False,False
+2026-11-19,H200,Runpod,runpod,8x H200 SXM Secure Cloud,8,SXM,réservé,,,Not reported,False,False
+2026-11-19,H200,Runware,runware,1x H200,1,,on-demand,0,4.5,Not reported,False,False
+2026-11-19,H200,Seeweb,seeweb,1x H200 SXM,1,SXM,on-demand,0,2.85,Not reported,True,False
+2026-11-19,H200,Seeweb,seeweb,1x H200 SXM,1,SXM,réservé,12,2.42,Not reported,True,False
+2026-11-19,H200,Sesterce,sesterce,4x H200,4,,on-demand,0,7.7495,In stock,True,False
 2026-11-19,H200,Sesterce,sesterce,8x H200,8,,on-demand,0,3.3,Out of stock,True,False
+2026-11-19,H200,Spheron,spheron,4x H200 SXM H200_SXM5-4-od-200g__noida-india,4,SXM,on-demand,0,5.5164,In stock,False,False
+2026-11-19,H200,Spheron,spheron,8x H200 SXM EU West 1::gpu-h200-sxm::8gpu-128vcpu-1600gb::spot,8,SXM,spot,0,3.3207875,In stock,False,False
+2026-11-19,H200,TheAI,theai-cloud,8x H200 NVL H200_NVL_141GB,8,NVL,réservé,12,2.55,Pre-order,False,False
+2026-11-19,H200,Theta EdgeCloud,theta-edgecloud,1x H200 vm_gh200x1,1,,on-demand,0,3.69,Not reported,False,False
+2026-11-19,H200,Together AI,together-ai,1x H200 SXM,1,SXM,on-demand,0,5.99,In stock,False,False
+2026-11-19,H200,Together AI,together-ai,1x H200 SXM,1,SXM,réservé,1,4.99,In stock,False,False
+2026-11-19,H200,Together AI,together-ai,1x H200 SXM,1,SXM,réservé,3,4.15,In stock,False,False
+2026-11-19,H200,Together AI,together-ai,1x H200 SXM,1,SXM,spot,0,2.99,In stock,False,False
+2026-11-19,H200,Utho,utho,1x H200,1,,réservé,36,2.64,Not reported,False,False
 2026-11-19,H200,Verda,verda,1x H200 SXM5 1H200.141S.44V,1,SXM,spot,0,3.452,Out of stock,True,False
-2026-11-19,H200,Verda,verda,8x H200 SXM5 8H200.141S.176V,8,SXM,réservé,24,5.1778125,Out of stock,True,False
+2026-11-19,H200,Verda,verda,4x H200 SXM5 4H200.141S.176V,4,SXM,on-demand,0,6.905,In stock,True,False
+2026-11-19,H200,Verda,verda,4x H200 SXM5 4H200.141S.176V,4,SXM,réservé,24,5.17875,In stock,True,False
+2026-11-19,H200,Verda,verda,4x H200 SXM5 4H200.141S.176V,4,SXM,spot,0,3.4525,In stock,True,False
 2026-11-19,H200,Verda,verda,8x H200 SXM5 8H200.141S.176V,8,SXM,on-demand,0,6.90375,Out of stock,True,False
+2026-11-19,H200,Verda,verda,8x H200 SXM5 8H200.141S.176V,8,SXM,réservé,24,5.1778125,Out of stock,True,False
 2026-11-19,H200,VoltageGPU,voltagegpu,1x H200 h200-small,1,,on-demand,0,9.0,Out of stock,False,False
-2026-11-19,B200,Runpod,runpod,1x B200 SXM Community Cloud,1,SXM,on-demand,0,5.98,Out of stock,False,False
-2026-11-19,B200,Runpod,runpod,1x B200 SXM Secure Cloud,1,SXM,on-demand,0,7.99,Out of stock,False,False
-2026-11-19,B200,Runpod,runpod,16x B200 SXM Instant Cluster,16,SXM,on-demand,0,9.59,Not reported,False,False
-2026-11-19,B200,Runpod,runpod,8x B200 SXM Secure Cloud,8,SXM,réservé,,,Not reported,False,False
-2026-11-19,B200,Runcrate,runcrate,1x B200 NVL,1,NVL,on-demand,0,10.01,In stock,False,False
-2026-11-19,B200,EmpirioLabs AI,empiriolabs,1x B200 b200-1x,1,,on-demand,0,14.0,In stock,False,False
-2026-11-19,B200,UpCloud,upcloud,1x B200 SXM GPU-SPOT-24xCPU-240GB-1xB200,1,SXM,spot,0,4.23,In stock,True,False
-2026-11-19,B200,UpCloud,upcloud,1x B200 SXM GPU-24xCPU-240GB-1xB200,1,SXM,on-demand,0,6.05,In stock,True,False
-2026-11-19,B200,UpCloud,upcloud,2x B200 SXM GPU-SPOT-48xCPU-480GB-2xB200,2,SXM,spot,0,4.235,In stock,True,False
-2026-11-19,B200,UpCloud,upcloud,2x B200 SXM GPU-48xCPU-480GB-2xB200,2,SXM,on-demand,0,6.05,In stock,True,False
-2026-11-19,B200,UpCloud,upcloud,4x B200 SXM GPU-SPOT-96xCPU-960GB-4xB200,4,SXM,spot,0,4.235,In stock,True,False
-2026-11-19,B200,UpCloud,upcloud,4x B200 SXM GPU-96xCPU-960GB-4xB200,4,SXM,on-demand,0,6.05,In stock,True,False
-2026-11-19,B200,UpCloud,upcloud,8x B200 SXM GPU-SPOT-192xCPU-1920GB-8xB200,8,SXM,spot,0,4.23375,Out of stock,True,False
-2026-11-19,B200,UpCloud,upcloud,8x B200 SXM Dedicated GPU Cluster,8,SXM,réservé,36,4.37625,Pre-order,True,False
-2026-11-19,B200,UpCloud,upcloud,8x B200 SXM GPU-192xCPU-1920GB-8xB200,8,SXM,on-demand,0,6.04875,Out of stock,True,False
-2026-11-19,B200,Lyceum,lyceum,1x B200,1,,spot,0,4.99,Out of stock,True,False
-2026-11-19,B200,Lyceum,lyceum,2x B200,2,,spot,0,4.99,Out of stock,True,False
-2026-11-19,B200,Lyceum,lyceum,1x B200,1,,on-demand,0,9.99,In stock,True,False
-2026-11-19,B200,Lyceum,lyceum,4x B200,4,,spot,0,4.99,Out of stock,True,False
-2026-11-19,B200,Lyceum,lyceum,2x B200,2,,on-demand,0,9.99,In stock,True,False
-2026-11-19,B200,Lyceum,lyceum,8x B200,8,,spot,0,4.99,Out of stock,True,False
-2026-11-19,B200,Lyceum,lyceum,4x B200,4,,on-demand,0,9.99,In stock,True,False
-2026-11-19,B200,Lyceum,lyceum,8x B200,8,,on-demand,0,9.99,Out of stock,True,False
-2026-11-19,B200,Lyceum,lyceum,8x B200,8,,réservé,,,Not reported,True,False
-2026-11-19,B200,Verda,verda,4x B200 SXM 4B200.120V,4,SXM,spot,0,4.8975,Out of stock,True,False
-2026-11-19,B200,Verda,verda,8x B200 SXM 8B200.240V.CC.AMD,8,SXM,réservé,24,7.494375,In stock,True,False
-2026-11-19,B200,Verda,verda,8x B200 SXM 8B200.240V.CC.AMD,8,SXM,on-demand,0,9.9925,In stock,True,False
-2026-11-19,B200,GPU.ai,gpu-ai,1x B200 SXM,1,SXM,on-demand,0,5.63,In stock,False,False
-2026-11-19,B200,GPU.ai,gpu-ai,2x B200 SXM,2,SXM,on-demand,0,13.365,In stock,False,False
-2026-11-19,B200,Lium,lium,1x B200 SXM,1,SXM,spot,0,5.0,In stock,False,False
-2026-11-19,B200,Lium,lium,1x B200 SXM,1,SXM,on-demand,0,7.0,In stock,False,False
-2026-11-19,B200,Spheron,spheron,1x B200 SXM ME West 1::gpu-b200-sxm-a::1gpu-20vcpu-224gb::spot,1,SXM,spot,0,5.2518,In stock,False,False
-2026-11-19,B200,Spheron,spheron,1x B200 SXM US Central 1::gpu-b200-sxm::1gpu-20vcpu-224gb::spot,1,SXM,spot,0,6.1155,In stock,False,False
-2026-11-19,B200,Spheron,spheron,1x B200 SXM ME West 1::gpu-b200-sxm-a::1gpu-20vcpu-224gb,1,SXM,on-demand,0,11.115,In stock,False,False
-2026-11-19,B200,Spheron,spheron,8x B200 SXM ME West 1::gpu-b200-sxm-a::8gpu-160vcpu-1792gb::spot,8,SXM,spot,0,5.2249625,In stock,False,False
-2026-11-19,B200,Spheron,spheron,8x B200 SXM US Central 1::gpu-b200-sxm::8gpu-160vcpu-1792gb::spot,8,SXM,spot,0,6.0800625,In stock,False,False
-2026-11-19,B200,Spheron,spheron,8x B200 SXM ME West 1::gpu-b200-sxm-a::8gpu-160vcpu-1792gb,8,SXM,on-demand,0,11.058125,In stock,False,False
-2026-11-19,B200,Together AI,together-ai,1x B200 SXM,1,SXM,spot,0,4.65,In stock,False,False
-2026-11-19,B200,Together AI,together-ai,1x B200 SXM,1,SXM,réservé,3,7.99,Out of stock,False,False
-2026-11-19,B200,Together AI,together-ai,1x B200 SXM,1,SXM,réservé,1,8.69,Out of stock,False,False
-2026-11-19,B200,Together AI,together-ai,1x B200 SXM,1,SXM,on-demand,0,9.29,Out of stock,False,False
-2026-11-19,B200,Impossible Cloud,impossible-cloud,8x B200 SXM 273-B200-12mo,8,SXM,réservé,12,4.21,In stock,True,False
-2026-11-19,B200,GPUaaS,gpuaas,8x B200,8,,autre,,7.0,In stock,False,False
-2026-11-19,B200,Packet·ai,packet-ai,1x B200 nvidia-b200-1gpu-dynamic,1,,on-demand,0,4.25,Not reported,False,False
-2026-11-19,B200,Packet·ai,packet-ai,2x B200 nvidia-b200-2gpu-monthly,2,,réservé,1,7.99,Not reported,False,False
-2026-11-19,B200,Packet·ai,packet-ai,8x B200 SXM nvidia-b200-8gpu-sxm-cluster,8,SXM,autre,,,In stock,False,False
-2026-11-19,B200,TheAI,theai-cloud,512x B200 SXM B200_SXM_180GB,512,SXM,réservé,36,3.6,Pre-order,False,False
-2026-11-19,B200,Denvr,denvr,8x B200 SXM,8,SXM,autre,,,Waitlist,False,False
-2026-11-19,B200,GMI Cloud,gmi-cloud,1x B200,1,,on-demand,0,5.0,Not reported,False,False
-2026-11-19,B200,Beam,beam,1x B200 SXM,1,SXM,on-demand,0,4.11,Not reported,False,False
-2026-11-19,B200,Beam,beam,8x B200 SXM,8,SXM,autre,,,Not reported,False,False
-2026-11-19,B200,Cerebrium,cerebrium,1x B200 BLACKWELL_B200,1,,on-demand,0,6.012,Not reported,False,False
-2026-11-19,B200,OpenRelay,openrelay,1x B200,1,,on-demand,0,6.3,Not reported,False,False
-2026-11-19,B200,Daytona,daytona,1x B200 GPU-only,1,,spot,0,4.3,Not reported,False,False
-2026-11-19,B200,Daytona,daytona,1x B200 GPU-only,1,,on-demand,0,7.49,Not reported,False,False
-2026-11-19,B200,Fal.ai,fal-ai,1x B200,1,,autre,,5.49,Not reported,False,False
-2026-11-19,B200,Fal.ai,fal-ai,1x B200,1,,on-demand,0,7.99,Not reported,False,False
-2026-11-19,B200,CoreWeave,coreweave,8x B200 SXM,8,SXM,spot,0,4.26375,Not reported,False,False
-2026-11-19,B200,CoreWeave,coreweave,8x B200 SXM,8,SXM,on-demand,0,8.6,Not reported,False,False
-2026-11-19,B200,Hostinger,hostinger,1x B200,1,,on-demand,0,4.5,Not reported,True,False
-2026-11-19,B200,Lightning AI,lightning-ai,8x B200 lit-b200-8,8,,on-demand,0,9.86,Not reported,False,False
-2026-11-19,B200,Koyeb,koyeb,1x B200 gpu-nvidia-b200,1,,on-demand,0,5.5,Not reported,False,False
-2026-11-19,B200,Oracle Cloud,oracle-cloud,8x B200 BM.GPU.B200.8,8,,on-demand,0,14.0,Not reported,False,True
-2026-11-19,B200,Amazon Web Services,aws,8x B200 p6-b200.48xlarge,8,,réservé,36,6.152375,Not reported,False,True
-2026-11-19,B200,Amazon Web Services,aws,8x B200 p6-b200.48xlarge,8,,on-demand,0,14.2416,Not reported,False,True
-2026-11-19,B200,Nebius,nebius,1x B200 SXM NVIDIA HGX B200,1,SXM,on-demand,0,8.5,Not reported,True,False
-2026-11-19,B200,Runware,runware,1x B200,1,,on-demand,0,6.0,Not reported,False,False
-2026-11-19,B200,HIGHRESO,highreso,8x B200 SXM,8,SXM,on-demand,0,7.5275,Not reported,False,False
-2026-11-19,B200,E2E Networks,e2e-networks,1x B200,1,,réservé,3,7.31,Not reported,False,False
-2026-11-19,B200,E2E Networks,e2e-networks,1x B200,1,,on-demand,0,8.12,Not reported,False,False
-2026-11-19,B200,Orion AI Factory,orion-ai-factory,1x B200 SXM max,1,SXM,réservé,36,7.81,Not reported,False,False
-2026-11-19,B200,Orion AI Factory,orion-ai-factory,1x B200 SXM max,1,SXM,on-demand,0,9.76,Not reported,False,False
-2026-11-19,B200,Cirrascale,cirrascale,8x B200,8,,réservé,,4.79,Not reported,False,False
-2026-11-19,B200,Geodd,geodd,8x B200 SXM gpu_8x_b200,8,SXM,réservé,,4.5,Not reported,False,False
-2026-11-19,B200,STN,stn-inc,8x B200 SXM,8,SXM,réservé,60,4.55,Not reported,False,False
-2026-11-19,B200,Google Cloud,google-cloud,8x B200 a4-highgpu-8g,8,,spot,0,3.9804875,Not reported,False,True
-2026-11-19,B200,Google Cloud,google-cloud,8x B200 a4-highgpu-8g,8,,réservé,36,7.162375,Not reported,False,True
-2026-11-19,B200,Civo,civo,8x B200,8,,réservé,36,3.79,Not reported,False,False
-2026-11-19,B200,Hyperstack,hyperstack,1x B200,1,,réservé,,5.1,Not reported,True,False
-2026-11-19,B200,Hyperstack,hyperstack,8x B200 SXM n3-B200-SXM6x8,8,SXM,on-demand,0,6.0,Out of stock,True,False
-2026-11-19,B200,Green AI Cloud,greenai-cloud,8x B200 SXM,8,SXM,réservé,,3.75,Not reported,True,False
-2026-11-19,B200,Beyond.pl,beyond-pl,8x B200 SXM,8,SXM,réservé,,5.1,Not reported,True,False
-2026-11-19,B200,Yotta Shakti Cloud,yotta-shakti-cloud,8x B200 SXM,8,SXM,réservé,60,2.98625,Not reported,False,False
-2026-11-19,B200,CUDO Compute,cudo-compute,1x B200 SXM,1,SXM,autre,,,Not reported,False,False
-2026-11-19,B200,Bentaus,bentaus,8x B200 SXM,8,SXM,autre,,,Not reported,False,False
-2026-11-19,B200,Crusoe,crusoe,8x B200 SXM,8,SXM,autre,,,Not reported,False,False
-2026-11-19,B200,Canopy Wave,canopywave,2x B200 SXM5,2,SXM,autre,,,Not reported,False,False
-2026-11-19,B200,Massed Compute,massed-compute,8x B200 SXM gpu_8x_b200_SXM6,8,SXM,on-demand,0,5.4325,Out of stock,False,False
-2026-11-19,B200,Lambda Labs,lambda-labs,8x B200 SXM gpu_8x_b200_sxm6,8,SXM,on-demand,0,7.69,Out of stock,False,False
-2026-11-19,B200,Sesterce,sesterce,8x B200,8,,on-demand,0,4.114,Out of stock,True,False
-2026-11-19,B200,Oblivus,oblivus,8x B200 SXM B200_SXM_x8,8,SXM,on-demand,0,8.4,Out of stock,False,False
-2026-11-19,B200,Vultr,vultr,8x B200 vbm-256c-3072gb-8-b200-gpu,8,,spot,0,3.2,Out of stock,False,False
