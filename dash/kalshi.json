@@ -5,48 +5,48 @@
    "gpu": "H100",
    "mois": "2026-11",
    "k": 0,
-   "prix": 3.1341,
+   "prix": 3.1382,
    "borne": "",
-   "q25": 3.0579,
-   "q75": 3.2104,
+   "q25": 3.0647,
+   "q75": 3.2118,
    "qualite": "mince",
-   "deux_sens": 2,
+   "deux_sens": 1,
    "spread": 0.1,
    "strikes": 9,
    "event": "KXH100MS-26NOV",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H100-2026-12",
    "gpu": "H100",
    "mois": "2026-12",
    "k": 1,
-   "prix": 3.2917,
+   "prix": 2.75,
    "borne": "",
-   "q25": 2.7237,
-   "q75": null,
+   "q25": 2.1214,
+   "q75": 3.5,
    "qualite": "mince",
-   "deux_sens": 9,
-   "spread": 0.48,
+   "deux_sens": 1,
+   "spread": 0.95,
    "strikes": 9,
    "event": "KXH100MS-26DEC",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H100-2027-01",
    "gpu": "H100",
    "mois": "2027-01",
    "k": 2,
-   "prix": 3.3981,
+   "prix": 2.7132,
    "borne": "",
-   "q25": 2.875,
-   "q75": null,
+   "q25": 2.5294,
+   "q75": 3.6429,
    "qualite": "mince",
-   "deux_sens": 9,
-   "spread": 0.42,
+   "deux_sens": 0,
+   "spread": null,
    "strikes": 9,
    "event": "KXH100MS-27JAN",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H100-2027-02",
@@ -62,7 +62,7 @@
    "spread": null,
    "strikes": 9,
    "event": "KXH100MS-27FEB",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H100-2027-03",
@@ -78,7 +78,7 @@
    "spread": null,
    "strikes": 9,
    "event": "KXH100MS-27MAR",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H100-2027-04",
@@ -94,7 +94,7 @@
    "spread": null,
    "strikes": 9,
    "event": "KXH100MS-27APR",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H100-2027-05",
@@ -110,7 +110,7 @@
    "spread": null,
    "strikes": 9,
    "event": "KXH100MS-27MAY",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H100-2027-06",
@@ -126,7 +126,7 @@
    "spread": null,
    "strikes": 9,
    "event": "KXH100MS-27JUN",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H100-2027-07",
@@ -142,7 +142,7 @@
    "spread": 0.58,
    "strikes": 9,
    "event": "KXH100MS-27JUL",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H100-2027-08",
@@ -158,55 +158,55 @@
    "spread": 0.08,
    "strikes": 13,
    "event": "KXH100MS-27AUG",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H200-2026-11",
    "gpu": "H200",
    "mois": "2026-11",
    "k": 0,
-   "prix": 6.8111,
+   "prix": 6.75,
    "borne": "",
-   "q25": 6.5333,
-   "q75": 7.1333,
+   "q25": 6.1831,
+   "q75": null,
    "qualite": "mince",
-   "deux_sens": 2,
-   "spread": 0.38,
+   "deux_sens": 0,
+   "spread": null,
    "strikes": 21,
    "event": "KXH200MS-26NOV",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H200-2026-12",
    "gpu": "H200",
    "mois": "2026-12",
    "k": 1,
-   "prix": 7.8478,
+   "prix": 5.1,
    "borne": "",
-   "q25": 6.1429,
-   "q75": 9.8571,
+   "q25": 4.1346,
+   "q75": 6.6528,
    "qualite": "mince",
-   "deux_sens": 15,
-   "spread": 0.41,
+   "deux_sens": 0,
+   "spread": null,
    "strikes": 21,
    "event": "KXH200MS-26DEC",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H200-2027-01",
    "gpu": "H200",
    "mois": "2027-01",
    "k": 2,
-   "prix": 8.1,
+   "prix": 5.1216,
    "borne": "",
-   "q25": 6.1667,
-   "q75": 10.0714,
+   "q25": 2.4688,
+   "q75": 6.7243,
    "qualite": "mince",
-   "deux_sens": 17,
-   "spread": 0.43,
+   "deux_sens": 3,
+   "spread": 0.98,
    "strikes": 20,
    "event": "KXH200MS-27JAN",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H200-2027-02",
@@ -222,7 +222,7 @@
    "spread": 0.98,
    "strikes": 11,
    "event": "KXH200MS-27FEB",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H200-2027-03",
@@ -238,7 +238,7 @@
    "spread": 0.98,
    "strikes": 21,
    "event": "KXH200MS-27MAR",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H200-2027-04",
@@ -254,7 +254,7 @@
    "spread": null,
    "strikes": 11,
    "event": "KXH200MS-27APR",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H200-2027-05",
@@ -270,7 +270,7 @@
    "spread": null,
    "strikes": 11,
    "event": "KXH200MS-27MAY",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H200-2027-06",
@@ -286,7 +286,7 @@
    "spread": null,
    "strikes": 11,
    "event": "KXH200MS-27JUN",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H200-2027-07",
@@ -302,7 +302,7 @@
    "spread": null,
    "strikes": 9,
    "event": "KXH200MS-27JUL",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "H200-2027-08",
@@ -318,23 +318,23 @@
    "spread": null,
    "strikes": 13,
    "event": "KXH200MS-27AUG",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "B200-2026-11",
    "gpu": "B200",
    "mois": "2026-11",
    "k": 0,
-   "prix": 9.3926,
+   "prix": 9.6562,
    "borne": "",
-   "q25": 9.186,
-   "q75": 9.6739,
+   "q25": 9.2963,
+   "q75": 9.9688,
    "qualite": "mince",
    "deux_sens": 1,
-   "spread": 0.1,
+   "spread": 0.61,
    "strikes": 19,
    "event": "KXB200MS-26NOV",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "B200-2026-12",
@@ -350,7 +350,7 @@
    "spread": 0.59,
    "strikes": 24,
    "event": "KXB200MS-26DEC",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "B200-2027-01",
@@ -366,7 +366,7 @@
    "spread": 0.1,
    "strikes": 19,
    "event": "KXB200MS-27JAN",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "B200-2027-02",
@@ -382,7 +382,7 @@
    "spread": 0.97,
    "strikes": 19,
    "event": "KXB200MS-27FEB",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "B200-2027-03",
@@ -398,7 +398,7 @@
    "spread": 0.96,
    "strikes": 19,
    "event": "KXB200MS-27MAR",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "B200-2027-04",
@@ -414,7 +414,7 @@
    "spread": null,
    "strikes": 19,
    "event": "KXB200MS-27APR",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "B200-2027-05",
@@ -430,7 +430,7 @@
    "spread": null,
    "strikes": 9,
    "event": "KXB200MS-27MAY",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "B200-2027-06",
@@ -446,7 +446,7 @@
    "spread": 0.97,
    "strikes": 9,
    "event": "KXB200MS-27JUN",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "B200-2027-07",
@@ -462,7 +462,7 @@
    "spread": 0.98,
    "strikes": 19,
    "event": "KXB200MS-27JUL",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "B200-2027-08",
@@ -478,7 +478,7 @@
    "spread": null,
    "strikes": 15,
    "event": "KXB200MS-27AUG",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "A100-2026-11",
@@ -494,7 +494,7 @@
    "spread": 0.09,
    "strikes": 7,
    "event": "KXA100MS-26NOV",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "A100-2026-12",
@@ -504,13 +504,13 @@
    "prix": 0.9851,
    "borne": "",
    "q25": 0.8614,
-   "q75": 1.1264,
+   "q75": 1.125,
    "qualite": "mince",
-   "deux_sens": 2,
+   "deux_sens": 1,
    "spread": 0.1,
    "strikes": 7,
    "event": "KXA100MS-26DEC",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "A100-2027-01",
@@ -521,12 +521,12 @@
    "borne": "",
    "q25": 0.8681,
    "q75": 1.1444,
-   "qualite": "bon",
-   "deux_sens": 3,
+   "qualite": "mince",
+   "deux_sens": 2,
    "spread": 0.1,
    "strikes": 7,
    "event": "KXA100MS-27JAN",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "A100-2027-02",
@@ -542,7 +542,7 @@
    "spread": null,
    "strikes": 7,
    "event": "KXA100MS-27FEB",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "A100-2027-03",
@@ -558,7 +558,7 @@
    "spread": null,
    "strikes": 7,
    "event": "KXA100MS-27MAR",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "A100-2027-04",
@@ -574,7 +574,7 @@
    "spread": null,
    "strikes": 7,
    "event": "KXA100MS-27APR",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "A100-2027-05",
@@ -590,7 +590,7 @@
    "spread": null,
    "strikes": 7,
    "event": "KXA100MS-27MAY",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "A100-2027-06",
@@ -606,7 +606,7 @@
    "spread": null,
    "strikes": 7,
    "event": "KXA100MS-27JUN",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "A100-2027-07",
@@ -622,7 +622,7 @@
    "spread": null,
    "strikes": 7,
    "event": "KXA100MS-27JUL",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   },
   {
    "cle": "A100-2027-08",
@@ -638,7 +638,7 @@
    "spread": null,
    "strikes": 10,
    "event": "KXA100MS-27AUG",
-   "date": "2026-11-18"
+   "date": "2026-11-19"
   }
  ],
  "meta": [

@@ -3,7 +3,7 @@
   {
    "gpu": "H100",
    "ornn": 2.92,
-   "ornn_date": "2026-11-18",
+   "ornn_date": "2026-11-17",
    "ornn_1j": -7.59,
    "ornn_1m": 3.91,
    "ornn_3m": null,
@@ -16,7 +16,7 @@
   {
    "gpu": "H200",
    "ornn": 6.58,
-   "ornn_date": "2026-11-18",
+   "ornn_date": "2026-11-17",
    "ornn_1j": 1.08,
    "ornn_1m": 3.46,
    "ornn_3m": null,
@@ -29,7 +29,7 @@
   {
    "gpu": "B200",
    "ornn": 9.43,
-   "ornn_date": "2026-11-18",
+   "ornn_date": "2026-11-17",
    "ornn_1j": -2.78,
    "ornn_1m": 11.07,
    "ornn_3m": null,
@@ -42,7 +42,7 @@
   {
    "gpu": "B300",
    "ornn": 11.3,
-   "ornn_date": "2026-11-18",
+   "ornn_date": "2026-11-17",
    "ornn_1j": 0.62,
    "ornn_1m": 1.16,
    "ornn_3m": null,
@@ -55,7 +55,7 @@
   {
    "gpu": "A100",
    "ornn": 1.0,
-   "ornn_date": "2026-11-18",
+   "ornn_date": "2026-11-17",
    "ornn_1j": 1.01,
    "ornn_1m": 2.04,
    "ornn_3m": null,
