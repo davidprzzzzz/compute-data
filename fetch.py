@@ -304,9 +304,12 @@ def ornn():
     t = text_of(h)
     (D / "raw" / "ornn_markets.txt").write_text(t)
     settle = None
-    m = re.search(r"[Ss]ettled ([A-Z][a-z]+ \d{1,2}, \d{4})", t)
+    m = re.search(r"(?:Latest settlement|[Ss]ettled)\s*:?\s*([A-Z][a-z]+) (\d{1,2}),? (\d{4})", t)
     if m:
-        settle = dt.datetime.strptime(m.group(1), "%B %d, %Y").date().isoformat()
+        try:
+            settle = dt.datetime.strptime(f"{m.group(1)[:3]} {m.group(2)} {m.group(3)}", "%b %d %Y").date().isoformat()
+        except ValueError:
+            settle = None
     rows = []
     for g, pat in ORNN_NAMES.items():
         m = re.search(pat + r"\s*(?:Bloomberg:\s*\S+\s*)?\$\s*([\d.]+)\s*([+\-−]?[\d.]+)%\s*([+\-−]?[\d.]+)%", t)
