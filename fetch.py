@@ -467,6 +467,28 @@ def news():
     log("News:", added, "nouvelles,", len(items), "au total")
 
 
+# ---------------------------------------------------------------- prix affichés (pages publiques)
+LIST_PAGES = {
+    "getdeploying_h100": "https://getdeploying.com/gpus/nvidia-h100",
+    "getdeploying_h200": "https://getdeploying.com/gpus/nvidia-h200",
+    "getdeploying_b200": "https://getdeploying.com/gpus/nvidia-b200",
+    "nebius": "https://nebius.com/prices",
+    "lambda": "https://lambda.ai/pricing",
+    "scaleway": "https://www.scaleway.com/en/pricing/gpu/",
+    "verda": "https://verda.com/pricing",
+    "runpod": "https://www.runpod.io/pricing",
+}
+
+
+def listings_raw():
+    """Pages tarifs publiques, sauvegardées brutes (data/raw/list_*.html) avant parsing."""
+    for name, url in LIST_PAGES.items():
+        h = get(url)
+        if h:
+            (D / "raw" / f"list_{name}.html").write_text(h)
+        log("Prix affichés", name, "OK" if h else "échec", len(h or ""))
+
+
 # ---------------------------------------------------------------- aicomputetracker (contrôle)
 def tracker():
     j = get("https://aicomputetracker.com/forward-curves.json", as_json=True)
@@ -476,7 +498,7 @@ def tracker():
 
 
 if __name__ == "__main__":
-    steps = sys.argv[1:] or ["kalshi", "ornn", "silicon", "fx", "news", "tracker", "archive"]
+    steps = sys.argv[1:] or ["kalshi", "ornn", "silicon", "fx", "news", "listings", "tracker", "archive"]
     raw = None
     for s in steps:
         try:
@@ -495,6 +517,8 @@ if __name__ == "__main__":
                 tracker()
             elif s == "archive":
                 archive_daily()
+            elif s == "listings":
+                listings_raw()
         except Exception as e:  # une source qui casse ne bloque pas les autres
             import traceback
             log("ÉCHEC", s, type(e).__name__, e)
