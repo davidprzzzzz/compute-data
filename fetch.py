@@ -64,10 +64,14 @@ def append_hist(name, rows, keys):
     new_keys = {tuple(r[k] for k in keys) for r in rows}
     kept = [r for r in old if tuple(r[k] for k in keys) not in new_keys]
     allr = kept + [{k: ("" if v is None else v) for k, v in r.items()} for r in rows]
-    cols = list(rows[0].keys()) if rows else (list(old[0].keys()) if old else [])
+    cols = []
+    for r in (old[:1] + rows):
+        for k in r.keys():
+            if k not in cols:
+                cols.append(k)
     allr.sort(key=lambda r: tuple(str(r.get(k, "")) for k in keys))
     with p.open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore", restval="")
         w.writeheader()
         w.writerows(allr)
     return len(allr)
@@ -205,11 +209,28 @@ def kalshi_series_markets(series):
     return out
 
 
+KEEP = ("ticker", "event_ticker", "strike_type", "floor_strike", "cap_strike", "yes_bid", "yes_ask", "last_price",
+        "yes_bid_dollars", "yes_ask_dollars", "last_price_dollars", "volume", "open_interest", "close_time")
+NOW = dt.datetime.now(dt.timezone.utc)
+ARCH = D / "archive" / NOW.strftime("%Y-%m") / NOW.strftime("%d")
+
+
+def archive(name, text):
+    """Copie compressée et horodatée d'un relevé brut : data/archive/AAAA-MM/JJ/<nom>."""
+    import gzip
+    ARCH.mkdir(parents=True, exist_ok=True)
+    with gzip.open(ARCH / (name + ".gz"), "wt", encoding="utf-8") as f:
+        f.write(text)
+
+
 def kalshi():
-    snap, hist_rows, raw = [], [], {}
+    """Relevé des échelles Kalshi. Chaque relevé est archivé ; le forward du jour retenu est celui
+    du relevé qui a le plus de cotations à deux sens pour ce mois (les carnets se vident à certaines heures)."""
+    snap, raw = [], {}
+    ts = NOW.strftime("%Y-%m-%dT%H:%MZ")
     for g in GPUS:
         series = f"KX{g}MS"
-        mk = kalshi_series_markets(series)
+        mk = [{k: m.get(k) for k in KEEP if m.get(k) is not None} for m in kalshi_series_markets(series)]
         raw[series] = mk
         log("Kalshi", series, "marchés:", len(mk))
         by_event = {}
@@ -218,18 +239,40 @@ def kalshi():
         for ev, ms in sorted(by_event.items()):
             month = event_month(ev)
             r = implied(ms)
-            if not month or not r:
-                continue
-            row = {"date": TODAY, "gpu": g, "mois": month, "event": ev, **r}
-            snap.append(row)
-            hist_rows.append({"date": TODAY, "gpu": g, "mois": month, "prix": r["prix"], "borne": r["borne"],
-                              "q25": r["q25"], "q75": r["q75"], "qualite": r["qualite"]})
-    (D / "raw" / "kalshi_markets.json").write_text(json.dumps(raw)[:5_000_000])
-    (D / "latest" / "kalshi.json").write_text(json.dumps({"date": TODAY, "rows": snap}, indent=1))
-    if hist_rows:
-        n = append_hist("kalshi_forwards", hist_rows, ["date", "gpu", "mois"])
-        log("Kalshi historique:", n, "lignes")
+            if month and r:
+                snap.append({"date": TODAY, "ts": ts, "gpu": g, "mois": month, "event": ev, **r})
+    body = json.dumps({"ts": ts, "series": raw})
+    (D / "raw" / "kalshi_markets.json").write_text(body)
+    archive(f"kalshi_{NOW.strftime('%H%M')}.json", body)
+    if not snap:
+        return raw
+    # tous les relevés, sans sélection
+    append_hist("kalshi_snapshots", [{k: r.get(k) for k in ("ts", "gpu", "mois", "prix", "borne", "q25", "q75", "qualite", "deux_sens", "spread_med", "strikes")}
+                                     for r in snap], ["ts", "gpu", "mois"])
+    # meilleur relevé du jour par (gpu, mois)
+    lp = D / "latest" / "kalshi.json"
+    prev = json.loads(lp.read_text()) if lp.exists() else {}
+    best = {(r["gpu"], r["mois"]): r for r in prev.get("rows", []) if prev.get("date") == TODAY}
+    for r in snap:
+        old = best.get((r["gpu"], r["mois"]))
+        if old is None or (r["deux_sens"] or 0) >= (old.get("deux_sens") or 0):
+            best[(r["gpu"], r["mois"])] = r
+    rows = sorted(best.values(), key=lambda r: (r["gpu"], r["mois"]))
+    lp.write_text(json.dumps({"date": TODAY, "rows": rows}, indent=1))
+    n = append_hist("kalshi_forwards", [{"date": TODAY, "gpu": r["gpu"], "mois": r["mois"], "prix": r["prix"], "borne": r["borne"],
+                                        "q25": r["q25"], "q75": r["q75"], "qualite": r["qualite"], "deux_sens": r["deux_sens"], "ts": r["ts"]}
+                                       for r in rows], ["date", "gpu", "mois"])
+    log("Kalshi historique:", n, "lignes ; relevé", ts)
     return raw
+
+
+def archive_daily():
+    """Une copie compressée par jour des pages brutes Ornn, Silicon Data et aicomputetracker."""
+    for p in (D / "raw").iterdir():
+        if p.name.startswith("kalshi_"):
+            continue
+        if not (ARCH / (p.name + ".gz")).exists():
+            archive(p.name, p.read_text())
 
 
 def kalshi_backfill(raw, days=200):
@@ -248,6 +291,8 @@ def kalshi_backfill(raw, days=200):
     calls = 0
     for series, mk in raw.items():
         g = series[2:-2]
+        if not isinstance(mk, list):
+            continue
         for m in mk:
             t = m.get("ticker")
             url = f"{KALSHI}/series/{series}/markets/{t}/candlesticks?start_ts={start}&end_ts={end}&period_interval=1440"
@@ -431,7 +476,7 @@ def tracker():
 
 
 if __name__ == "__main__":
-    steps = sys.argv[1:] or ["kalshi", "ornn", "silicon", "fx", "news", "tracker"]
+    steps = sys.argv[1:] or ["kalshi", "ornn", "silicon", "fx", "news", "tracker", "archive"]
     raw = None
     for s in steps:
         try:
@@ -448,6 +493,8 @@ if __name__ == "__main__":
                 news()
             elif s == "tracker":
                 tracker()
+            elif s == "archive":
+                archive_daily()
         except Exception as e:  # une source qui casse ne bloque pas les autres
             import traceback
             log("ÉCHEC", s, type(e).__name__, e)
