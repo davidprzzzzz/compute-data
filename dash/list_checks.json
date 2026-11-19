@@ -3,36 +3,6 @@
   {
    "date": "2026-11-19",
    "gpu": "B200",
-   "fournisseur": "Runpod",
-   "config": "1x B200 SXM Community Cloud",
-   "facturation": "on-demand",
-   "prix": 5.98,
-   "page_officielle": "2026-11-19",
-   "retrouve": "NON"
-  },
-  {
-   "date": "2026-11-19",
-   "gpu": "B200",
-   "fournisseur": "Runpod",
-   "config": "1x B200 SXM Secure Cloud",
-   "facturation": "on-demand",
-   "prix": 7.99,
-   "page_officielle": "2026-11-19",
-   "retrouve": "OUI"
-  },
-  {
-   "date": "2026-11-19",
-   "gpu": "B200",
-   "fournisseur": "Runpod",
-   "config": "16x B200 SXM Instant Cluster",
-   "facturation": "on-demand",
-   "prix": 9.59,
-   "page_officielle": "2026-11-19",
-   "retrouve": "OUI"
-  },
-  {
-   "date": "2026-11-19",
-   "gpu": "B200",
    "fournisseur": "Verda",
    "config": "4x B200 SXM 4B200.120V",
    "facturation": "spot",
@@ -63,6 +33,16 @@
   {
    "date": "2026-11-19",
    "gpu": "B200",
+   "fournisseur": "Runpod",
+   "config": "1x B200 SXM Community Cloud",
+   "facturation": "on-demand",
+   "prix": 5.98,
+   "page_officielle": "2026-11-19",
+   "retrouve": "NON"
+  },
+  {
+   "date": "2026-11-19",
+   "gpu": "B200",
    "fournisseur": "Lambda Labs",
    "config": "8x B200 SXM gpu_8x_b200_sxm6",
    "facturation": "on-demand",
@@ -74,69 +54,9 @@
    "date": "2026-11-19",
    "gpu": "H100",
    "fournisseur": "Runpod",
-   "config": "1x H100 PCIe Community Cloud",
-   "facturation": "on-demand",
-   "prix": 1.99,
-   "page_officielle": "2026-11-19",
-   "retrouve": "OUI"
-  },
-  {
-   "date": "2026-11-19",
-   "gpu": "H100",
-   "fournisseur": "Runpod",
-   "config": "1x H100 NVL Community Cloud",
-   "facturation": "on-demand",
-   "prix": 2.59,
-   "page_officielle": "2026-11-19",
-   "retrouve": "NON"
-  },
-  {
-   "date": "2026-11-19",
-   "gpu": "H100",
-   "fournisseur": "Runpod",
-   "config": "1x H100 SXM Community Cloud",
-   "facturation": "on-demand",
-   "prix": 2.69,
-   "page_officielle": "2026-11-19",
-   "retrouve": "OUI"
-  },
-  {
-   "date": "2026-11-19",
-   "gpu": "H100",
-   "fournisseur": "Runpod",
-   "config": "1x H100 PCIe Secure Cloud",
-   "facturation": "on-demand",
-   "prix": 2.89,
-   "page_officielle": "2026-11-19",
-   "retrouve": "OUI"
-  },
-  {
-   "date": "2026-11-19",
-   "gpu": "H100",
-   "fournisseur": "Runpod",
-   "config": "1x H100 NVL Secure Cloud",
-   "facturation": "on-demand",
-   "prix": 3.19,
-   "page_officielle": "2026-11-19",
-   "retrouve": "OUI"
-  },
-  {
-   "date": "2026-11-19",
-   "gpu": "H100",
-   "fournisseur": "Runpod",
    "config": "1x H100 SXM Secure Cloud",
    "facturation": "on-demand",
    "prix": 4.39,
-   "page_officielle": "2026-11-19",
-   "retrouve": "OUI"
-  },
-  {
-   "date": "2026-11-19",
-   "gpu": "H100",
-   "fournisseur": "Runpod",
-   "config": "16x H100 SXM Instant Cluster",
-   "facturation": "on-demand",
-   "prix": 4.79,
    "page_officielle": "2026-11-19",
    "retrouve": "OUI"
   },

@@ -203,6 +203,13 @@
   "requete": "H200 OR B200 rental price"
  },
  {
+  "date": "2026-11-17",
+  "titre": "The week ahead: a long-awaited GTA sequel and a long-shot CEO comeback",
+  "source": "Kalshi News",
+  "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9sb1ZwWWRxbEdpR3g1MWV6Z05qMFZCakR1YUFBUTlCQzYwZWJxZTM0N3VnU2lJT0dnLU9ESjZfb1ZsdUN3VVc5NU5meUoxblVHRHIzM1ZaeDdpaEsxTzJsQVEtTWRORmlPaHEtMEg5VzNuUQ?oc=5",
+  "requete": "Kalshi compute GPU"
+ },
+ {
   "date": "2026-11-16",
   "titre": "NVIDIA Rubin HPC GPU Packs Over 50,000 CUDA Cores, All Connected Using 7th Gen NVLink To Accelerate Simulations & Data Processing As Launch Slated For 2028",
   "source": "Wccftech",
