@@ -1,0 +1,20 @@
+{
+ "rows": [
+  {
+   "version": "v1",
+   "depuis": "2026-11-19",
+   "changement": "Première version : médiane par fournisseur puis médiane entre fournisseurs, néoclouds hors AWS, Azure, Google Cloud et Oracle, tous formats et toutes disponibilités."
+  },
+  {
+   "version": "v2",
+   "depuis": "2026-11-19",
+   "changement": "H100 : PCIe et NVL exclus de l'indice principal (SXM ou format non précisé), PCIe suivi à part. H200 : NVL exclu. Ligne « disponible » hors rupture de stock et précommande. Plateformes serverless exclues (Replicate, Fal.ai, Cerebrium, Runware, Koyeb, Daytona, Beam, Hugging Face, Lightning AI). Prix hors bornes exclus (H100 0,50 à 15 $, H200 0,80 à 20 $, B200 1,50 à 30 $). Contrôles automatiques et recoupement avec 5 pages tarifs officielles. Historique recalculé avec v2."
+  }
+ ],
+ "meta": [
+  {
+   "label": "Règle",
+   "value": "Toute modification du calcul de l'indice est datée ici. L'historique est recalculé avec la version en vigueur."
+  }
+ ]
+}

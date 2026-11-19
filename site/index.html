@@ -167,17 +167,32 @@ html, body { margin:0; background:#06070a; }
     </div>
 
     <div class="panel full" id="lidx">
-      <div class="ph"><h2>Indice prix affichés · Compute Group</h2><span class="src" data-draw="lidx_d" data-source="list_index_view" data-field="date" data-row="0">—</span></div>
+      <div class="ph"><h2>Indice prix affichés · Compute Group</h2><span class="src" data-draw="lidx_d" data-source="list_index_view" data-field="date" data-row="0">—</span><span class="src" data-draw="lidx_m" data-source="methode" data-field="version">—</span></div>
       <div class="tw">
         <table data-source="list_index_view" data-row-key="gpu" aria-label="Indice des prix affichés">
           <thead>
-            <tr><th></th><th class="grp" colspan="3">On-demand · néoclouds</th><th class="grp sepl" colspan="3">Par origine</th><th class="grp sepl" colspan="3">Engagement</th><th class="grp sepl" colspan="2">Marché</th></tr>
-            <tr><th class="l" data-field="gpu">GPU</th><th data-field="od_med">Médiane</th><th data-field="var_1s">1s</th><th data-field="var_1m">1m</th>
-            <th class="sepl" data-field="od_eu">Europe</th><th data-field="od_hors_eu">Hors Europe</th><th data-field="od_hyper">Hyperscalers</th>
+            <tr><th></th><th class="grp" colspan="4">On-demand · néoclouds</th><th class="grp sepl" colspan="4">Par origine et format</th><th class="grp sepl" colspan="3">Engagement</th><th class="grp sepl" colspan="4">Contrôle</th></tr>
+            <tr><th class="l" data-field="gpu">GPU</th><th data-field="od_med">Tous</th><th data-field="od_dispo">Dispo.</th><th data-field="var_1s">1s</th><th data-field="var_1m">1m</th>
+            <th class="sepl" data-field="od_eu">Europe</th><th data-field="od_hors_eu">Hors Europe</th><th data-field="od_hyper">Hyperscalers</th><th data-field="od_pcie">PCIe</th>
             <th class="sepl" data-field="spot_med">Spot</th><th data-field="r12">Réservé 1A</th><th data-field="decote_12">Décote 1A</th>
-            <th class="sepl" data-field="en_stock_pct">En stock</th><th data-field="n_fournisseurs">Fournisseurs</th></tr>
+            <th class="sepl" data-field="en_stock_pct">En stock</th><th data-field="n_od">Fourn.</th><th data-field="recoup">Recoup.</th><th data-field="statut">Statut</th></tr>
           </thead>
           <tbody data-draw="lidx"></tbody>
+        </table>
+      </div>
+      <div class="tw">
+        <table data-source="list_checks_view" data-row-key="id" aria-label="Recoupement pages officielles">
+          <thead>
+            <tr><th class="l" colspan="6">Recoupement · pages tarifs officielles</th></tr>
+            <tr><th class="l" data-field="fournisseur">Fournisseur</th><th class="l" data-field="gpu">GPU</th><th class="l" data-field="config">Configuration</th><th class="l" data-field="facturation">Facturation</th><th data-field="prix">Prix</th><th data-field="retrouve">Retrouvé</th></tr>
+          </thead>
+          <tbody data-draw="lchk"></tbody>
+        </table>
+      </div>
+      <div class="tw">
+        <table data-source="methode" data-row-key="version" aria-label="Méthode">
+          <thead><tr><th class="l" data-field="version">Méthode</th><th class="l" data-field="depuis">Depuis</th><th class="l" data-field="changement">Changement</th></tr></thead>
+          <tbody data-draw="lmeth"></tbody>
         </table>
       </div>
     </div>
@@ -475,10 +490,25 @@ html, body { margin:0; background:#06070a; }
         const r = list_index.find((x) => x.gpu === gpu && x.date === last);
         if (!r) return null;
         const w = near(gpu, 7), mo = near(gpu, 30);
-        return { gpu, date: last, od_med: r.od_med, var_1s: ch(r.od_med, w && w.od_med), var_1m: ch(r.od_med, mo && mo.od_med),
-          od_eu: r.od_eu, od_hors_eu: r.od_hors_eu, od_hyper: r.od_hyper, spot_med: r.spot_med, r12: r.r12,
-          decote_12: r.r12 != null && r.od_med ? +((r.r12 / r.od_med - 1) * 100).toFixed(1) : null, en_stock_pct: r.en_stock_pct, n_fournisseurs: r.n_fournisseurs };
+        return { gpu, date: last, od_med: r.od_med, od_dispo: r.od_dispo ?? null, var_1s: ch(r.od_med, w && w.od_med), var_1m: ch(r.od_med, mo && mo.od_med),
+          od_eu: r.od_eu, od_hors_eu: r.od_hors_eu, od_hyper: r.od_hyper, od_pcie: r.od_pcie ?? null, spot_med: r.spot_med, r12: r.r12,
+          decote_12: r.r12 != null && r.od_med ? +((r.r12 / r.od_med - 1) * 100).toFixed(1) : null, en_stock_pct: r.en_stock_pct, n_od: r.n_od,
+          recoup: r.recoup_n ? r.recoup_ok + '/' + r.recoup_n : null, statut: r.statut || '—', motif: r.motif || '' };
       }).filter(Boolean);
+    },
+  });
+
+  dash.calc('list_checks_view', {
+    title: 'Recoupement pages officielles',
+    description: 'Prix GetDeploying du dernier relevé recherchés sur les pages tarifs officielles de Lambda, Nebius, RunPod, Verda et Scaleway. Les prix non retrouvés en premier.',
+    inputs: ['list_checks'],
+    fn: (list_checks) => {
+      if (!list_checks.length) return [];
+      const last = list_checks.reduce((a, r) => (r.date > a ? r.date : a), '');
+      const seen = new Set();
+      return list_checks.filter((r) => r.date === last).filter((r) => { const k = [r.fournisseur, r.gpu, r.config, r.facturation, r.prix].join('|'); if (seen.has(k)) return false; seen.add(k); return true; })
+        .map((r, i) => ({ id: String(i), date: r.date, fournisseur: r.fournisseur, gpu: r.gpu, config: r.config, facturation: r.facturation, prix: r.prix, retrouve: r.retrouve }))
+        .sort((a, b) => (a.retrouve === b.retrouve ? a.fournisseur.localeCompare(b.fournisseur) || a.gpu.localeCompare(b.gpu) : a.retrouve === 'NON' ? -1 : 1));
     },
   });
 
@@ -705,10 +735,31 @@ html, body { margin:0; background:#06070a; }
     rows('list_index_view').forEach((r) => {
       const tr = document.createElement('tr'); tr.setAttribute('data-key', r.gpu);
       const px = (k, extra) => { const c = cell(tr, r[k] == null ? '—' : f3(r[k]), (r[k] == null ? 'v na' : 'p') + (extra || '')); if (r[k] != null) dragify(c, 'lidx|' + r.gpu + '|' + k); return c; };
-      cell(tr, r.gpu, 'l k'); px('od_med'); cell(tr, pct(r.var_1s), cls(r.var_1s)); cell(tr, pct(r.var_1m), cls(r.var_1m));
-      px('od_eu', ' sepl'); px('od_hors_eu'); px('od_hyper');
+      cell(tr, r.gpu, 'l k'); px('od_med'); px('od_dispo'); cell(tr, pct(r.var_1s), cls(r.var_1s)); cell(tr, pct(r.var_1m), cls(r.var_1m));
+      px('od_eu', ' sepl'); px('od_hors_eu'); px('od_hyper'); px('od_pcie');
       px('spot_med', ' sepl'); px('r12'); cell(tr, r.decote_12 == null ? '—' : pct(r.decote_12), r.decote_12 == null ? 'v na' : 'v');
-      cell(tr, r.en_stock_pct == null ? '—' : d3.format('.0f')(r.en_stock_pct) + '%', 'v sepl'); cell(tr, String(r.n_fournisseurs), 'v');
+      cell(tr, r.en_stock_pct == null ? '—' : d3.format('.0f')(r.en_stock_pct) + '%', 'v sepl'); cell(tr, String(r.n_od), 'v');
+      cell(tr, r.recoup || '—', r.recoup ? 'v' : 'v na');
+      const st = cell(tr, r.statut, 'v ' + (r.statut === 'OK' ? 'up' : r.statut === 'SUSPECT' ? 'dn' : 'na'));
+      if (r.motif) st.title = r.motif;
+      tb.appendChild(tr);
+    });
+  });
+  dash.draw('lidx_m', (el) => { const m = rows('methode'); el.textContent = m.length ? 'MÉTHODE ' + m[m.length - 1].version : '—'; });
+  dash.draw('lchk', (tb) => {
+    tb.replaceChildren();
+    rows('list_checks_view').forEach((r) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', r.id);
+      cell(tr, r.fournisseur, 'l'); cell(tr, r.gpu, 'l k'); cell(tr, r.config, 'l'); cell(tr, r.facturation, 'l');
+      cell(tr, f3(r.prix), 'p'); cell(tr, r.retrouve, 'v ' + (r.retrouve === 'OUI' ? 'up' : 'dn'));
+      tb.appendChild(tr);
+    });
+  });
+  dash.draw('lmeth', (tb) => {
+    tb.replaceChildren();
+    rows('methode').forEach((r) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', r.version);
+      cell(tr, r.version, 'l k'); cell(tr, window.CG.fr(r.depuis), 'l'); cell(tr, r.changement, 'l', { style: 'white-space:normal;max-width:900px' });
       tb.appendChild(tr);
     });
   });

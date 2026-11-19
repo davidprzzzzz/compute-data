@@ -9,7 +9,7 @@ dash/refs.json        EUR/USD et références
 dash/agenda.csv       agenda marché (statique)
 Si une source n'a rien rendu, on garde le dernier fichier de dash/ (ou la graine data/static/seed_*.json).
 """
-import csv, datetime as dt, json, shutil
+import csv, datetime as dt, html, json, re, shutil
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -152,37 +152,111 @@ def med(v):
 
 
 lh = hist("listings")
-idx_rows = []
+# Méthode versionnée : toute modification du calcul est datée dans data/static/methode.json
+METH = rd(ST / "methode.json") or []
+METH_V = METH[-1]["version"] if METH else "v1"
+BORNES = {"H100": (0.5, 15.0), "H200": (0.8, 20.0), "B200": (1.5, 30.0)}
+EXCL_FMT = {"H100": {"PCIe", "NVL"}, "H200": {"NVL"}, "B200": set()}
+HORS_DISPO = {"Out of stock", "Pre-order"}
+# plateformes serverless / inférence : le prix inclut une couche logicielle, ce n'est pas de la location de GPU brute
+SERVERLESS = {"replicate", "fal-ai", "cerebrium", "runware", "koyeb", "daytona", "beam", "huggingface", "lightning-ai", "modal", "baseten", "openrelay"}
+OFFICIEL = {"lambda-labs": "list_lambda", "nebius": "list_nebius", "runpod": "list_runpod", "verda": "list_verda", "scaleway": "list_scaleway"}
+
+
+def official_prices(day):
+    """Prix en dollars lus sur les pages tarifs officielles archivées ce jour-là (ou la veille la plus proche)."""
+    import gzip
+    out = {}
+    days = sorted((D / "archive").glob("*/*"), reverse=True)
+    for slug, name in OFFICIEL.items():
+        for dd in days:
+            if f"{dd.parent.name}-{dd.name}" > day:
+                continue
+            f = dd / f"{name}.html.gz"
+            if f.exists():
+                t = gzip.open(f, "rt", errors="ignore").read()
+                t = html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<script.*?</script>|<style.*?</style>", "", t, flags=re.S)))
+                out[slug] = ({float(x) for x in re.findall(r"\$\s*(\d{1,3}\.\d{1,4})", t)}, f"{dd.parent.name}-{dd.name}")
+                break
+    return out
+
+
+idx_rows, checks = [], []
 by = {}
 for r in lh:
     if r.get("prix") in (None, ""):
         continue
     by.setdefault((r["date"], r["gpu"]), []).append(r)
-for (d, g), rs in sorted(by.items()):
+prev = {}
+for (d, g), all_rs in sorted(by.items()):
+    lo, hi = BORNES.get(g, (0.1, 100))
+    hors = [r for r in all_rs if not lo <= float(r["prix"]) <= hi]
+    rs = [r for r in all_rs if lo <= float(r["prix"]) <= hi]
+
     def prov_med(filt):
         per = {}
         for r in rs:
             if filt(r):
                 per.setdefault(r["slug"], []).append(float(r["prix"]))
         return [statistics.median(v) for v in per.values()]
-    neo = lambda r: r["hyperscaler"] != "True"
-    od = lambda r: r["facturation"] == "on-demand"
+    neo = lambda r: r["hyperscaler"] != "True" and r["slug"] not in SERVERLESS
+    fmt = lambda r: r["format"] not in EXCL_FMT.get(g, set()) and r["slug"] not in SERVERLESS
+    od = lambda r: r["facturation"] == "on-demand" and fmt(r)
+    dispo = lambda r: r["dispo"] not in HORS_DISPO
     row = {"date": d, "gpu": g,
            "od_med": med(prov_med(lambda r: od(r) and neo(r))),
+           "od_dispo": med(prov_med(lambda r: od(r) and neo(r) and dispo(r))),
+           "n_od_dispo": len(prov_med(lambda r: od(r) and neo(r) and dispo(r))),
+           "od_pcie": med(prov_med(lambda r: r["facturation"] == "on-demand" and r["format"] == "PCIe" and neo(r))) if g == "H100" else None,
            "od_eu": med(prov_med(lambda r: od(r) and r["europe"] == "True")),
            "od_hors_eu": med(prov_med(lambda r: od(r) and neo(r) and r["europe"] != "True")),
            "od_hyper": med(prov_med(lambda r: od(r) and not neo(r))),
            "n_od": len(prov_med(lambda r: od(r) and neo(r))),
-           "spot_med": med(prov_med(lambda r: r["facturation"] == "spot" and neo(r)))}
+           "spot_med": med(prov_med(lambda r: r["facturation"] == "spot" and fmt(r) and neo(r)))}
     for t in (1, 3, 6, 12, 24, 36):
-        v = prov_med(lambda r, t=t: r["facturation"] == "réservé" and r["duree_mois"] == str(t) and neo(r))
+        v = prov_med(lambda r, t=t: r["facturation"] == "réservé" and r["duree_mois"] == str(t) and fmt(r) and neo(r))
         row[f"r{t}"], row[f"n_r{t}"] = med(v), len(v)
     st = [r["dispo"] for r in rs if r["dispo"] in ("In stock", "Out of stock")]
     row["en_stock_pct"] = round(100 * st.count("In stock") / len(st), 1) if st else None
     row["n_fournisseurs"] = len({r["slug"] for r in rs})
+    row["n_lignes"] = len(all_rs)
+
+    # recoupement avec les pages officielles (on-demand et spot uniquement)
+    offp = official_prices(d)
+    ok = tot = 0
+    for r in rs:
+        if r["slug"] in offp and r["facturation"] in ("on-demand", "spot"):
+            p = float(r["prix"])
+            hit = any(abs(n - p) <= max(0.011, 0.005 * p) for n in offp[r["slug"]][0])
+            tot += 1
+            ok += hit
+            checks.append({"date": d, "gpu": g, "fournisseur": r["fournisseur"], "config": r["config"], "facturation": r["facturation"],
+                           "prix": round(p, 3), "page_officielle": offp[r["slug"]][1], "retrouve": "OUI" if hit else "NON"})
+    row["recoup_ok"], row["recoup_n"] = ok, tot
+
+    # contrôles automatiques
+    motifs = []
+    past = [x["n_lignes"] for x in prev.get(g, [])[-7:]]
+    if past and row["n_lignes"] < 0.6 * statistics.median(past):
+        motifs.append(f"lignes {row['n_lignes']} contre {statistics.median(past):.0f}")
+    if row["n_od"] < 5:
+        motifs.append(f"{row['n_od']} fournisseurs on-demand")
+    if prev.get(g) and prev[g][-1]["od_med"] and row["od_med"]:
+        v = row["od_med"] / prev[g][-1]["od_med"] - 1
+        if abs(v) > 0.15:
+            motifs.append(f"variation {100 * v:+.1f} % sur 1 relevé")
+    if len(hors) > 0.1 * len(all_rs):
+        motifs.append(f"{len(hors)} prix hors bornes")
+    if tot >= 4 and ok / tot < 0.5:
+        motifs.append(f"recoupement {ok}/{tot}")
+    row["statut"] = "SUSPECT" if motifs else "OK"
+    row["motif"] = " ; ".join(motifs)
+    row["methode"] = METH_V
+    prev.setdefault(g, []).append(row)
     idx_rows.append(row)
 if idx_rows:
-    write("list_index.json", idx_rows, [{"label": "Méthode", "value": "Prix affichés relevés chaque jour sur les pages publiques des fournisseurs (via GetDeploying). Pour chaque fournisseur, médiane de ses configurations ; puis médiane entre fournisseurs. Néoclouds = hors AWS, Azure, Google Cloud, Oracle. Europe = siège du fournisseur en Europe. En stock = part des configurations dont la disponibilité est renseignée et positive."}])
+    write("list_index.json", idx_rows, [{"label": "Méthode", "value": f"Méthode {METH_V}, voir methode.json."}])
+    write("list_checks.json", checks[-400:], [{"label": "Recoupement", "value": "Chaque prix GetDeploying on-demand ou spot de Lambda, Nebius, RunPod, Verda et Scaleway est recherché sur la page tarifs officielle archivée le même jour."}])
     last = max(r["date"] for r in idx_rows)
     h = next((r for r in idx_rows if r["date"] == last and r["gpu"] == "H100"), None)
     if h:
@@ -193,13 +267,17 @@ if idx_rows:
                 vals = []
                 per = {}
                 for r in by[(last, "H100")]:
-                    if r["facturation"] == "réservé" and r["duree_mois"] == str(t) and r["hyperscaler"] != "True":
+                    if r["facturation"] == "réservé" and r["duree_mois"] == str(t) and r["hyperscaler"] != "True" and r["slug"] not in SERVERLESS and r["format"] not in EXCL_FMT["H100"] and 0.5 <= float(r["prix"]) <= 15:
                         per.setdefault(r["fournisseur"], []).append(float(r["prix"]))
                 vals = sorted(statistics.median(v) for v in per.values())
                 q = lambda p: round(vals[int((len(vals) - 1) * p)], 3) if len(vals) > 2 else None
                 lrows.append({"gpu": "H100", "mois": t, "tenor": lab[t], "mediane": h[f"r{t}"], "q25": q(.25), "q75": q(.75), "n": h[f"n_r{t}"],
                               "fournisseurs": ", ".join(f"{k} {statistics.median(v):.2f}" for k, v in sorted(per.items())), "date": last})
         write("listes.json", lrows, [{"label": "Source", "value": "Indice Compute Group des prix affichés (voir list_index.json), H100, néoclouds hors hyperscalers."}])
+
+if METH:
+    write("methode.json", [{"version": m["version"], "depuis": m["depuis"], "changement": m["changement"]} for m in METH],
+          [{"label": "Règle", "value": "Toute modification du calcul de l'indice est datée ici. L'historique est recalculé avec la version en vigueur."}])
 
 # ---------------- statiques et références
 if not (OUT / "listes.json").exists() or not idx_rows:

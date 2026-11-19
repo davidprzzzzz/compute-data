@@ -61,9 +61,17 @@ def append_hist(name, rows, keys):
     if p.exists():
         with p.open() as f:
             old = list(csv.DictReader(f))
-    new_keys = {tuple(r[k] for k in keys) for r in rows}
-    kept = [r for r in old if tuple(r[k] for k in keys) not in new_keys]
-    allr = kept + [{k: ("" if v is None else v) for k, v in r.items()} for r in rows]
+    norm = lambda r: tuple("" if r.get(k) is None else str(r.get(k)) for k in keys)  # None et "" doivent donner la même clé
+    rows = [{k: ("" if v is None else v) for k, v in r.items()} for r in rows]
+    new_keys = {norm(r) for r in rows}
+    kept = [r for r in old if norm(r) not in new_keys]
+    seen, uniq = set(), []
+    for r in rows:  # une configuration listée deux fois à l'identique ne compte qu'une fois
+        t = tuple(sorted((k, str(v)) for k, v in r.items()))
+        if t not in seen:
+            seen.add(t)
+            uniq.append(r)
+    allr = kept + uniq
     cols = []
     for r in (old[:1] + rows):
         for k in r.keys():

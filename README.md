@@ -20,3 +20,11 @@ Mise en place (une fois) :
 3. Lancer le workflow (Actions → fetch → Run workflow). Le site sort sur `https://compute-desk.pages.dev`.
 4. Protéger l'accès : Cloudflare → Workers & Pages → compute-desk → Settings → « Enable access policy », puis dans Zero Trust → Access, autoriser les e-mails voulus (gratuit jusqu'à 50 utilisateurs). Faire de même pour les URL de prévisualisation.
 5. Passer ce repo en privé (Settings → General → Danger Zone → Change visibility).
+
+## Indice des prix affichés : fiabilité (méthode v2)
+
+- H100 : PCIe et NVL exclus de l'indice principal, PCIe suivi à part ; H200 : NVL exclu.
+- Plateformes serverless exclues ; hyperscalers dans une colonne à part.
+- Deux lignes : tous les prix et prix disponibles (hors rupture et précommande).
+- Prix hors bornes exclus. Contrôles à chaque relevé : nombre de lignes, nombre de fournisseurs, variation de plus de 15 %, recoupement avec les pages officielles (Lambda, Nebius, RunPod, Verda, Scaleway). Un contrôle en échec marque le jour SUSPECT, avec le motif.
+- Toute modification de méthode est datée dans `data/static/methode.json` (publiée dans `dash/methode.json`).

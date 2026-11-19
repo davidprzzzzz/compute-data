@@ -4,7 +4,7 @@
   const FILES = {
     spot: 'data/spot.json', kalshi: 'data/kalshi.json', kalshi_hist: 'data/kalshi_hist.json', sd_term: 'data/sd_term.json',
     sd_term_hist: 'data/sd_term_hist.json', hist_spot: 'data/hist_spot.json', listes: 'data/listes.json', refs: 'data/refs.json',
-    news: 'data/news.json', agenda: 'data/agenda.csv', list_index: 'data/list_index.json',
+    news: 'data/news.json', agenda: 'data/agenda.csv', list_index: 'data/list_index.json', list_checks: 'data/list_checks.json', methode: 'data/methode.json',
   };
   const DEFAULTS = { p_gpu: 'H100', k1: '1M', k2: '2M', k3: '3M', k4: '4M', k5: '5M', k6: '6M', k7: '9M', l1: '1M', l2: '3M', l3: '6M',
     l4: '1A', l5: '2A', l6: '3A', q_curve: 'Kalshi', q_gpu: 'H100', q_ten: '6M', q_n: 64, q_comm: 3, c_series: '' };
