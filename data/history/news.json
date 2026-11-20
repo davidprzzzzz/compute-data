@@ -1,5 +1,19 @@
 [
  {
+  "date": "2026-11-20",
+  "titre": "B200 Rents Rose 23.5% Since August as GPU Credit Tightened",
+  "source": "FourWeekMBA",
+  "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMFBGVkZXM0RPS0h1TndWQmRaamY4ay1mZFdBanVaRTV5TjFSMUYxYjE4WE9yUnhfQ3RlanhGZkswbXB2OFgyelZRUTlKTTdGZnROME10VTJLdDhuWDBIcmZVLVo3eXNoYnBtaHNrS1NrUFFUWk1BYU1RSlRSOEhmWkloNlhvd3RSWFZKMnN3?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-20",
+  "titre": "Nvidia trims neocloud commitments to $32bn, impacting data centre finance",
+  "source": "ET Datacenters",
+  "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOTDl2WHhTeElQQUhVVVNURUlKX2ZzZVBWMmJEak5heE55RXItUTFQZzRFSTEzU2RjQnpHS21WQVRmQVVZdzJVVkdFS21fUGg3VDByTllZTHRYd21ZaDBKbXBVaEN1V0pmbWJrSWppSnhsRFVFU0NnNHhQeTBoU3N6ZkVzbFpQc1VNS2FHa1o2S0FCYmVVZDc5S3dmRHV1YVNzS0s0NVNNVU12OTI5LUNWb3VPdmI5RlF2ODhlaGNqdkgzS0prbmkydnU3WWRaelNNekU5TGpzM1Y2WWlyeElBdGlxLWJHUUhlS1F5bmRQYjZCZk3SAfcBQVVfeXFMTTFrRVZOU2lZdmU3Snp5Q1NmN2oxZ1VNOWZxcG5RT1ZoTTVXakoxN2xDR0tFODB2N1hMQTRWcVZteGRGRVhEYzduc3hneXlCUl9PTmpianZkbGlvczVPM0lSRHpvd3k2S1RWc0lnRnhjVkFPVUJnUXJLck9uclFIR2FFS2VGOXh2N2NXNnVnc3NRUi1aVU1GQXcxZEpBSGlTa3lHWjI0VVgxblFlZnJHRXdEZjU5cDFFVDJIdGVRQ2pqQ0Z2SFZFX2xwaEJmWk52ZE9WSGc0RkVnM1JZd2NFNXJVWWxOc0hrcENsNHRFeWszclgxcEswVQ?oc=5",
+  "requete": "neocloud GPU capacity contract"
+ },
+ {
   "date": "2026-11-19",
   "titre": "[News] NVIDIA Highlights Rising GPU Rental Rates: Hopper Up to 2X, B300 Up Over 60%",
   "source": "TrendForce",
@@ -210,6 +224,20 @@
   "requete": "GPU compute futures"
  },
  {
+  "date": "2026-11-18",
+  "titre": "CoreWeave Stock: The Credit Risk Is Mispriced (NASDAQ:CRWV)",
+  "source": "Seeking Alpha",
+  "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPc0RZcnhKa3Z3dzlEYkFHcldHTlpiUml0ak1mLVZySjdnWktPWmUxTkRpUExWTUlqUnBrMU1laXdkZUZQSklSdTlLUENEMnYzdjh0bTd3QWh0b1k5aTlTUkVIVXVQT0JDOFZ0Y0FGVnoyUi1ZcEdYYjd4Snk2SGtPaldObnd0Yng1ZGd3cEFHMlRZODRoQWhoRlBkdUZYRWRYTEFGOUI2MElPZw?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-18",
+  "titre": "Ascend 950DT vs H200: 86% Leaked Test — What to Check",
+  "source": "explainx.ai",
+  "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMFBwQ2RkUzF5UFgwNFlpTDN5TnItMFFMMGFTaXBIemQtUXJtdm9ONGlFc0wyUXdNZTRjaGwzUjBYaXBnRThtdHNGaGloaV9XVDY2OUVPSUM1Y01MRVNWVGVjdWpEeTI2d19ieTlLcktYWVNQZEt2andJMGxHYjJKd0lMTlloTENYaUxQeUF0cVktbEtMMTl5VXVVVHN1Zlkya2c?oc=5",
+  "requete": "H200 OR B200 rental price"
+ },
+ {
   "date": "2026-11-17",
   "titre": "Luxor, Architect, and Hyperbolic Execute First OTC Option Trade on GPU Rental Prices",
   "source": "PR Newswire",
@@ -322,6 +350,13 @@
   "requete": "Kalshi compute GPU"
  },
  {
+  "date": "2026-11-17",
+  "titre": "Huang's Nvidia Return Odds Rebound to 11% on Kalshi",
+  "source": "The Defiant",
+  "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQa0lEM3hLcUZoUG9XUWtqUFVrVEtseEppNTV3NzJMZ0Uwd294MFZtZjB3dk5xNFJlb2pjOTh5eGhibWVaMlBxVmx3NnBhaDNQd1lPN1FTaUFUYVFFa2VZUmhmOE5TQXRwSmtXUThBQ3F4ZjQ5eWRyRUV6Wmx4ZlVCLW1IVzA2cXJoVEtiNw?oc=5",
+  "requete": "Kalshi compute GPU"
+ },
+ {
   "date": "2026-11-16",
   "titre": "NVIDIA Rubin HPC GPU Packs Over 50,000 CUDA Cores, All Connected Using 7th Gen NVLink To Accelerate Simulations & Data Processing As Launch Slated For 2028",
   "source": "Wccftech",
@@ -420,11 +455,25 @@
   "requete": "\"GPU rental\" price"
  },
  {
+  "date": "2026-11-16",
+  "titre": "AI Compute Unit Economics",
+  "source": "panteracapital.com",
+  "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1LbnR6U1FPRkZnMTZuM0xTRHdzaG9oZkFoWU14RHY5cTBGbUpTTlhITk5SZjZjWFFHYnNMYzg2bEV6Q19UQ2I4ZDBEdmJ6TXVnd0tSMVRzUUUyUWVoOC1HZ01pUQ?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
   "date": "2026-11-15",
   "titre": "Microsoft Neocloud Pullback Piles Pressure on CoreWeave, Nebius",
   "source": "FinanceX Magazine",
   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbDVtQ2FSVGVPZUFWMktuYmRuSzRmRHRtSmpMbnU1RExvMlk4RzdpbDlZWVAyVEktdDFFT1VUVElQTExDa2pwNE5iOHdleTRLLVlVbThGLUxDNGd6V2ZoQ0lTajhpLUdLczJESXJxX0t0TnJvQ0R6endnOUdDRFdHcEQyQXFDQVJVb2JDaHppdUdSVzZfcnN4eHp2VEwxcjZIaEE?oc=5",
   "requete": "neocloud GPU capacity contract"
+ },
+ {
+  "date": "2026-11-15",
+  "titre": "Michael Burry Warned AI Chips Would Lose Value Fast. New Data Suggests He Was Wrong",
+  "source": "24/7 Wall St.",
+  "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOLWVzNEtUQXlYZmc3T1l0SEVIalFtYXBIcXpESWUwSGdzTWJtOWNNak5EcUQwbTV0REM2NnNISGZkakhydEI0WHY5SU5jM3FveDFOZ3ZfWWZlR2NhSldnb2VxZC0zWWZvcUdOeFUwek5xa1o2Ti02V2VhQUhESkFuTURiQ3ZMbHhUSExZanBTZTE2dkRJU0EzVVY2WFd2Z05mbVpPcWZuVkRuU1RFRGhLZWEybkdGZ05oQ2NidXdtRDMzTWha?oc=5",
+  "requete": "\"GPU rental\" price"
  },
  {
   "date": "2026-11-14",
@@ -453,6 +502,20 @@
   "source": "CASRAI",
   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBzTkppYndqdnFoMnd6TF9HYUMwS1RJTDVwRnJMSGptYnpJdjFmd0VER21SczZBcnVxS1MtemtNcHZHblp4VHhhRzBhQ2pGczNUNzRPcS1LUVdSQWlJMEYySHUyTnczVWJjOUpDTUU4blBwZUgycEt0ZlFBNEg?oc=5",
   "requete": "neocloud GPU capacity contract"
+ },
+ {
+  "date": "2026-11-14",
+  "titre": "GeForce Evangelist Jacob Freeman Assures Consumers That The Future Of Gaming GPUs Is Safe, But That Doesn’t Mean Graphics Cards Will Become Cheaper",
+  "source": "Wccftech",
+  "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOR0g1RzJ4cjdtWGU2WDlrQ000NnJxUG9JWVpMVEdKempyVkQ4WEJXejFSRncwTjhsZHNyWTlNRHpLbkU1dXl4TDZjMXVONnk0Tk8zal84TjJkdFlHdlo4d3pna09tb1I1bEVLcW9pRzExYVdpMlRxNVE3TUVOMGNMX0FsUF92VXRWWkd4OHlka9IBlAFBVV95cUxNcEdhM1dubzBKelFRbFR6SUFibWIwb1FHblpvRlljdkowYVl6aWZQaDJiaHFJamlfZzhQM2pPTWdkejdieEFVRUVvM0tiRGpZdDdvT3RNS05wQllOLUtzNTc3bDhBcGdZVXBzX0ZoWUt6aE84dUpmUmRsaF9qZ0N2VnVaaDlRZi1MNnU5RC1xM3NUaGNx?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-14",
+  "titre": "Nebius: 2 Reasons Why You Should Buy The Bloodbath",
+  "source": "Seeking Alpha",
+  "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQM0ZDWUtQQWd0ckNVMmdKOXBTTUNZUE11UEFITGVHYjBvakZieVptd3dyR2dkc2otazF0VlFXdDVmNHBxMGVKeU9nSXhpaWZYRXI3SEVGZmpLVmxyWUR6b2Z3bk5Nc1dfSExFS1hNM3hZZkNrVE5hbzJsckhvczlvQXJJR0pOdVBSZkE?oc=5",
+  "requete": "\"GPU rental\" price"
  },
  {
   "date": "2026-11-13",
@@ -530,6 +593,13 @@
   "source": "Investing.com",
   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPR0tnNEF2U2ZiOGoxY1hCZHhpNG1lSW9WVUJtbXdpTjZ6OEpHVTcybUFJQWJoaWxXTzFFdzItQ3hYbi10VUJMUFZBUVNMODBIY1o0ZFIxWlo1UEFrS1BOdTNiNjFSeWNLU1N5c1RCVk8tMUoya2gyejdPRGdENmE4NllGU2d4OTVrblJlMmhVZGlwQXBiQ2t1QmdUM0t6MEZZeHN3M21WTzhPUjdKUTZBRHZRVHVhS2xRQXJVQ1RaZnZhaHZLTnhzdXZOX0NfRVE?oc=5",
   "requete": "Kalshi compute GPU"
+ },
+ {
+  "date": "2026-11-13",
+  "titre": "TAO Rises as Bitcoin Falls, Bittensor Subnet Revenue Gains Attention",
+  "source": "Altcoin Buzz",
+  "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOQngtTHdHb0RHYm51QkMxTTJMNklJMzZtYi13SEV6MDlXX1pIWGZqWjRrekk1YkUxOHkzZjZMYkRhbzdhLUR3anJ5cHpReHhuRF9KN2tGdWx5S1JYSFc1Zi15eHRZUmRVcHQ3a3ExOE1hSE1ZY2UycUhfLUN2dlBzLWhIbw?oc=5",
+  "requete": "\"GPU rental\" price"
  },
  {
   "date": "2026-11-12",
@@ -658,6 +728,13 @@
   "requete": "\"H100\" rental price"
  },
  {
+  "date": "2026-11-12",
+  "titre": "Modded RTX 5090 With 96GB VRAM Shows Up On Chinese Marketplace With A Placeholder Price That’s 57x Higher Than The RTX PRO 6000’s",
+  "source": "Wccftech",
+  "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBiMk5MTURmX1oyNjluWk9henhzMFNWd0U0SXd3U2tvSnVpNzZGOTF0MzM4T3NMUS1aRXhkYXY0UG56amVKWGotUGhfdllJcV91OHdiM2laTGc5V0dSdG55ajBHTWROX3RUcERrQ1R30gFzQVVfeXFMTWN1bmRzOGQxYXNmcGxacjlXLWw2Ujc3ZVJ0NHZldlhXZko3cUFORkJleksxT1FpNVA4Tk1CaGFndlBKZVhqZFNPTXhWeFAxY0pLX2JDeVNSUGNfN2p0bzlyVDRmcmZVaUN2Q05FWWlPc3I4Yw?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
   "date": "2026-11-11",
   "titre": "AI's pricing paradox: GPU rental prices rise as AI model costs fall",
   "source": "Yahoo Finance",
@@ -749,6 +826,20 @@
   "requete": "GPU compute futures"
  },
  {
+  "date": "2026-11-11",
+  "titre": "U.S. Regulator Slows Wall Street Push for GPU Futures",
+  "source": "Seoul Economic Daily",
+  "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNd0ZhdzZoT0otVEt0MzhQSGVzRGZnXzdqSGhfM3NQQk9DZGJMaWdXSWNabXdpeW1KOHJJRGZOVnViQ0V6QlBuMWdKMHdwSjdkNDVHQVpFbFFpdXpDSklyNmw1bkY3MEJROTZGY3RrMWpWcVRwRG9qY0ZSY1JhYndYQlJSVGx2QjgxQ3l6ZkNqVm1tR0NmbHc?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-11",
+  "titre": "PLA-Linked NWPU H200 Purchase: Entity List Gap",
+  "source": "explainx.ai",
+  "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPT2N6cS16Tnc1aEFGbXRaVWI1YUZYZ21STW56NHYxWnBYUUhoMmltcmVzbFFObEhKZ3g4X01yaGVPeER4eTlIekFFZ0JrU25jTHlXaTZfd0FRa0hBM0FnQi1JVEtkS3lPR0lPUU42cnpfQkhXQVIzNkNONTRKc2k0TzhrdHRlOG1wOTFmMlFmTzYtdjFkTk5R?oc=5",
+  "requete": "H200 OR B200 rental price"
+ },
+ {
   "date": "2026-11-10",
   "titre": "CME's Nvidia GPU rental futures delayed again as CFTC extends review to January",
   "source": "Startup Fortune",
@@ -802,6 +893,20 @@
   "titre": "Nota optimizes Kimi K3.1 Pro to cut GPU costs by up to 20%",
   "source": "Chosunbiz",
   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5kNlRaNjBrUjZ1SjhzZTRFNmxIeDZRMzRwc19UcEN6ZzdWTmxvWUM4SXB3TExnSUlSX2VSc0xpOC1IT2tUV3hMLVJZMXlINjhHS0wxcmJHbEZLUXI1RnBxaVd1RjVOTWlBbC03cEltQWlKQlZCcjVNY0Fn0gGOAUFVX3lxTE9rYkt1S2Q2bFgxU2VvLUYyazNtSk1KbWhhT1k0eEhzc3lOSjBPZkdSa2JnSU9zLTVYMTdWXy02V0YwUndUa3FGbTIxbGtvS3pnc3RTUVFnVXh0WFA0Y3F6X1Z4aFBQeWVBc1NqVS16d2FaRWZsOG1YOUVwN3hqZERGYnhLSFRORzZWTFNkZVE?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-10",
+  "titre": "Amid the anti-data center backlash, how far can the AI trade go? The key lies in GPU leasing prices.",
+  "source": "富途牛牛",
+  "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONVdzcnhCdTFIM3hBS2E4bEhkNF9tNkpVRWdMYkVDOExTajI1LUkzX3RfcVBFMWlQUGRzcWhGdkM3dFFJeVZZUXhKa0xCYW5JLUtyMFRaOXJadHU3SldvcGZqS3JaWndZTm9PY2xsYzZJQ2VtMW9TSjI0YzRRa3hpUUZGRXo1dmNzaHZMRFhyRkdFUTdoZXpQag?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-10",
+  "titre": "SpaceX Will Spend Up to $40 Billion in a Single Quarter. Its CFO Says the Payback Is “Less Than a Year.”",
+  "source": "TIKR.com",
+  "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVmI2bjB3bVRHR29mdXh6b0RuWnBWeDY4eHQwZHJhX3lIdHF0ZVVrd0lBb0tGdUdpR3YzUnlqZlJEZ00xY3ZrTUtrdy05eWhaTVNPdjkxRmNSZEdyR0F0bXVnS1Q0Y1YtYWVlNkVHcUJfVW9fc0x0WDZNS2oxYWFsZUxNUGtLZ0o0NnF1cFh5X3dZaWtNdjV4ckZVeURnelBEQ0xESHBRUTQ1ekJZZjViVlE2TDVDZjZCNkRDM3ZuWlZBclk?oc=5",
   "requete": "\"GPU rental\" price"
  },
  {
@@ -875,11 +980,25 @@
   "requete": "\"H100\" rental price"
  },
  {
+  "date": "2026-11-09",
+  "titre": "AMD Leads NVIDIA In GPU Sales, Capturing 47% Share According To Amazon US October Data",
+  "source": "Wccftech",
+  "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcWdWUW5EUTVkdW53VWswOWpsNS1Rd1NUblBVWHRQbEpOcDBoUVR1TGVOZVpqc1VLUm5TU01rLWNab29zWkVJV1FIQXhTNm1odU81WV9ldkVnQlFEREdwdEVVZWhwcW5HYVJndzhCd3J2QU9iVGMzaFI1cXFyM2lCWXRseDRrZXVEZlZROWI3NUxoaUg1OU5YSVRWb0VlOE0xUUhwMjNPSUhwQdIBrwFBVV95cUxQaUVSN3JRMjJJSE1hUmZ0bGs5VDJqWU9kekpMN0hyV2RVc3NlYk0yRlhROXZ2WkVDT29HLVZBTlZlZUp5YWNiNTZqVmMyQmJXZHVmN0g1UUgzeGxfTzN6WDFhSXBFSFZkSFBXNlNsTkd4ak55bGdXUE9lN2FkNXU5UGQ3bWdCV01FV2lXV01fVVVCZy01X0FKTGtVNHc5OW1IamJxWE5sWEFsVG9RVGsw?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
   "date": "2026-11-08",
   "titre": "Investigation Finds Chinese Military-Linked Firms Somehow Gained Approval To Assemble NVIDIA H200 AI GPUs, Highlighting A Half-Baked U.S. Approval System",
   "source": "Wccftech",
   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVzIySHZKd3h2dkZnTm9jTFR6Ui16d3VkRHhMWmx3cVhOQXpzUkwtd1E0UnB2dmJtcXplb0gyOWZ2bGxVdEV5MkgxQkJLOFVuRkF1TXljOGtUVUdkeHd5OFg2QVZrVDRQekpkcWM1Tl95ZHppbk5NbkN6aHpFSVlsZXpHcU00d3RHZ3F2MmY3Z0RBY29MWnZpQdIBngFBVV95cUxNY2VzejNVLVBCWlVmU29LZTBHYjVXX1lpSUNaVkduZGU3cUw3OTZpVThnUXNVYzh1aWktVkI0Umx2dmV6c1pfX0l2d05mVUdXMmFCbUl6aHlieXhFVmUyVWdXQ3Q1T3VLa2ZQaWRqcHlkUXFjczhyWlFnZ1BrOGE3Rkg3RUFodU83eUhXZFR2QVVsRUY3VmNESVRKbUJwQQ?oc=5",
   "requete": "H200 OR B200 rental price"
+ },
+ {
+  "date": "2026-11-08",
+  "titre": "ASUS Launches XG Core Radeon RX 9060 XT LP External Graphics Card To “Accelerate” Gaming Performance But Is Capped At 75W",
+  "source": "Wccftech",
+  "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUUVhNmRGeGlTRDNFa1REVFp4aVAxUGtLaDRYdmJKeno3X25iWlNuUXVBaVlTc0xsRDdhOE5wamVYQUsxTzJtdHprcGJUdzVkZkNLRFdlcGt0dHNuOXZGZjZRZnlOMWV1Y2FmeDIzUnFyVERZbU5xNlRqZU0xTzFxdzI0SmRwVTI0S2l0RXFhY1jSAZYBQVVfeXFMUEdoSzNSS3hUUTdKdzA5eFBIM2pNM2YzSlQ3RU1IZTZNMmxBMzE0eDhMR055cEhSOUxtaDdUaEFMMWQ0YjlkZXNaSi1jQ0RkdWhONE1INjk1UDZBWWdkNS1PVTl2MS0zRlBreTdRb3BEYksybTJWTkpXUjRsVFc5ZGtZX2ZKbEVjNUJLbGxiNWUwSWdWNkdn?oc=5",
+  "requete": "\"GPU rental\" price"
  },
  {
   "date": "2026-11-07",
@@ -950,6 +1069,13 @@
   "source": "MLQ.ai",
   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNRDV3LS1SMnQ5U1prSVl0TmU4RGgtVF9oaTViVkNoMzlNTThMbWRiTXFIUk1zM0pReHU1cVpadGVnMVJoWFlVU1Vka3RoTXpwSXlLWVpva3ZtcUhnbWJpWHVEUFM3SDlndVJBbFV4Rlkxc3h1cElvcFNnS3BydEhyN2FrM2FtNGh2LVZvSTlKQzdOTFFiUUJoR0xrMUMteWg3WkpiUnRLX0dpeFZ3ZnJEYUJtOG1KcjFuSXdhbWc5Tjd5UQ?oc=5",
   "requete": "neocloud GPU capacity contract"
+ },
+ {
+  "date": "2026-11-06",
+  "titre": "NVIDIA GPUs Worth $11.4 Million Stolen From Oakland Fetch A Hefty Price Outside Of U.S. Says UC Berkeley Professor, “They Go For About 1 Million Or More Abroad”",
+  "source": "Wccftech",
+  "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOd09EYm9mLTM3Z0FROHFqOE83dVppM01LMUZuU1JaRENMUVprWFJCdzFaNTNvQkpzSDI0N3pablFnNWIxbkcyRXNyb3pIM1ZtVFlmbW5CbHFWOHRMWnVsMndnT1FXRjdVS1F4RTFsWmVYUHdQNWtYbnBiLUVTUWxkRS0zLU9od1o1MTBpTzVtOThrWm_SAZgBQVVfeXFMTzRSVk1DZVh3TXVBRE5JX1liQWRpOHVYLUVpandpZ0RfS0o4NnlzdzFSSS1ScjBzblhKMHI4MmtndmRCc3V2Y201VFRFclJTTXVzVGM2Rm1SeWI3S1p2cFo4cU5DbzBycFlVZ2VxN3FKMFhYb08yTXNvLVpzOXl3WFZuYng0ZC1ZUFRXQVpRZlppMU91ckxzVk8?oc=5",
+  "requete": "\"GPU rental\" price"
  },
  {
   "date": "2026-11-05",

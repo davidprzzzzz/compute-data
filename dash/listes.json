@@ -4,12 +4,12 @@
    "gpu": "H100",
    "mois": 0,
    "tenor": "On-demand",
-   "mediane": 3.404,
+   "mediane": 3.49,
    "q25": null,
    "q75": null,
-   "n": 34,
+   "n": 35,
    "fournisseurs": "",
-   "date": "2026-11-19"
+   "date": "2026-11-20"
   },
   {
    "gpu": "H100",
@@ -20,7 +20,7 @@
    "q75": 1.973,
    "n": 4,
    "fournisseurs": "Database Mart 1.44, HyperAI 1.53, Leaseweb 1.97, Together AI 3.69",
-   "date": "2026-11-19"
+   "date": "2026-11-20"
   },
   {
    "gpu": "H100",
@@ -31,7 +31,7 @@
    "q75": null,
    "n": 2,
    "fournisseurs": "E2E Networks 3.73, Together AI 3.45",
-   "date": "2026-11-19"
+   "date": "2026-11-20"
   },
   {
    "gpu": "H100",
@@ -42,7 +42,7 @@
    "q75": null,
    "n": 1,
    "fournisseurs": "TheAI 3.30",
-   "date": "2026-11-19"
+   "date": "2026-11-20"
   },
   {
    "gpu": "H100",
@@ -53,7 +53,7 @@
    "q75": 3.21,
    "n": 7,
    "fournisseurs": "AceCloud 3.31, Cyfuture AI 2.21, DigitalOcean 3.26, Jarvislabs 3.21, Latitude.sh 1.18, Novita 2.79, Seeweb 1.77",
-   "date": "2026-11-19"
+   "date": "2026-11-20"
   },
   {
    "gpu": "H100",
@@ -64,7 +64,7 @@
    "q75": null,
    "n": 2,
    "fournisseurs": "Verda 4.09, Yotta Shakti Cloud 3.37",
-   "date": "2026-11-19"
+   "date": "2026-11-20"
   },
   {
    "gpu": "H100",
@@ -75,7 +75,7 @@
    "q75": null,
    "n": 1,
    "fournisseurs": "Civo 2.49",
-   "date": "2026-11-19"
+   "date": "2026-11-20"
   }
  ],
  "meta": [
