@@ -14,6 +14,27 @@
   "requete": "neocloud GPU capacity contract"
  },
  {
+  "date": "2026-11-20",
+  "titre": "Arbol introduces GPU value protection as AI infrastructure spending increases",
+  "source": "Reinsurance News",
+  "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSm80TGFPZXlLMjE1MFNxUzRpSGxXQ1loTVpJWTVCTzZudEEwR2pOaEhyVTZKU05VVlJTSnVkZ2ZMbVN5bUZTUVpzR3RBZ1JvTVNmRVNHaE4zdzBQUjRwbjRsZGV2dVc1ZWZDam14cTUxUXhnNmRrRnBjeWlxUDFrQkM2UU05cmxwZHpxRFZybV9zNXZlWEEwZjI4bU80TTVyYjJiaVNVQ2hFT2s?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-20",
+  "titre": "ETF Providers Vie for Early Lead Ahead of Compute Market Debut",
+  "source": "Bloomberg.com",
+  "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQM3lVaVZzenlab0dlaXh5SWtFX3dMdWljU0dxcnFGNVJzU19SSTVURTlDWXhaaEVjLXM3amlZVmRFZDM3dVJKZ3hCbmp4RVkxQVc1ZGkydDJBWHZmX2FHeF9nYnhLR0MweG5kN2hjZE1DTHZJYnktM3RSWWpoVWlsdzhPLXVhSlRqTVNvVFBXcnhWaFlwZ3hnOFRwVWxocFJtamRRN21Ob1dndVplUW1iYl9LNk1hQzZwNy1kUURZNWlfaFRYczRTblV3?oc=5",
+  "requete": "GPU compute futures"
+ },
+ {
+  "date": "2026-11-20",
+  "titre": "Over 30% Of Approved U.S. AI Chips, Including NVIDIA’s H200, Went To Pentagon-Listed Chinese Military Companies, House Committee Data Reveals",
+  "source": "Wccftech",
+  "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOGxUZjFSTWtfQ2p5ck5kOVZTa190UFpOLVd5VjRGaExER0xqRU8yRUpTaklvck5taGhJZ2J4b2hab3cwRDJFaWRWbUg4eFdFSW9XdXlkYy03UkdOblpsczVaN1BEMXA5VTFJMmwxRk5NODVxdTdIZW9yZ1ZUOE1vckUxenBBRUxWbnZnMDJxQkVkc2xCclIyMUhEbFlDYm5w0gGgAUFVX3lxTFA4bFRmMVJNa19DanlyTmQ5VlNrX3RQWk4tV3lWNEZoTERHTGpFTzJFSlNqSW9yTm1oaElnYnhvaFpvdzBEMkVpZFZtSDh4V0VJb1d1eWRjLTdSR05uWmxzNVo3UEQxcDlVMUkybDFGTk04NXF1N0hlb3JnVlQ4TW9yRTF6cEFFTFZudmcwMnFCRWRzbEJyUjIxSERsWUNibnA?oc=5",
+  "requete": "H200 OR B200 rental price"
+ },
+ {
   "date": "2026-11-19",
   "titre": "[News] NVIDIA Highlights Rising GPU Rental Rates: Hopper Up to 2X, B300 Up Over 60%",
   "source": "TrendForce",
@@ -236,6 +257,13 @@
   "source": "explainx.ai",
   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMFBwQ2RkUzF5UFgwNFlpTDN5TnItMFFMMGFTaXBIemQtUXJtdm9ONGlFc0wyUXdNZTRjaGwzUjBYaXBnRThtdHNGaGloaV9XVDY2OUVPSUM1Y01MRVNWVGVjdWpEeTI2d19ieTlLcktYWVNQZEt2andJMGxHYjJKd0lMTlloTENYaUxQeUF0cVktbEtMMTl5VXVVVHN1Zlkya2c?oc=5",
   "requete": "H200 OR B200 rental price"
+ },
+ {
+  "date": "2026-11-18",
+  "titre": "After Huang, Nvidia puts Firmus and its neocloud network on notice",
+  "source": "AFR",
+  "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNUpmd29FMWZZX0o0YUZxZEk5U3lZTk1nLVVCRDNYem1FSi1LcnJxS29VeEJURjFaQWcwa0JqeEQ4cGc3eElPMXVvNHJhTFFTd01wd2VJSVZsbl95Vm80aDJ6MUZva1lNZGhOWU1nM0tiTVVEaS1VU0tEYmdLUDI0bjJMNndFbWt5MHM2QkxRNWxfWDdOVGVhMTAteVQtUUNuLU96RjhWbWRWLVRvQUxjcWdnQQ?oc=5",
+  "requete": "neocloud GPU capacity contract"
  },
  {
   "date": "2026-11-17",
@@ -474,6 +502,13 @@
   "source": "24/7 Wall St.",
   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOLWVzNEtUQXlYZmc3T1l0SEVIalFtYXBIcXpESWUwSGdzTWJtOWNNak5EcUQwbTV0REM2NnNISGZkakhydEI0WHY5SU5jM3FveDFOZ3ZfWWZlR2NhSldnb2VxZC0zWWZvcUdOeFUwek5xa1o2Ti02V2VhQUhESkFuTURiQ3ZMbHhUSExZanBTZTE2dkRJU0EzVVY2WFd2Z05mbVpPcWZuVkRuU1RFRGhLZWEybkdGZ05oQ2NidXdtRDMzTWha?oc=5",
   "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-15",
+  "titre": "Traders Turn to Kalshi Stock ‘Perps’ on Nvidia and SpaceX as Leverage Fears Grow",
+  "source": "Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQdllqcF83U29zNldrakdHbDgzeTRTb2k2UHI5S3BCWnkwYldJRXhLOW5vdjlRVGxkbHBvOTZkMnVjcGgzdUZlVG5LWS1NX3lBY0FrTDEwLWxyaWF5dkRqeUs3ZW5MZ0s0YXE4V19ZS3p3RkdZenZXU0VoMWxZUVExekxZUFNla1NPcWdCZGlHWmg0M0ZXalZoZ1BGbzczdw?oc=5",
+  "requete": "Kalshi compute GPU"
  },
  {
   "date": "2026-11-14",
@@ -908,6 +943,20 @@
   "source": "TIKR.com",
   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVmI2bjB3bVRHR29mdXh6b0RuWnBWeDY4eHQwZHJhX3lIdHF0ZVVrd0lBb0tGdUdpR3YzUnlqZlJEZ00xY3ZrTUtrdy05eWhaTVNPdjkxRmNSZEdyR0F0bXVnS1Q0Y1YtYWVlNkVHcUJfVW9fc0x0WDZNS2oxYWFsZUxNUGtLZ0o0NnF1cFh5X3dZaWtNdjV4ckZVeURnelBEQ0xESHBRUTQ1ekJZZjViVlE2TDVDZjZCNkRDM3ZuWlZBclk?oc=5",
   "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-10",
+  "titre": "CFTC Extends GPU Rental Futures Review to January 2027: What Builders Should Know",
+  "source": "explainx.ai",
+  "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdUtNN1RLV3VOYno1eUxyXzJ0QVF5OUx1cFYwT2NqTWdjMVcwNzlpSm12T1hWMTBKSjZzUUJQU1BkYkQwUTNrVFg4eE83RENadzlqbU9TcEM3bWN6Qzl2akxPbDdhUFF5Z3BXdzg2bXpOa0IzcGFEYkgzZWRJZUU3Tm1RZl8xRHhjTnZCaGRwaXlFLXBRYmR2clQ2dw?oc=5",
+  "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-10",
+  "titre": "AI’s Trillion-Dollar Blind Spot",
+  "source": "Chief Investment Officer",
+  "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5GbDBHSTJ2M0ZrV2RiUXJ5SjF2Tzk0MVMtclJ1TnBvSEJSV1hMRnJxTnhGdWUtemxpU3dCQ3lOVTRWWktFRE9uX2l3Z0h4cnF4WEpsbUZrSHAzYWg3UFRjMmNjMDN1WEFwcXA0?oc=5",
+  "requete": "GPU compute futures"
  },
  {
   "date": "2026-11-09",

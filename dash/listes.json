@@ -4,7 +4,7 @@
    "gpu": "H100",
    "mois": 0,
    "tenor": "On-demand",
-   "mediane": 3.49,
+   "mediane": 3.79,
    "q25": null,
    "q75": null,
    "n": 35,
@@ -26,11 +26,11 @@
    "gpu": "H100",
    "mois": 3,
    "tenor": "3M",
-   "mediane": 3.59,
+   "mediane": 3.6,
    "q25": null,
    "q75": null,
    "n": 2,
-   "fournisseurs": "E2E Networks 3.73, Together AI 3.45",
+   "fournisseurs": "E2E Networks 3.75, Together AI 3.45",
    "date": "2026-11-20"
   },
   {
@@ -52,18 +52,18 @@
    "q25": 1.77,
    "q75": 3.21,
    "n": 7,
-   "fournisseurs": "AceCloud 3.31, Cyfuture AI 2.21, DigitalOcean 3.26, Jarvislabs 3.21, Latitude.sh 1.18, Novita 2.79, Seeweb 1.77",
+   "fournisseurs": "AceCloud 3.31, Cyfuture AI 2.22, DigitalOcean 3.26, Jarvislabs 3.21, Latitude.sh 1.18, Novita 2.79, Seeweb 1.77",
    "date": "2026-11-20"
   },
   {
    "gpu": "H100",
    "mois": 24,
    "tenor": "2A",
-   "mediane": 3.728,
+   "mediane": 3.76,
    "q25": null,
    "q75": null,
    "n": 2,
-   "fournisseurs": "Verda 4.09, Yotta Shakti Cloud 3.37",
+   "fournisseurs": "Verda 4.13, Yotta Shakti Cloud 3.39",
    "date": "2026-11-20"
   },
   {
