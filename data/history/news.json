@@ -1,5 +1,12 @@
 [
  {
+  "date": "2026-11-21",
+  "titre": "Behind the GPU Rent Spike Lies a Financing Squeeze: Loan-to-Value Ratios Cut to 50%, Spot Market Inflated by Forced Demand",
+  "source": "BigGo Finance",
+  "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1ZYVJDWlhFcHBiS1J3WTY5dzh2a3c4V2hSbjhMVUlwVVdBVUJ1MnBjWHhsQ2hNQjFEV3VHMmhkOUN5LXhCcU0zeGJJNDR4ZmliOGF1M2lEQkxUVlBTYlRIeGVCTlZ2Z2l4VEF2a0dSd1ZEaHp1Tnc?oc=5",
+  "requete": "\"Silicon Data\" GPU index"
+ },
+ {
   "date": "2026-11-20",
   "titre": "B200 Rents Rose 23.5% Since August as GPU Credit Tightened",
   "source": "FourWeekMBA",
@@ -82,6 +89,13 @@
   "source": "explainx.ai",
   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZlpRQVFDWkRwRFpWUVg4OFFaOEV1VzQtY1hmMXFWcmVTalVwb190WVVxb2hRbEdyQjBjT3JndXUyOTJ2Skphd1BNMmVZREt6ZTFnNlpFLWVWUUNEOTBXWWNER0lwb3E1aVhBVHRzbjdQNXd2cjBMeEZ5ZUtJRzZmNHBCTQ?oc=5",
   "requete": "neocloud GPU capacity contract"
+ },
+ {
+  "date": "2026-11-20",
+  "titre": "Nvidia CEO odds: Jensen Huang at 10% as Trump calls for second chance",
+  "source": "Kalshi News",
+  "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5lVk5QM2FSRllRZEJNOHpndnlnMVJadHppVVhad2l2UzFod2xtQXhqVWpqeEU3MTV6dllFZHVEY1luc29HallaZ0tCNFYxZ1ZSaGJzOFJGcm1tYThkMTdoaklqa0NnN1Zfemt0U3dKYnBOT3UycDQzZkNFTzNWaEU?oc=5",
+  "requete": "Kalshi compute GPU"
  },
  {
   "date": "2026-11-19",
@@ -180,6 +194,20 @@
   "source": "Wisevoter",
   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOTljYkJRcW5ZeU1GN1JUYUt0S29oc2puSjlMdGJ5RnJ2Ym1lWVFKMFpSd2owSlRpMUFjcDlQNkg2QmxhTlctVk10YXhUNXIxU1ZZcWszZHhZY3FFeXZvMGZPRnJhYVoxLVhJQXFHRl9mNnhFS3I2RjlRUmpBb05KcGRLR1FrN0JrZkgyUjBB?oc=5",
   "requete": "H200 OR B200 rental price"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "China’s Moonshot AI Scraps $150 Million Deal to Access Nvidia Chips in Indonesia",
+  "source": "The Information",
+  "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdE5MUDNQNXlvMGk2ZmF5ellRVVpSekxPd0NmZnI2cWJkbGJVdTFUZkl6Z1o3d1NjeDVoQUtUUHhDQjhfNjQ3RUM3R3lmXzZYRkVydTBjeE1MVzFjQXpVX3FNTG1Qb3p3UV9veTlCMEVISnpxcXFERUlERnNrNWJWcTRZNXRoZmVQbjM4YkItQlZxQzNDMDJtWGYxaHRjeFZEWnZvOHJmSFgxQ19XWC0zNjhR?oc=5",
+  "requete": "neocloud GPU capacity contract"
+ },
+ {
+  "date": "2026-11-19",
+  "titre": "Nscale ByteDance Deal: US Export License Needed in 90 Days",
+  "source": "explainx.ai",
+  "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPNWFtMmhna1NWa01DV29GYmxsb2R0MGRtV1pJOTBWS0NITHdjOXpWRXVKc0FNbWlvSTV5MUx0VHZ0a0NjZWpXSEZVNHVQZUVFRzg4c2hpUV9peW9ELWg0UzQ1bUFBX3BFa0dnbGcycTNRRTVGT0ttdTUtMXZ0MTdjT0JDWFVEUEZXRWxmeGpCTHN1TzZBOTE4dFJJd2U?oc=5",
+  "requete": "neocloud GPU capacity contract"
  },
  {
   "date": "2026-11-18",
@@ -1097,6 +1125,13 @@
   "source": "Wccftech",
   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcWdWUW5EUTVkdW53VWswOWpsNS1Rd1NUblBVWHRQbEpOcDBoUVR1TGVOZVpqc1VLUm5TU01rLWNab29zWkVJV1FIQXhTNm1odU81WV9ldkVnQlFEREdwdEVVZWhwcW5HYVJndzhCd3J2QU9iVGMzaFI1cXFyM2lCWXRseDRrZXVEZlZROWI3NUxoaUg1OU5YSVRWb0VlOE0xUUhwMjNPSUhwQdIBrwFBVV95cUxQaUVSN3JRMjJJSE1hUmZ0bGs5VDJqWU9kekpMN0hyV2RVc3NlYk0yRlhROXZ2WkVDT29HLVZBTlZlZUp5YWNiNTZqVmMyQmJXZHVmN0g1UUgzeGxfTzN6WDFhSXBFSFZkSFBXNlNsTkd4ak55bGdXUE9lN2FkNXU5UGQ3bWdCV01FV2lXV01fVVVCZy01X0FKTGtVNHc5OW1IamJxWE5sWEFsVG9RVGsw?oc=5",
   "requete": "\"GPU rental\" price"
+ },
+ {
+  "date": "2026-11-09",
+  "titre": "Microsoft Cuts Neocloud Partners To Favor Own Data Centers",
+  "source": "Dataconomy",
+  "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPS0UtMWdkYnBIWjdHLUN6VXN2STlmTURQSnh2N01Ob1NrWkJkYlliLVBVempka2ZSeE1POEMxQUY4ZE5DdFFSRXFra09PekJKVjBqQlVIampuaHJYNHNvOC1RdlIzTEdfdFJnNFJoTnhVbnpUY3JJSDA4UlNvM25aV3E5dlJDUWpQWmZGV2pEZ0drTnZyYnJLUA?oc=5",
+  "requete": "neocloud GPU capacity contract"
  },
  {
   "date": "2026-11-08",

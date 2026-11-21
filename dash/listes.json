@@ -4,10 +4,10 @@
    "gpu": "H100",
    "mois": 0,
    "tenor": "On-demand",
-   "mediane": 3.442,
+   "mediane": 3.5,
    "q25": null,
    "q75": null,
-   "n": 37,
+   "n": 36,
    "fournisseurs": "",
    "date": "2026-11-21"
   },

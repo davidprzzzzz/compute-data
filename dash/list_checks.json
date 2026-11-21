@@ -413,10 +413,50 @@
   {
    "date": "2026-11-21",
    "gpu": "B200",
+   "fournisseur": "Runpod",
+   "config": "1x B200 SXM Community Cloud",
+   "facturation": "on-demand",
+   "prix": 5.98,
+   "page_officielle": "2026-11-21",
+   "retrouve": "NON"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "B200",
+   "fournisseur": "Runpod",
+   "config": "1x B200 SXM Secure Cloud",
+   "facturation": "on-demand",
+   "prix": 7.99,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "B200",
+   "fournisseur": "Runpod",
+   "config": "2x B200 SXM Secure Cloud",
+   "facturation": "on-demand",
+   "prix": 7.99,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "B200",
+   "fournisseur": "Runpod",
+   "config": "16x B200 SXM Instant Cluster",
+   "facturation": "on-demand",
+   "prix": 9.59,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "B200",
    "fournisseur": "Verda",
-   "config": "4x B200 SXM 4B200.120V",
+   "config": "8x B200 SXM 8B200.240V",
    "facturation": "spot",
-   "prix": 4.872,
+   "prix": 4.874,
    "page_officielle": "2026-11-21",
    "retrouve": "OUI"
   },
@@ -443,16 +483,6 @@
   {
    "date": "2026-11-21",
    "gpu": "B200",
-   "fournisseur": "Runpod",
-   "config": "1x B200 SXM Community Cloud",
-   "facturation": "on-demand",
-   "prix": 5.98,
-   "page_officielle": "2026-11-21",
-   "retrouve": "NON"
-  },
-  {
-   "date": "2026-11-21",
-   "gpu": "B200",
    "fournisseur": "Lambda Labs",
    "config": "8x B200 SXM gpu_8x_b200_sxm6",
    "facturation": "on-demand",
@@ -464,11 +494,11 @@
    "date": "2026-11-21",
    "gpu": "H100",
    "fournisseur": "Runpod",
-   "config": "1x H100 SXM Secure Cloud",
+   "config": "1x H100 NVL Community Cloud",
    "facturation": "on-demand",
-   "prix": 4.39,
+   "prix": 2.59,
    "page_officielle": "2026-11-21",
-   "retrouve": "OUI"
+   "retrouve": "NON"
   },
   {
    "date": "2026-11-21",
@@ -477,7 +507,7 @@
    "config": "1x H100 PCIe H100-1-80G",
    "facturation": "on-demand",
    "prix": 3.15,
-   "page_officielle": "2026-11-20",
+   "page_officielle": "2026-11-21",
    "retrouve": "NON"
   },
   {
@@ -487,7 +517,7 @@
    "config": "2x H100 PCIe H100-2-80G",
    "facturation": "on-demand",
    "prix": 3.15,
-   "page_officielle": "2026-11-20",
+   "page_officielle": "2026-11-21",
    "retrouve": "NON"
   },
   {
@@ -497,7 +527,7 @@
    "config": "2x H100 SXM H100-SXM-2-80G",
    "facturation": "on-demand",
    "prix": 3.64,
-   "page_officielle": "2026-11-20",
+   "page_officielle": "2026-11-21",
    "retrouve": "NON"
   },
   {
@@ -507,7 +537,7 @@
    "config": "4x H100 SXM H100-SXM-4-80G",
    "facturation": "on-demand",
    "prix": 3.51,
-   "page_officielle": "2026-11-20",
+   "page_officielle": "2026-11-21",
    "retrouve": "NON"
   },
   {
@@ -517,14 +547,14 @@
    "config": "8x H100 SXM H100-SXM-8-80G",
    "facturation": "on-demand",
    "prix": 3.48,
-   "page_officielle": "2026-11-20",
+   "page_officielle": "2026-11-21",
    "retrouve": "NON"
   },
   {
    "date": "2026-11-21",
    "gpu": "H100",
    "fournisseur": "Verda",
-   "config": "1x H100 SXM5 1H100.80S.30V",
+   "config": "4x H100 SXM5 4H100.80S.176V",
    "facturation": "on-demand",
    "prix": 5.508,
    "page_officielle": "2026-11-21",
@@ -594,9 +624,9 @@
    "date": "2026-11-21",
    "gpu": "H200",
    "fournisseur": "Runpod",
-   "config": "2x H200 SXM Community Cloud",
+   "config": "2x H200 SXM Secure Cloud",
    "facturation": "on-demand",
-   "prix": 3.59,
+   "prix": 5.29,
    "page_officielle": "2026-11-21",
    "retrouve": "OUI"
   },
@@ -604,7 +634,17 @@
    "date": "2026-11-21",
    "gpu": "H200",
    "fournisseur": "Runpod",
-   "config": "2x H200 SXM Secure Cloud",
+   "config": "4x H200 SXM Secure Cloud",
+   "facturation": "on-demand",
+   "prix": 5.29,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H200",
+   "fournisseur": "Runpod",
+   "config": "8x H200 SXM Secure Cloud",
    "facturation": "on-demand",
    "prix": 5.29,
    "page_officielle": "2026-11-21",
@@ -624,7 +664,7 @@
    "date": "2026-11-21",
    "gpu": "H200",
    "fournisseur": "Verda",
-   "config": "4x H200 SXM5 4H200.141S.176V",
+   "config": "1x H200 SXM5 1H200.141S.44V",
    "facturation": "on-demand",
    "prix": 7.043,
    "page_officielle": "2026-11-21",
