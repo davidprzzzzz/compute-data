@@ -409,6 +409,246 @@
    "prix": 5.4,
    "page_officielle": "2026-11-20",
    "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "B200",
+   "fournisseur": "Verda",
+   "config": "4x B200 SXM 4B200.120V",
+   "facturation": "spot",
+   "prix": 4.872,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "B200",
+   "fournisseur": "Verda",
+   "config": "8x B200 SXM 8B200.240V.CC.AMD",
+   "facturation": "on-demand",
+   "prix": 9.943,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "B200",
+   "fournisseur": "Nebius",
+   "config": "1x B200 SXM NVIDIA HGX B200",
+   "facturation": "on-demand",
+   "prix": 8.5,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "B200",
+   "fournisseur": "Runpod",
+   "config": "1x B200 SXM Community Cloud",
+   "facturation": "on-demand",
+   "prix": 5.98,
+   "page_officielle": "2026-11-21",
+   "retrouve": "NON"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "B200",
+   "fournisseur": "Lambda Labs",
+   "config": "8x B200 SXM gpu_8x_b200_sxm6",
+   "facturation": "on-demand",
+   "prix": 7.69,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H100",
+   "fournisseur": "Runpod",
+   "config": "1x H100 SXM Secure Cloud",
+   "facturation": "on-demand",
+   "prix": 4.39,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H100",
+   "fournisseur": "Scaleway",
+   "config": "1x H100 PCIe H100-1-80G",
+   "facturation": "on-demand",
+   "prix": 3.15,
+   "page_officielle": "2026-11-20",
+   "retrouve": "NON"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H100",
+   "fournisseur": "Scaleway",
+   "config": "2x H100 PCIe H100-2-80G",
+   "facturation": "on-demand",
+   "prix": 3.15,
+   "page_officielle": "2026-11-20",
+   "retrouve": "NON"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H100",
+   "fournisseur": "Scaleway",
+   "config": "2x H100 SXM H100-SXM-2-80G",
+   "facturation": "on-demand",
+   "prix": 3.64,
+   "page_officielle": "2026-11-20",
+   "retrouve": "NON"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H100",
+   "fournisseur": "Scaleway",
+   "config": "4x H100 SXM H100-SXM-4-80G",
+   "facturation": "on-demand",
+   "prix": 3.51,
+   "page_officielle": "2026-11-20",
+   "retrouve": "NON"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H100",
+   "fournisseur": "Scaleway",
+   "config": "8x H100 SXM H100-SXM-8-80G",
+   "facturation": "on-demand",
+   "prix": 3.48,
+   "page_officielle": "2026-11-20",
+   "retrouve": "NON"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H100",
+   "fournisseur": "Verda",
+   "config": "1x H100 SXM5 1H100.80S.30V",
+   "facturation": "on-demand",
+   "prix": 5.508,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H100",
+   "fournisseur": "Verda",
+   "config": "8x H100 SXM5 8H100.80S.176V",
+   "facturation": "spot",
+   "prix": 2.754,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H100",
+   "fournisseur": "Nebius",
+   "config": "1x H100 SXM NVIDIA HGX H100",
+   "facturation": "on-demand",
+   "prix": 4.5,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H100",
+   "fournisseur": "Lambda Labs",
+   "config": "1x H100 PCIe gpu_1x_h100_pcie",
+   "facturation": "on-demand",
+   "prix": 3.79,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H200",
+   "fournisseur": "Runpod",
+   "config": "1x H200 SXM Community Cloud",
+   "facturation": "on-demand",
+   "prix": 3.59,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H200",
+   "fournisseur": "Runpod",
+   "config": "1x H200 NVL Secure Cloud",
+   "facturation": "on-demand",
+   "prix": 3.79,
+   "page_officielle": "2026-11-21",
+   "retrouve": "NON"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H200",
+   "fournisseur": "Runpod",
+   "config": "1x H200 SXM Secure Cloud",
+   "facturation": "on-demand",
+   "prix": 5.29,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H200",
+   "fournisseur": "Runpod",
+   "config": "2x H200 SXM Community Cloud",
+   "facturation": "on-demand",
+   "prix": 3.59,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H200",
+   "fournisseur": "Runpod",
+   "config": "2x H200 SXM Secure Cloud",
+   "facturation": "on-demand",
+   "prix": 5.29,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H200",
+   "fournisseur": "Runpod",
+   "config": "16x H200 SXM Instant Cluster",
+   "facturation": "on-demand",
+   "prix": 6.35,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H200",
+   "fournisseur": "Verda",
+   "config": "4x H200 SXM5 4H200.141S.176V",
+   "facturation": "on-demand",
+   "prix": 7.043,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H200",
+   "fournisseur": "Verda",
+   "config": "8x H200 SXM5 8H200.141S.176V",
+   "facturation": "spot",
+   "prix": 3.521,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
+  },
+  {
+   "date": "2026-11-21",
+   "gpu": "H200",
+   "fournisseur": "Nebius",
+   "config": "1x H200 SXM NVIDIA HGX H200",
+   "facturation": "on-demand",
+   "prix": 5.4,
+   "page_officielle": "2026-11-21",
+   "retrouve": "OUI"
   }
  ],
  "meta": [
